@@ -1,0 +1,1394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12322844377009887BB3F55F /* libPods-TTDoctor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 260DC1B01CF6D372725D9F7D /* libPods-TTDoctor.a */; };
+		5915F88C249CCFAA0098CDE9 /* YKChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5915F88B249CCFAA0098CDE9 /* YKChangePasswordVC.m */; };
+		59236D712491DBF60075F64B /* YKTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59236D702491DBF60075F64B /* YKTabBarVC.m */; };
+		59236D792491E10B0075F64B /* YKHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59236D782491E10B0075F64B /* YKHomeVC.m */; };
+		59236D7C2491E1250075F64B /* YKPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59236D7B2491E1250075F64B /* YKPatientVC.m */; };
+		59236D7F2491E1390075F64B /* YKChatListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59236D7E2491E1390075F64B /* YKChatListVC.m */; };
+		59236D852491E1620075F64B /* YKMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59236D842491E1620075F64B /* YKMineVC.m */; };
+		59246B5025E7927E00D766A4 /* YKRecordAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59246B4F25E7927E00D766A4 /* YKRecordAnimation.m */; };
+		592A552A24E12F2900C14443 /* UIView+FrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A552524E12F2900C14443 /* UIView+FrameTool.m */; };
+		592A552B24E12F2900C14443 /* DKSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A552724E12F2900C14443 /* DKSTextView.m */; };
+		592A552F24E13A2800C14443 /* YKChatKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A552E24E13A2800C14443 /* YKChatKeyboardView.m */; };
+		59375B292500BAE50072B700 /* YKChatDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B282500BAE50072B700 /* YKChatDBManager.m */; };
+		59375B2C2500CB5C0072B700 /* YKInputBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B2B2500CB5B0072B700 /* YKInputBase64.m */; };
+		59375B2F2500D68E0072B700 /* YKChatMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B2E2500D68E0072B700 /* YKChatMessageManager.m */; };
+		59375B332500F33F0072B700 /* YKTestChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B322500F33F0072B700 /* YKTestChatVC.m */; };
+		593D304225C93C69000682E0 /* MyTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593D304125C93C69000682E0 /* MyTestSDK.framework */; };
+		59452FF42499CC1800A62D05 /* YKAnnouncementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FF32499CC1800A62D05 /* YKAnnouncementVC.m */; };
+		59452FF82499F4E100A62D05 /* YKAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FF72499F4E100A62D05 /* YKAnnouncementCell.m */; };
+		59452FFC249A05A700A62D05 /* YKWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FFB249A05A700A62D05 /* YKWebVC.m */; };
+		59453003249A0DBA00A62D05 /* YKPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59453002249A0DBA00A62D05 /* YKPatientCell.m */; };
+		5945A59E250227DE002A230B /* YKChatBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A59D250227DE002A230B /* YKChatBaseCell.m */; };
+		5945A5A12502284D002A230B /* YKChatMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A5A02502284D002A230B /* YKChatMessageCell.m */; };
+		5945A5A825022D1D002A230B /* UIView+WZMChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A5A625022D1D002A230B /* UIView+WZMChat.m */; };
+		5945A5AB250230AF002A230B /* YKChatTextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A5AA250230AF002A230B /* YKChatTextMessageCell.m */; };
+		5945A5AE25023162002A230B /* YKChatImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A5AD25023162002A230B /* YKChatImageMessageCell.m */; };
+		5946C89E249B384C00332B11 /* YKChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C89D249B384C00332B11 /* YKChatListCell.m */; };
+		5946C8A1249B41A900332B11 /* YKMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C8A0249B41A900332B11 /* YKMineCell.m */; };
+		5946C8A5249B50FE00332B11 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C8A4249B50FE00332B11 /* PopoverView.m */; };
+		5946C8AE249B57F000332B11 /* YKQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C8AD249B57F000332B11 /* YKQRCodeVC.m */; };
+		5946C8B2249B5C1800332B11 /* YKUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C8B1249B5C1800332B11 /* YKUserInfoCell.m */; };
+		5946C8B5249B5C3700332B11 /* YKUserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C8B4249B5C3700332B11 /* YKUserInfoVC.m */; };
+		5946C8B8249B843E00332B11 /* YKChangePhoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C8B7249B843E00332B11 /* YKChangePhoneVC.m */; };
+		5946C8BE249B84A900332B11 /* YKProvinceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946C8BD249B84A900332B11 /* YKProvinceVC.m */; };
+		59484E13248A5A9C00787EEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59484E12248A5A9C00787EEE /* AppDelegate.m */; };
+		59484E1E248A5AAF00787EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59484E1D248A5AAF00787EEE /* Assets.xcassets */; };
+		59484E21248A5AAF00787EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59484E1F248A5AAF00787EEE /* LaunchScreen.storyboard */; };
+		59484E24248A5AAF00787EEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59484E23248A5AAF00787EEE /* main.m */; };
+		59484E37248A5BCD00787EEE /* YKBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59484E36248A5BCD00787EEE /* YKBaseVC.m */; };
+		5949D09A24AC7FA400F740EE /* YKAddProjectPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5949D09924AC7FA400F740EE /* YKAddProjectPatientCell.m */; };
+		594B126F24F50BE800635525 /* YKDoctorListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B126E24F50BE800635525 /* YKDoctorListVC.m */; };
+		594B127324F50E8500635525 /* CLTreeViewFirstLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B127224F50E8500635525 /* CLTreeViewFirstLevelCell.m */; };
+		594B127624F50EAA00635525 /* CLTreeViewSecondLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B127524F50EAA00635525 /* CLTreeViewSecondLevelCell.m */; };
+		594B127924F50EC100635525 /* CLTreeViewThirdLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B127824F50EC100635525 /* CLTreeViewThirdLevelCell.m */; };
+		594B127C24F50EE100635525 /* CLTreeViewFirstLevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B127B24F50EE100635525 /* CLTreeViewFirstLevelModel.m */; };
+		594B127F24F50EF700635525 /* CLTreeViewSecondLevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B127E24F50EF700635525 /* CLTreeViewSecondLevelModel.m */; };
+		594B128224F50F0F00635525 /* CLTreeViewThirdLevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B128124F50F0F00635525 /* CLTreeViewThirdLevelModel.m */; };
+		594B128524F5100600635525 /* CLTreeViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B128424F5100600635525 /* CLTreeViewNode.m */; };
+		594D200324A1A9540076EEB0 /* YKServiceSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200224A1A9540076EEB0 /* YKServiceSettingCell.m */; };
+		594D200724A1D00F0076EEB0 /* YKSelfInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200624A1D00F0076EEB0 /* YKSelfInfoVC.m */; };
+		594D200A24A1EECC0076EEB0 /* YKMainSymptomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200924A1EECC0076EEB0 /* YKMainSymptomVC.m */; };
+		594D200E24A1FFAD0076EEB0 /* YKMainSymptomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200D24A1FFAD0076EEB0 /* YKMainSymptomCell.m */; };
+		594D328A249877BE0025B7FF /* BFCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D3288249877BE0025B7FF /* BFCButton.m */; };
+		594D328D249899540025B7FF /* YKHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D328C249899540025B7FF /* YKHomeCell.m */; };
+		594E444D24A2FE700004CC01 /* YKQuickReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E444C24A2FE700004CC01 /* YKQuickReplyVC.m */; };
+		594E445124A335840004CC01 /* YKProjectDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E445024A335840004CC01 /* YKProjectDetailVC.m */; };
+		594E445524A337E30004CC01 /* YKProjectDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E445424A337E30004CC01 /* YKProjectDetailCell.m */; };
+		594FCEB2248DDE0600FDC416 /* YKNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEB1248DDE0600FDC416 /* YKNetworkManager.m */; };
+		594FCEB5248DE55900FDC416 /* YKApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEB4248DE55900FDC416 /* YKApiService.m */; };
+		594FCEB8248DE6B800FDC416 /* YKHUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEB7248DE6B800FDC416 /* YKHUDHelper.m */; };
+		594FCEBB248DE80600FDC416 /* YKLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEBA248DE80600FDC416 /* YKLoginVC.m */; };
+		594FCEBF248DE9D700FDC416 /* YKUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEBE248DE9D600FDC416 /* YKUserDefaults.m */; };
+		595099F3248F2DB300BC3479 /* YKGuidePagesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595099F2248F2DB300BC3479 /* YKGuidePagesVC.m */; };
+		595099F6248F613E00BC3479 /* YKForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595099F5248F613E00BC3479 /* YKForgetVC.m */; };
+		595099F9248F657D00BC3479 /* YKLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 595099F8248F657D00BC3479 /* YKLoginCell.m */; };
+		595099FD248F7A8C00BC3479 /* YKRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595099FC248F7A8C00BC3479 /* YKRegisterVC.m */; };
+		5951768D24E669D000985E19 /* YKMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5951768C24E669D000985E19 /* YKMessageModel.m */; };
+		59537149250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59537148250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.m */; };
+		5954F72824FE509B00BD8F60 /* YKChatBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5954F72724FE509B00BD8F60 /* YKChatBaseModel.m */; };
+		5954F73024FE553400BD8F60 /* YKChatUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5954F72F24FE553400BD8F60 /* YKChatUserModel.m */; };
+		5954F73324FE555A00BD8F60 /* YKChatMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5954F73224FE555A00BD8F60 /* YKChatMessageModel.m */; };
+		5954F73724FE583900BD8F60 /* YKChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5954F73624FE583900BD8F60 /* YKChatHelper.m */; };
+		5956A1AC24B2F1D200EEE5E7 /* YKChatDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5956A1AB24B2F1D200EEE5E7 /* YKChatDetailCell.m */; };
+		59596392249723FF00BCF83A /* YKAlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59596391249723FF00BCF83A /* YKAlertHelper.m */; };
+		5959639524972A6F00BCF83A /* NSString+BFCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5959639424972A6F00BCF83A /* NSString+BFCAddition.m */; };
+		59596399249762ED00BCF83A /* YKDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 59596398249762ED00BCF83A /* YKDoctor.m */; };
+		5959639C249769B900BCF83A /* YKDoctorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5959639B249769B900BCF83A /* YKDoctorHelper.m */; };
+		595C112024A9EE0F006A18D8 /* YKProjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595C111F24A9EE0F006A18D8 /* YKProjectVC.m */; };
+		595C112324A9EEA9006A18D8 /* YKAddProjectPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595C112224A9EEA9006A18D8 /* YKAddProjectPatientVC.m */; };
+		595EBBBC24EA54FB007D0206 /* WHDebugToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 595EBBAF24EA54FA007D0206 /* WHDebugToolManager.m */; };
+		595EBBBD24EA54FB007D0206 /* WHDebugTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595EBBB624EA54FA007D0206 /* WHDebugTempVC.m */; };
+		595EBBBE24EA54FB007D0206 /* WHDebugFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 595EBBB724EA54FA007D0206 /* WHDebugFPSMonitor.m */; };
+		595EBBBF24EA54FB007D0206 /* WHDebugMemoryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 595EBBB824EA54FA007D0206 /* WHDebugMemoryMonitor.m */; };
+		595EBBC024EA54FB007D0206 /* WHDebugConsoleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 595EBBB924EA54FA007D0206 /* WHDebugConsoleLabel.m */; };
+		595EBBC124EA54FB007D0206 /* WHDebugMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 595EBBBA24EA54FA007D0206 /* WHDebugMonitor.m */; };
+		595EBBC224EA54FB007D0206 /* WHDebugCpuMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 595EBBBB24EA54FA007D0206 /* WHDebugCpuMonitor.m */; };
+		5960275824A0A53700AA0833 /* YKHospitalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5960275724A0A53700AA0833 /* YKHospitalVC.m */; };
+		5960275B24A0A57B00AA0833 /* YKDepartmentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5960275A24A0A57B00AA0833 /* YKDepartmentsVC.m */; };
+		5960275F24A0A61100AA0833 /* YKPatientAreasVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5960275E24A0A61100AA0833 /* YKPatientAreasVC.m */; };
+		5960276224A0A66300AA0833 /* YKProfessionalNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5960276124A0A66300AA0833 /* YKProfessionalNameVC.m */; };
+		5960276524A0C32D00AA0833 /* YKServiceSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5960276424A0C32D00AA0833 /* YKServiceSettingVC.m */; };
+		5963EADF24FF88A7001AE2C1 /* YKChatSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5963EADE24FF88A7001AE2C1 /* YKChatSqliteManager.m */; };
+		5967EF0324AEDD2B003FC023 /* YKChatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5967EF0224AEDD2B003FC023 /* YKChatDetailVC.m */; };
+		5967EF0924AEFE2C003FC023 /* YKChatSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5967EF0824AEFE2C003FC023 /* YKChatSelectView.m */; };
+		598930E524C6EDD400863EF2 /* YKMyQuestionnaireVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 598930E424C6EDD400863EF2 /* YKMyQuestionnaireVC.m */; };
+		598930E924C6EE1400863EF2 /* YKMyQuestionnaireCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 598930E824C6EE1400863EF2 /* YKMyQuestionnaireCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		260DC1B01CF6D372725D9F7D /* libPods-TTDoctor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TTDoctor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5915F88A249CCFAA0098CDE9 /* YKChangePasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChangePasswordVC.h; sourceTree = "<group>"; };
+		5915F88B249CCFAA0098CDE9 /* YKChangePasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChangePasswordVC.m; sourceTree = "<group>"; };
+		59236D6F2491DBF60075F64B /* YKTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTabBarVC.h; sourceTree = "<group>"; };
+		59236D702491DBF60075F64B /* YKTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKTabBarVC.m; sourceTree = "<group>"; };
+		59236D772491E10B0075F64B /* YKHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHomeVC.h; sourceTree = "<group>"; };
+		59236D782491E10B0075F64B /* YKHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHomeVC.m; sourceTree = "<group>"; };
+		59236D7A2491E1250075F64B /* YKPatientVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKPatientVC.h; sourceTree = "<group>"; };
+		59236D7B2491E1250075F64B /* YKPatientVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKPatientVC.m; sourceTree = "<group>"; };
+		59236D7D2491E1390075F64B /* YKChatListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatListVC.h; sourceTree = "<group>"; };
+		59236D7E2491E1390075F64B /* YKChatListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatListVC.m; sourceTree = "<group>"; };
+		59236D832491E1620075F64B /* YKMineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMineVC.h; sourceTree = "<group>"; };
+		59236D842491E1620075F64B /* YKMineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMineVC.m; sourceTree = "<group>"; };
+		59246B4E25E7927E00D766A4 /* YKRecordAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKRecordAnimation.h; sourceTree = "<group>"; };
+		59246B4F25E7927E00D766A4 /* YKRecordAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKRecordAnimation.m; sourceTree = "<group>"; };
+		592A552424E12F2900C14443 /* DKSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSTextView.h; sourceTree = "<group>"; };
+		592A552524E12F2900C14443 /* UIView+FrameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameTool.m"; sourceTree = "<group>"; };
+		592A552724E12F2900C14443 /* DKSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSTextView.m; sourceTree = "<group>"; };
+		592A552824E12F2900C14443 /* UIView+FrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameTool.h"; sourceTree = "<group>"; };
+		592A552D24E13A2800C14443 /* YKChatKeyboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatKeyboardView.h; sourceTree = "<group>"; };
+		592A552E24E13A2800C14443 /* YKChatKeyboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatKeyboardView.m; sourceTree = "<group>"; };
+		59375B272500BAE50072B700 /* YKChatDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatDBManager.h; sourceTree = "<group>"; };
+		59375B282500BAE50072B700 /* YKChatDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatDBManager.m; sourceTree = "<group>"; };
+		59375B2A2500CB5B0072B700 /* YKInputBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKInputBase64.h; sourceTree = "<group>"; };
+		59375B2B2500CB5B0072B700 /* YKInputBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKInputBase64.m; sourceTree = "<group>"; };
+		59375B2D2500D68E0072B700 /* YKChatMessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatMessageManager.h; sourceTree = "<group>"; };
+		59375B2E2500D68E0072B700 /* YKChatMessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatMessageManager.m; sourceTree = "<group>"; };
+		59375B312500F33F0072B700 /* YKTestChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTestChatVC.h; sourceTree = "<group>"; };
+		59375B322500F33F0072B700 /* YKTestChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKTestChatVC.m; sourceTree = "<group>"; };
+		593D304125C93C69000682E0 /* MyTestSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyTestSDK.framework; sourceTree = "<group>"; };
+		59452FF22499CC1800A62D05 /* YKAnnouncementVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAnnouncementVC.h; sourceTree = "<group>"; };
+		59452FF32499CC1800A62D05 /* YKAnnouncementVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAnnouncementVC.m; sourceTree = "<group>"; };
+		59452FF62499F4E100A62D05 /* YKAnnouncementCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAnnouncementCell.h; sourceTree = "<group>"; };
+		59452FF72499F4E100A62D05 /* YKAnnouncementCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAnnouncementCell.m; sourceTree = "<group>"; };
+		59452FFA249A05A700A62D05 /* YKWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKWebVC.h; sourceTree = "<group>"; };
+		59452FFB249A05A700A62D05 /* YKWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKWebVC.m; sourceTree = "<group>"; };
+		59453001249A0DBA00A62D05 /* YKPatientCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKPatientCell.h; sourceTree = "<group>"; };
+		59453002249A0DBA00A62D05 /* YKPatientCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKPatientCell.m; sourceTree = "<group>"; };
+		5945A59C250227DE002A230B /* YKChatBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatBaseCell.h; sourceTree = "<group>"; };
+		5945A59D250227DE002A230B /* YKChatBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatBaseCell.m; sourceTree = "<group>"; };
+		5945A59F2502284D002A230B /* YKChatMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatMessageCell.h; sourceTree = "<group>"; };
+		5945A5A02502284D002A230B /* YKChatMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatMessageCell.m; sourceTree = "<group>"; };
+		5945A5A325022D1D002A230B /* UIView+WZMChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZMChat.h"; sourceTree = "<group>"; };
+		5945A5A625022D1D002A230B /* UIView+WZMChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZMChat.m"; sourceTree = "<group>"; };
+		5945A5A9250230AF002A230B /* YKChatTextMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatTextMessageCell.h; sourceTree = "<group>"; };
+		5945A5AA250230AF002A230B /* YKChatTextMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatTextMessageCell.m; sourceTree = "<group>"; };
+		5945A5AC25023162002A230B /* YKChatImageMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatImageMessageCell.h; sourceTree = "<group>"; };
+		5945A5AD25023162002A230B /* YKChatImageMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatImageMessageCell.m; sourceTree = "<group>"; };
+		5946C89C249B384C00332B11 /* YKChatListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatListCell.h; sourceTree = "<group>"; };
+		5946C89D249B384C00332B11 /* YKChatListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatListCell.m; sourceTree = "<group>"; };
+		5946C89F249B41A900332B11 /* YKMineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMineCell.h; sourceTree = "<group>"; };
+		5946C8A0249B41A900332B11 /* YKMineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMineCell.m; sourceTree = "<group>"; };
+		5946C8A3249B50FE00332B11 /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopoverView.h; path = "TTDoctor/Third/New Group/PopoverView.h"; sourceTree = SOURCE_ROOT; };
+		5946C8A4249B50FE00332B11 /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
+		5946C8AC249B57F000332B11 /* YKQRCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKQRCodeVC.h; sourceTree = "<group>"; };
+		5946C8AD249B57F000332B11 /* YKQRCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKQRCodeVC.m; sourceTree = "<group>"; };
+		5946C8B0249B5C1800332B11 /* YKUserInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKUserInfoCell.h; sourceTree = "<group>"; };
+		5946C8B1249B5C1800332B11 /* YKUserInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUserInfoCell.m; sourceTree = "<group>"; };
+		5946C8B3249B5C3700332B11 /* YKUserInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKUserInfoVC.h; sourceTree = "<group>"; };
+		5946C8B4249B5C3700332B11 /* YKUserInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUserInfoVC.m; sourceTree = "<group>"; };
+		5946C8B6249B843E00332B11 /* YKChangePhoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChangePhoneVC.h; sourceTree = "<group>"; };
+		5946C8B7249B843E00332B11 /* YKChangePhoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChangePhoneVC.m; sourceTree = "<group>"; };
+		5946C8BC249B84A900332B11 /* YKProvinceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKProvinceVC.h; sourceTree = "<group>"; };
+		5946C8BD249B84A900332B11 /* YKProvinceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKProvinceVC.m; sourceTree = "<group>"; };
+		59484E0E248A5A9C00787EEE /* TTDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59484E11248A5A9C00787EEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		59484E12248A5A9C00787EEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		59484E1D248A5AAF00787EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59484E20248A5AAF00787EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59484E22248A5AAF00787EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59484E23248A5AAF00787EEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		59484E34248A5B7A00787EEE /* doctorPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = doctorPrefix.pch; sourceTree = "<group>"; };
+		59484E35248A5BCD00787EEE /* YKBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKBaseVC.h; sourceTree = "<group>"; };
+		59484E36248A5BCD00787EEE /* YKBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKBaseVC.m; sourceTree = "<group>"; };
+		5949D09824AC7FA400F740EE /* YKAddProjectPatientCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAddProjectPatientCell.h; sourceTree = "<group>"; };
+		5949D09924AC7FA400F740EE /* YKAddProjectPatientCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAddProjectPatientCell.m; sourceTree = "<group>"; };
+		594B126D24F50BE800635525 /* YKDoctorListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDoctorListVC.h; sourceTree = "<group>"; };
+		594B126E24F50BE800635525 /* YKDoctorListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDoctorListVC.m; sourceTree = "<group>"; };
+		594B127124F50E8500635525 /* CLTreeViewFirstLevelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewFirstLevelCell.h; sourceTree = "<group>"; };
+		594B127224F50E8500635525 /* CLTreeViewFirstLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewFirstLevelCell.m; sourceTree = "<group>"; };
+		594B127424F50EAA00635525 /* CLTreeViewSecondLevelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewSecondLevelCell.h; sourceTree = "<group>"; };
+		594B127524F50EAA00635525 /* CLTreeViewSecondLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewSecondLevelCell.m; sourceTree = "<group>"; };
+		594B127724F50EC100635525 /* CLTreeViewThirdLevelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewThirdLevelCell.h; sourceTree = "<group>"; };
+		594B127824F50EC100635525 /* CLTreeViewThirdLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewThirdLevelCell.m; sourceTree = "<group>"; };
+		594B127A24F50EE100635525 /* CLTreeViewFirstLevelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewFirstLevelModel.h; sourceTree = "<group>"; };
+		594B127B24F50EE100635525 /* CLTreeViewFirstLevelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewFirstLevelModel.m; sourceTree = "<group>"; };
+		594B127D24F50EF700635525 /* CLTreeViewSecondLevelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewSecondLevelModel.h; sourceTree = "<group>"; };
+		594B127E24F50EF700635525 /* CLTreeViewSecondLevelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewSecondLevelModel.m; sourceTree = "<group>"; };
+		594B128024F50F0F00635525 /* CLTreeViewThirdLevelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewThirdLevelModel.h; sourceTree = "<group>"; };
+		594B128124F50F0F00635525 /* CLTreeViewThirdLevelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewThirdLevelModel.m; sourceTree = "<group>"; };
+		594B128324F5100600635525 /* CLTreeViewNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTreeViewNode.h; sourceTree = "<group>"; };
+		594B128424F5100600635525 /* CLTreeViewNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTreeViewNode.m; sourceTree = "<group>"; };
+		594D200124A1A9540076EEB0 /* YKServiceSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKServiceSettingCell.h; sourceTree = "<group>"; };
+		594D200224A1A9540076EEB0 /* YKServiceSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKServiceSettingCell.m; sourceTree = "<group>"; };
+		594D200524A1D00F0076EEB0 /* YKSelfInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSelfInfoVC.h; sourceTree = "<group>"; };
+		594D200624A1D00F0076EEB0 /* YKSelfInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSelfInfoVC.m; sourceTree = "<group>"; };
+		594D200824A1EECC0076EEB0 /* YKMainSymptomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMainSymptomVC.h; sourceTree = "<group>"; };
+		594D200924A1EECC0076EEB0 /* YKMainSymptomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMainSymptomVC.m; sourceTree = "<group>"; };
+		594D200C24A1FFAD0076EEB0 /* YKMainSymptomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMainSymptomCell.h; sourceTree = "<group>"; };
+		594D200D24A1FFAD0076EEB0 /* YKMainSymptomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMainSymptomCell.m; sourceTree = "<group>"; };
+		594D3288249877BE0025B7FF /* BFCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFCButton.m; sourceTree = "<group>"; };
+		594D3289249877BE0025B7FF /* BFCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFCButton.h; sourceTree = "<group>"; };
+		594D328B249899540025B7FF /* YKHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHomeCell.h; sourceTree = "<group>"; };
+		594D328C249899540025B7FF /* YKHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHomeCell.m; sourceTree = "<group>"; };
+		594E444B24A2FE700004CC01 /* YKQuickReplyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKQuickReplyVC.h; sourceTree = "<group>"; };
+		594E444C24A2FE700004CC01 /* YKQuickReplyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKQuickReplyVC.m; sourceTree = "<group>"; };
+		594E444F24A335840004CC01 /* YKProjectDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKProjectDetailVC.h; sourceTree = "<group>"; };
+		594E445024A335840004CC01 /* YKProjectDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKProjectDetailVC.m; sourceTree = "<group>"; };
+		594E445324A337E30004CC01 /* YKProjectDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKProjectDetailCell.h; sourceTree = "<group>"; };
+		594E445424A337E30004CC01 /* YKProjectDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKProjectDetailCell.m; sourceTree = "<group>"; };
+		594FCEB0248DDE0600FDC416 /* YKNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKNetworkManager.h; sourceTree = "<group>"; };
+		594FCEB1248DDE0600FDC416 /* YKNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKNetworkManager.m; sourceTree = "<group>"; wrapsLines = 0; };
+		594FCEB3248DE55900FDC416 /* YKApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKApiService.h; sourceTree = "<group>"; };
+		594FCEB4248DE55900FDC416 /* YKApiService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKApiService.m; sourceTree = "<group>"; };
+		594FCEB6248DE6B800FDC416 /* YKHUDHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHUDHelper.h; sourceTree = "<group>"; };
+		594FCEB7248DE6B800FDC416 /* YKHUDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHUDHelper.m; sourceTree = "<group>"; };
+		594FCEB9248DE80600FDC416 /* YKLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLoginVC.h; sourceTree = "<group>"; };
+		594FCEBA248DE80600FDC416 /* YKLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLoginVC.m; sourceTree = "<group>"; };
+		594FCEBD248DE9D600FDC416 /* YKUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKUserDefaults.h; sourceTree = "<group>"; };
+		594FCEBE248DE9D600FDC416 /* YKUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUserDefaults.m; sourceTree = "<group>"; };
+		595099F1248F2DB300BC3479 /* YKGuidePagesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKGuidePagesVC.h; sourceTree = "<group>"; };
+		595099F2248F2DB300BC3479 /* YKGuidePagesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKGuidePagesVC.m; sourceTree = "<group>"; };
+		595099F4248F613E00BC3479 /* YKForgetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKForgetVC.h; sourceTree = "<group>"; };
+		595099F5248F613E00BC3479 /* YKForgetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKForgetVC.m; sourceTree = "<group>"; };
+		595099F7248F657C00BC3479 /* YKLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLoginCell.h; sourceTree = "<group>"; };
+		595099F8248F657D00BC3479 /* YKLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLoginCell.m; sourceTree = "<group>"; };
+		595099FB248F7A8C00BC3479 /* YKRegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKRegisterVC.h; sourceTree = "<group>"; };
+		595099FC248F7A8C00BC3479 /* YKRegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKRegisterVC.m; sourceTree = "<group>"; };
+		5951768B24E669D000985E19 /* YKMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMessageModel.h; sourceTree = "<group>"; };
+		5951768C24E669D000985E19 /* YKMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMessageModel.m; sourceTree = "<group>"; };
+		59537147250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatQuestionnaireMessageCell.h; sourceTree = "<group>"; };
+		59537148250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatQuestionnaireMessageCell.m; sourceTree = "<group>"; };
+		5954F72624FE509B00BD8F60 /* YKChatBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatBaseModel.h; sourceTree = "<group>"; };
+		5954F72724FE509B00BD8F60 /* YKChatBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatBaseModel.m; sourceTree = "<group>"; };
+		5954F72E24FE553400BD8F60 /* YKChatUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatUserModel.h; sourceTree = "<group>"; };
+		5954F72F24FE553400BD8F60 /* YKChatUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatUserModel.m; sourceTree = "<group>"; };
+		5954F73124FE555A00BD8F60 /* YKChatMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatMessageModel.h; sourceTree = "<group>"; };
+		5954F73224FE555A00BD8F60 /* YKChatMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatMessageModel.m; sourceTree = "<group>"; };
+		5954F73524FE583900BD8F60 /* YKChatHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatHelper.h; sourceTree = "<group>"; };
+		5954F73624FE583900BD8F60 /* YKChatHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatHelper.m; sourceTree = "<group>"; };
+		5956A1AA24B2F1D200EEE5E7 /* YKChatDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatDetailCell.h; sourceTree = "<group>"; };
+		5956A1AB24B2F1D200EEE5E7 /* YKChatDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatDetailCell.m; sourceTree = "<group>"; };
+		59596390249723FF00BCF83A /* YKAlertHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAlertHelper.h; sourceTree = "<group>"; };
+		59596391249723FF00BCF83A /* YKAlertHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAlertHelper.m; sourceTree = "<group>"; };
+		5959639324972A6F00BCF83A /* NSString+BFCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BFCAddition.h"; sourceTree = "<group>"; };
+		5959639424972A6F00BCF83A /* NSString+BFCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BFCAddition.m"; sourceTree = "<group>"; };
+		59596397249762ED00BCF83A /* YKDoctor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDoctor.h; sourceTree = "<group>"; };
+		59596398249762ED00BCF83A /* YKDoctor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDoctor.m; sourceTree = "<group>"; };
+		5959639A249769B900BCF83A /* YKDoctorHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDoctorHelper.h; sourceTree = "<group>"; };
+		5959639B249769B900BCF83A /* YKDoctorHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDoctorHelper.m; sourceTree = "<group>"; };
+		595C111E24A9EE0F006A18D8 /* YKProjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKProjectVC.h; sourceTree = "<group>"; };
+		595C111F24A9EE0F006A18D8 /* YKProjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKProjectVC.m; sourceTree = "<group>"; };
+		595C112124A9EEA9006A18D8 /* YKAddProjectPatientVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAddProjectPatientVC.h; sourceTree = "<group>"; };
+		595C112224A9EEA9006A18D8 /* YKAddProjectPatientVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAddProjectPatientVC.m; sourceTree = "<group>"; };
+		595EBBAE24EA54FA007D0206 /* WHDebugTempVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugTempVC.h; sourceTree = "<group>"; };
+		595EBBAF24EA54FA007D0206 /* WHDebugToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugToolManager.m; sourceTree = "<group>"; };
+		595EBBB024EA54FA007D0206 /* WHDebugConsoleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugConsoleLabel.h; sourceTree = "<group>"; };
+		595EBBB124EA54FA007D0206 /* WHDebugMemoryMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugMemoryMonitor.h; sourceTree = "<group>"; };
+		595EBBB224EA54FA007D0206 /* WHDebugFPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugFPSMonitor.h; sourceTree = "<group>"; };
+		595EBBB324EA54FA007D0206 /* WHDebugMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugMonitor.h; sourceTree = "<group>"; };
+		595EBBB424EA54FA007D0206 /* WHDebugCpuMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugCpuMonitor.h; sourceTree = "<group>"; };
+		595EBBB524EA54FA007D0206 /* WHDebugToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugToolManager.h; sourceTree = "<group>"; };
+		595EBBB624EA54FA007D0206 /* WHDebugTempVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugTempVC.m; sourceTree = "<group>"; };
+		595EBBB724EA54FA007D0206 /* WHDebugFPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugFPSMonitor.m; sourceTree = "<group>"; };
+		595EBBB824EA54FA007D0206 /* WHDebugMemoryMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugMemoryMonitor.m; sourceTree = "<group>"; };
+		595EBBB924EA54FA007D0206 /* WHDebugConsoleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugConsoleLabel.m; sourceTree = "<group>"; };
+		595EBBBA24EA54FA007D0206 /* WHDebugMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugMonitor.m; sourceTree = "<group>"; };
+		595EBBBB24EA54FA007D0206 /* WHDebugCpuMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugCpuMonitor.m; sourceTree = "<group>"; };
+		5960275624A0A53700AA0833 /* YKHospitalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHospitalVC.h; sourceTree = "<group>"; };
+		5960275724A0A53700AA0833 /* YKHospitalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHospitalVC.m; sourceTree = "<group>"; };
+		5960275924A0A57B00AA0833 /* YKDepartmentsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDepartmentsVC.h; sourceTree = "<group>"; };
+		5960275A24A0A57B00AA0833 /* YKDepartmentsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDepartmentsVC.m; sourceTree = "<group>"; };
+		5960275D24A0A61100AA0833 /* YKPatientAreasVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKPatientAreasVC.h; sourceTree = "<group>"; };
+		5960275E24A0A61100AA0833 /* YKPatientAreasVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKPatientAreasVC.m; sourceTree = "<group>"; };
+		5960276024A0A66300AA0833 /* YKProfessionalNameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKProfessionalNameVC.h; sourceTree = "<group>"; };
+		5960276124A0A66300AA0833 /* YKProfessionalNameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKProfessionalNameVC.m; sourceTree = "<group>"; };
+		5960276324A0C32D00AA0833 /* YKServiceSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKServiceSettingVC.h; sourceTree = "<group>"; };
+		5960276424A0C32D00AA0833 /* YKServiceSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKServiceSettingVC.m; sourceTree = "<group>"; };
+		5963EADD24FF88A7001AE2C1 /* YKChatSqliteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatSqliteManager.h; sourceTree = "<group>"; };
+		5963EADE24FF88A7001AE2C1 /* YKChatSqliteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatSqliteManager.m; sourceTree = "<group>"; };
+		5967EF0124AEDD2B003FC023 /* YKChatDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatDetailVC.h; sourceTree = "<group>"; };
+		5967EF0224AEDD2B003FC023 /* YKChatDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatDetailVC.m; sourceTree = "<group>"; };
+		5967EF0724AEFE2C003FC023 /* YKChatSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatSelectView.h; sourceTree = "<group>"; };
+		5967EF0824AEFE2C003FC023 /* YKChatSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatSelectView.m; sourceTree = "<group>"; };
+		598930E324C6EDD400863EF2 /* YKMyQuestionnaireVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMyQuestionnaireVC.h; sourceTree = "<group>"; };
+		598930E424C6EDD400863EF2 /* YKMyQuestionnaireVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMyQuestionnaireVC.m; sourceTree = "<group>"; };
+		598930E724C6EE1400863EF2 /* YKMyQuestionnaireCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMyQuestionnaireCell.h; sourceTree = "<group>"; };
+		598930E824C6EE1400863EF2 /* YKMyQuestionnaireCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMyQuestionnaireCell.m; sourceTree = "<group>"; };
+		DC08071A343379DDA3E894AF /* Pods-TTDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTDoctor.debug.xcconfig"; path = "Target Support Files/Pods-TTDoctor/Pods-TTDoctor.debug.xcconfig"; sourceTree = "<group>"; };
+		F958522930956F2C93EA27B9 /* Pods-TTDoctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTDoctor.release.xcconfig"; path = "Target Support Files/Pods-TTDoctor/Pods-TTDoctor.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59484E0B248A5A9C00787EEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12322844377009887BB3F55F /* libPods-TTDoctor.a in Frameworks */,
+				593D304225C93C69000682E0 /* MyTestSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		492A15E2C7907249F76C6A65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				260DC1B01CF6D372725D9F7D /* libPods-TTDoctor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59236D722491E01A0075F64B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				59236D832491E1620075F64B /* YKMineVC.h */,
+				59236D842491E1620075F64B /* YKMineVC.m */,
+				5946C8A6249B552800332B11 /* UserInfo */,
+				5946C8AA249B578A00332B11 /* QRCode */,
+				5946C8AB249B579B00332B11 /* ServiceSetting */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		59236D732491E01C0075F64B /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				595C111E24A9EE0F006A18D8 /* YKProjectVC.h */,
+				595C111F24A9EE0F006A18D8 /* YKProjectVC.m */,
+				594E444E24A334F60004CC01 /* SubVCs */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		59236D742491E01F0075F64B /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				59236D7D2491E1390075F64B /* YKChatListVC.h */,
+				59236D7E2491E1390075F64B /* YKChatListVC.m */,
+				5967EF0124AEDD2B003FC023 /* YKChatDetailVC.h */,
+				5967EF0224AEDD2B003FC023 /* YKChatDetailVC.m */,
+				598930E224C6ECF200863EF2 /* MyQuestionnaire */,
+				598930E124C6ECEE00863EF2 /* Teach */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		59236D752491E0210075F64B /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				59236D7A2491E1250075F64B /* YKPatientVC.h */,
+				59236D7B2491E1250075F64B /* YKPatientVC.m */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		59236D762491E0240075F64B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				59236D772491E10B0075F64B /* YKHomeVC.h */,
+				59236D782491E10B0075F64B /* YKHomeVC.m */,
+				59452FF12499CBEE00A62D05 /* Announcement */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		592A552324E12F2900C14443 /* DKSKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				592A552424E12F2900C14443 /* DKSTextView.h */,
+				592A552724E12F2900C14443 /* DKSTextView.m */,
+				592A552824E12F2900C14443 /* UIView+FrameTool.h */,
+				592A552524E12F2900C14443 /* UIView+FrameTool.m */,
+			);
+			path = DKSKeyBoard;
+			sourceTree = "<group>";
+		};
+		59375B302500F30F0072B700 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				59375B312500F33F0072B700 /* YKTestChatVC.h */,
+				59375B322500F33F0072B700 /* YKTestChatVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		593D304025C93C48000682E0 /* MyTestSDK */ = {
+			isa = PBXGroup;
+			children = (
+				593D304125C93C69000682E0 /* MyTestSDK.framework */,
+			);
+			path = MyTestSDK;
+			sourceTree = "<group>";
+		};
+		59452FF12499CBEE00A62D05 /* Announcement */ = {
+			isa = PBXGroup;
+			children = (
+				59452FF22499CC1800A62D05 /* YKAnnouncementVC.h */,
+				59452FF32499CC1800A62D05 /* YKAnnouncementVC.m */,
+			);
+			path = Announcement;
+			sourceTree = "<group>";
+		};
+		59452FF52499F4B700A62D05 /* Announcement */ = {
+			isa = PBXGroup;
+			children = (
+				59452FF62499F4E100A62D05 /* YKAnnouncementCell.h */,
+				59452FF72499F4E100A62D05 /* YKAnnouncementCell.m */,
+			);
+			path = Announcement;
+			sourceTree = "<group>";
+		};
+		59452FF9249A047700A62D05 /* WebVC */ = {
+			isa = PBXGroup;
+			children = (
+				59452FFA249A05A700A62D05 /* YKWebVC.h */,
+				59452FFB249A05A700A62D05 /* YKWebVC.m */,
+			);
+			path = WebVC;
+			sourceTree = "<group>";
+		};
+		59452FFD249A0D6600A62D05 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				59453001249A0DBA00A62D05 /* YKPatientCell.h */,
+				59453002249A0DBA00A62D05 /* YKPatientCell.m */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		59452FFE249A0D7A00A62D05 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				5946C89C249B384C00332B11 /* YKChatListCell.h */,
+				5946C89D249B384C00332B11 /* YKChatListCell.m */,
+				592A552D24E13A2800C14443 /* YKChatKeyboardView.h */,
+				592A552E24E13A2800C14443 /* YKChatKeyboardView.m */,
+				59246B4E25E7927E00D766A4 /* YKRecordAnimation.h */,
+				59246B4F25E7927E00D766A4 /* YKRecordAnimation.m */,
+				5967EF0724AEFE2C003FC023 /* YKChatSelectView.h */,
+				5967EF0824AEFE2C003FC023 /* YKChatSelectView.m */,
+				5956A1AA24B2F1D200EEE5E7 /* YKChatDetailCell.h */,
+				5956A1AB24B2F1D200EEE5E7 /* YKChatDetailCell.m */,
+				598930E624C6EDE200863EF2 /* MyQuestionnaire */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		59452FFF249A0D8200A62D05 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				594E445224A337B80004CC01 /* SubVCs */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		59453000249A0D8F00A62D05 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				5946C89F249B41A900332B11 /* YKMineCell.h */,
+				5946C8A0249B41A900332B11 /* YKMineCell.m */,
+				5946C8AF249B5BCF00332B11 /* UserInfo */,
+				594D200024A1A90D0076EEB0 /* ServiceSetting */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		5945A59A25022729002A230B /* MsgCell */ = {
+			isa = PBXGroup;
+			children = (
+				5945A59B25022790002A230B /* BaseCell */,
+				5945A59F2502284D002A230B /* YKChatMessageCell.h */,
+				5945A5A02502284D002A230B /* YKChatMessageCell.m */,
+				5945A5A9250230AF002A230B /* YKChatTextMessageCell.h */,
+				5945A5AA250230AF002A230B /* YKChatTextMessageCell.m */,
+				5945A5AC25023162002A230B /* YKChatImageMessageCell.h */,
+				5945A5AD25023162002A230B /* YKChatImageMessageCell.m */,
+				59537147250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.h */,
+				59537148250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.m */,
+			);
+			path = MsgCell;
+			sourceTree = "<group>";
+		};
+		5945A59B25022790002A230B /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				5945A59C250227DE002A230B /* YKChatBaseCell.h */,
+				5945A59D250227DE002A230B /* YKChatBaseCell.m */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
+		5945A5A225022D1D002A230B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5945A5A325022D1D002A230B /* UIView+WZMChat.h */,
+				5945A5A625022D1D002A230B /* UIView+WZMChat.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5946C8A2249B50EA00332B11 /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				5946C8A3249B50FE00332B11 /* PopoverView.h */,
+				5946C8A4249B50FE00332B11 /* PopoverView.m */,
+			);
+			path = PopoverView;
+			sourceTree = "<group>";
+		};
+		5946C8A6249B552800332B11 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5946C8B3249B5C3700332B11 /* YKUserInfoVC.h */,
+				5946C8B4249B5C3700332B11 /* YKUserInfoVC.m */,
+				5960275C24A0A5B100AA0833 /* SubVCs */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		5946C8AA249B578A00332B11 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				5946C8AC249B57F000332B11 /* YKQRCodeVC.h */,
+				5946C8AD249B57F000332B11 /* YKQRCodeVC.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		5946C8AB249B579B00332B11 /* ServiceSetting */ = {
+			isa = PBXGroup;
+			children = (
+				5960276324A0C32D00AA0833 /* YKServiceSettingVC.h */,
+				5960276424A0C32D00AA0833 /* YKServiceSettingVC.m */,
+				594D200424A1CF7C0076EEB0 /* SubVCs */,
+			);
+			path = ServiceSetting;
+			sourceTree = "<group>";
+		};
+		5946C8AF249B5BCF00332B11 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5946C8B0249B5C1800332B11 /* YKUserInfoCell.h */,
+				5946C8B1249B5C1800332B11 /* YKUserInfoCell.m */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		59484E05248A5A9B00787EEE = {
+			isa = PBXGroup;
+			children = (
+				59484E10248A5A9C00787EEE /* TTDoctor */,
+				59484E0F248A5A9C00787EEE /* Products */,
+				678F0C60433D1CB16E7D82F4 /* Pods */,
+				492A15E2C7907249F76C6A65 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59484E0F248A5A9C00787EEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59484E0E248A5A9C00787EEE /* TTDoctor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59484E10248A5A9C00787EEE /* TTDoctor */ = {
+			isa = PBXGroup;
+			children = (
+				5954F72324FE4F5D00BD8F60 /* Chat */,
+				59484E33248A5B0D00787EEE /* Application */,
+				59484E32248A5B0B00787EEE /* Controller */,
+				59484E31248A5B0900787EEE /* View */,
+				59484E30248A5B0800787EEE /* Model */,
+				59484E2F248A5B0600787EEE /* Helper */,
+				59484E2E248A5B0500787EEE /* NetWork */,
+				59484E2D248A5B0300787EEE /* ApiService */,
+				59484E2C248A5B0100787EEE /* Category */,
+				59484E2B248A5AFE00787EEE /* Third */,
+				59484E1D248A5AAF00787EEE /* Assets.xcassets */,
+				59484E1F248A5AAF00787EEE /* LaunchScreen.storyboard */,
+				59484E22248A5AAF00787EEE /* Info.plist */,
+				59484E23248A5AAF00787EEE /* main.m */,
+			);
+			path = TTDoctor;
+			sourceTree = "<group>";
+		};
+		59484E2B248A5AFE00787EEE /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				593D304025C93C48000682E0 /* MyTestSDK */,
+				595EBBAD24EA54FA007D0206 /* WHDebugTool */,
+				592A552324E12F2900C14443 /* DKSKeyBoard */,
+				5946C8A2249B50EA00332B11 /* PopoverView */,
+				594D3287249877BE0025B7FF /* BFButton */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		59484E2C248A5B0100787EEE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5959639624972A7300BCF83A /* NSString+BFCAddition */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		59484E2D248A5B0300787EEE /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				594FCEB3248DE55900FDC416 /* YKApiService.h */,
+				594FCEB4248DE55900FDC416 /* YKApiService.m */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		59484E2E248A5B0500787EEE /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				594FCEB0248DDE0600FDC416 /* YKNetworkManager.h */,
+				594FCEB1248DDE0600FDC416 /* YKNetworkManager.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		59484E2F248A5B0600787EEE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5959639A249769B900BCF83A /* YKDoctorHelper.h */,
+				5959639B249769B900BCF83A /* YKDoctorHelper.m */,
+				594FCEB6248DE6B800FDC416 /* YKHUDHelper.h */,
+				594FCEB7248DE6B800FDC416 /* YKHUDHelper.m */,
+				594FCEBD248DE9D600FDC416 /* YKUserDefaults.h */,
+				594FCEBE248DE9D600FDC416 /* YKUserDefaults.m */,
+				59596390249723FF00BCF83A /* YKAlertHelper.h */,
+				59596391249723FF00BCF83A /* YKAlertHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		59484E30248A5B0800787EEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59596397249762ED00BCF83A /* YKDoctor.h */,
+				59596398249762ED00BCF83A /* YKDoctor.m */,
+				5951768B24E669D000985E19 /* YKMessageModel.h */,
+				5951768C24E669D000985E19 /* YKMessageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59484E31248A5B0900787EEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				594B127024F50CD500635525 /* CLTreeView */,
+				595099FA248F658C00BC3479 /* Login */,
+				594D328E2498995C0025B7FF /* Home */,
+				59452FFD249A0D6600A62D05 /* Patient */,
+				59452FFE249A0D7A00A62D05 /* ChatList */,
+				59452FFF249A0D8200A62D05 /* Project */,
+				59453000249A0D8F00A62D05 /* Mine */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59484E32248A5B0B00787EEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59452FF9249A047700A62D05 /* WebVC */,
+				595099F0248F2D7600BC3479 /* guidePagesVC */,
+				59484E38248A5BD000787EEE /* Base */,
+				59484E39248A5C1D00787EEE /* Login */,
+				59236D762491E0240075F64B /* Home */,
+				59236D752491E0210075F64B /* Patient */,
+				59236D742491E01F0075F64B /* ChatList */,
+				59236D732491E01C0075F64B /* Project */,
+				59236D722491E01A0075F64B /* Mine */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59484E33248A5B0D00787EEE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				59484E11248A5A9C00787EEE /* AppDelegate.h */,
+				59484E12248A5A9C00787EEE /* AppDelegate.m */,
+				59484E34248A5B7A00787EEE /* doctorPrefix.pch */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		59484E38248A5BD000787EEE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				59484E35248A5BCD00787EEE /* YKBaseVC.h */,
+				59484E36248A5BCD00787EEE /* YKBaseVC.m */,
+				59236D6F2491DBF60075F64B /* YKTabBarVC.h */,
+				59236D702491DBF60075F64B /* YKTabBarVC.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		59484E39248A5C1D00787EEE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				594FCEB9248DE80600FDC416 /* YKLoginVC.h */,
+				594FCEBA248DE80600FDC416 /* YKLoginVC.m */,
+				595099F4248F613E00BC3479 /* YKForgetVC.h */,
+				595099F5248F613E00BC3479 /* YKForgetVC.m */,
+				595099FB248F7A8C00BC3479 /* YKRegisterVC.h */,
+				595099FC248F7A8C00BC3479 /* YKRegisterVC.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		594B127024F50CD500635525 /* CLTreeView */ = {
+			isa = PBXGroup;
+			children = (
+				594B126D24F50BE800635525 /* YKDoctorListVC.h */,
+				594B126E24F50BE800635525 /* YKDoctorListVC.m */,
+				594B127124F50E8500635525 /* CLTreeViewFirstLevelCell.h */,
+				594B127224F50E8500635525 /* CLTreeViewFirstLevelCell.m */,
+				594B127A24F50EE100635525 /* CLTreeViewFirstLevelModel.h */,
+				594B127B24F50EE100635525 /* CLTreeViewFirstLevelModel.m */,
+				594B127424F50EAA00635525 /* CLTreeViewSecondLevelCell.h */,
+				594B127524F50EAA00635525 /* CLTreeViewSecondLevelCell.m */,
+				594B127D24F50EF700635525 /* CLTreeViewSecondLevelModel.h */,
+				594B127E24F50EF700635525 /* CLTreeViewSecondLevelModel.m */,
+				594B127724F50EC100635525 /* CLTreeViewThirdLevelCell.h */,
+				594B127824F50EC100635525 /* CLTreeViewThirdLevelCell.m */,
+				594B128024F50F0F00635525 /* CLTreeViewThirdLevelModel.h */,
+				594B128124F50F0F00635525 /* CLTreeViewThirdLevelModel.m */,
+				594B128324F5100600635525 /* CLTreeViewNode.h */,
+				594B128424F5100600635525 /* CLTreeViewNode.m */,
+			);
+			path = CLTreeView;
+			sourceTree = "<group>";
+		};
+		594D200024A1A90D0076EEB0 /* ServiceSetting */ = {
+			isa = PBXGroup;
+			children = (
+				594D200124A1A9540076EEB0 /* YKServiceSettingCell.h */,
+				594D200224A1A9540076EEB0 /* YKServiceSettingCell.m */,
+				594D200B24A1FF5A0076EEB0 /* SubViews */,
+			);
+			path = ServiceSetting;
+			sourceTree = "<group>";
+		};
+		594D200424A1CF7C0076EEB0 /* SubVCs */ = {
+			isa = PBXGroup;
+			children = (
+				594D200524A1D00F0076EEB0 /* YKSelfInfoVC.h */,
+				594D200624A1D00F0076EEB0 /* YKSelfInfoVC.m */,
+				594D200824A1EECC0076EEB0 /* YKMainSymptomVC.h */,
+				594D200924A1EECC0076EEB0 /* YKMainSymptomVC.m */,
+				594E444B24A2FE700004CC01 /* YKQuickReplyVC.h */,
+				594E444C24A2FE700004CC01 /* YKQuickReplyVC.m */,
+			);
+			path = SubVCs;
+			sourceTree = "<group>";
+		};
+		594D200B24A1FF5A0076EEB0 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				594D200C24A1FFAD0076EEB0 /* YKMainSymptomCell.h */,
+				594D200D24A1FFAD0076EEB0 /* YKMainSymptomCell.m */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		594D3287249877BE0025B7FF /* BFButton */ = {
+			isa = PBXGroup;
+			children = (
+				594D3289249877BE0025B7FF /* BFCButton.h */,
+				594D3288249877BE0025B7FF /* BFCButton.m */,
+			);
+			path = BFButton;
+			sourceTree = "<group>";
+		};
+		594D328E2498995C0025B7FF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				594D328B249899540025B7FF /* YKHomeCell.h */,
+				594D328C249899540025B7FF /* YKHomeCell.m */,
+				59452FF52499F4B700A62D05 /* Announcement */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		594E444E24A334F60004CC01 /* SubVCs */ = {
+			isa = PBXGroup;
+			children = (
+				594E444F24A335840004CC01 /* YKProjectDetailVC.h */,
+				594E445024A335840004CC01 /* YKProjectDetailVC.m */,
+				595C112124A9EEA9006A18D8 /* YKAddProjectPatientVC.h */,
+				595C112224A9EEA9006A18D8 /* YKAddProjectPatientVC.m */,
+			);
+			path = SubVCs;
+			sourceTree = "<group>";
+		};
+		594E445224A337B80004CC01 /* SubVCs */ = {
+			isa = PBXGroup;
+			children = (
+				594E445324A337E30004CC01 /* YKProjectDetailCell.h */,
+				594E445424A337E30004CC01 /* YKProjectDetailCell.m */,
+				5949D09824AC7FA400F740EE /* YKAddProjectPatientCell.h */,
+				5949D09924AC7FA400F740EE /* YKAddProjectPatientCell.m */,
+			);
+			path = SubVCs;
+			sourceTree = "<group>";
+		};
+		595099F0248F2D7600BC3479 /* guidePagesVC */ = {
+			isa = PBXGroup;
+			children = (
+				595099F1248F2DB300BC3479 /* YKGuidePagesVC.h */,
+				595099F2248F2DB300BC3479 /* YKGuidePagesVC.m */,
+			);
+			path = guidePagesVC;
+			sourceTree = "<group>";
+		};
+		595099FA248F658C00BC3479 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				595099F7248F657C00BC3479 /* YKLoginCell.h */,
+				595099F8248F657D00BC3479 /* YKLoginCell.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5954F72324FE4F5D00BD8F60 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				5945A5A225022D1D002A230B /* Category */,
+				59375B302500F30F0072B700 /* ViewController */,
+				5945A59A25022729002A230B /* MsgCell */,
+				5954F72424FE505800BD8F60 /* Model */,
+				5954F73424FE574D00BD8F60 /* Common */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		5954F72424FE505800BD8F60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5954F72524FE506800BD8F60 /* YKChatBaseModel */,
+				5954F72A24FE529200BD8F60 /* YKChatuserModel */,
+				5954F72924FE528E00BD8F60 /* YKChatMessageModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5954F72524FE506800BD8F60 /* YKChatBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				5954F72624FE509B00BD8F60 /* YKChatBaseModel.h */,
+				5954F72724FE509B00BD8F60 /* YKChatBaseModel.m */,
+			);
+			path = YKChatBaseModel;
+			sourceTree = "<group>";
+		};
+		5954F72924FE528E00BD8F60 /* YKChatMessageModel */ = {
+			isa = PBXGroup;
+			children = (
+				5954F73124FE555A00BD8F60 /* YKChatMessageModel.h */,
+				5954F73224FE555A00BD8F60 /* YKChatMessageModel.m */,
+			);
+			path = YKChatMessageModel;
+			sourceTree = "<group>";
+		};
+		5954F72A24FE529200BD8F60 /* YKChatuserModel */ = {
+			isa = PBXGroup;
+			children = (
+				5954F72E24FE553400BD8F60 /* YKChatUserModel.h */,
+				5954F72F24FE553400BD8F60 /* YKChatUserModel.m */,
+			);
+			path = YKChatuserModel;
+			sourceTree = "<group>";
+		};
+		5954F73424FE574D00BD8F60 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5954F73524FE583900BD8F60 /* YKChatHelper.h */,
+				5954F73624FE583900BD8F60 /* YKChatHelper.m */,
+				59375B272500BAE50072B700 /* YKChatDBManager.h */,
+				59375B282500BAE50072B700 /* YKChatDBManager.m */,
+				5963EADD24FF88A7001AE2C1 /* YKChatSqliteManager.h */,
+				5963EADE24FF88A7001AE2C1 /* YKChatSqliteManager.m */,
+				59375B2A2500CB5B0072B700 /* YKInputBase64.h */,
+				59375B2B2500CB5B0072B700 /* YKInputBase64.m */,
+				59375B2D2500D68E0072B700 /* YKChatMessageManager.h */,
+				59375B2E2500D68E0072B700 /* YKChatMessageManager.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5959639624972A7300BCF83A /* NSString+BFCAddition */ = {
+			isa = PBXGroup;
+			children = (
+				5959639324972A6F00BCF83A /* NSString+BFCAddition.h */,
+				5959639424972A6F00BCF83A /* NSString+BFCAddition.m */,
+			);
+			path = "NSString+BFCAddition";
+			sourceTree = "<group>";
+		};
+		595EBBAD24EA54FA007D0206 /* WHDebugTool */ = {
+			isa = PBXGroup;
+			children = (
+				595EBBB024EA54FA007D0206 /* WHDebugConsoleLabel.h */,
+				595EBBB924EA54FA007D0206 /* WHDebugConsoleLabel.m */,
+				595EBBB424EA54FA007D0206 /* WHDebugCpuMonitor.h */,
+				595EBBBB24EA54FA007D0206 /* WHDebugCpuMonitor.m */,
+				595EBBB224EA54FA007D0206 /* WHDebugFPSMonitor.h */,
+				595EBBB724EA54FA007D0206 /* WHDebugFPSMonitor.m */,
+				595EBBB124EA54FA007D0206 /* WHDebugMemoryMonitor.h */,
+				595EBBB824EA54FA007D0206 /* WHDebugMemoryMonitor.m */,
+				595EBBB324EA54FA007D0206 /* WHDebugMonitor.h */,
+				595EBBBA24EA54FA007D0206 /* WHDebugMonitor.m */,
+				595EBBAE24EA54FA007D0206 /* WHDebugTempVC.h */,
+				595EBBB624EA54FA007D0206 /* WHDebugTempVC.m */,
+				595EBBB524EA54FA007D0206 /* WHDebugToolManager.h */,
+				595EBBAF24EA54FA007D0206 /* WHDebugToolManager.m */,
+			);
+			path = WHDebugTool;
+			sourceTree = "<group>";
+		};
+		5960275C24A0A5B100AA0833 /* SubVCs */ = {
+			isa = PBXGroup;
+			children = (
+				5946C8B6249B843E00332B11 /* YKChangePhoneVC.h */,
+				5946C8B7249B843E00332B11 /* YKChangePhoneVC.m */,
+				5915F88A249CCFAA0098CDE9 /* YKChangePasswordVC.h */,
+				5915F88B249CCFAA0098CDE9 /* YKChangePasswordVC.m */,
+				5946C8BC249B84A900332B11 /* YKProvinceVC.h */,
+				5946C8BD249B84A900332B11 /* YKProvinceVC.m */,
+				5960275624A0A53700AA0833 /* YKHospitalVC.h */,
+				5960275724A0A53700AA0833 /* YKHospitalVC.m */,
+				5960275924A0A57B00AA0833 /* YKDepartmentsVC.h */,
+				5960275A24A0A57B00AA0833 /* YKDepartmentsVC.m */,
+				5960275D24A0A61100AA0833 /* YKPatientAreasVC.h */,
+				5960275E24A0A61100AA0833 /* YKPatientAreasVC.m */,
+				5960276024A0A66300AA0833 /* YKProfessionalNameVC.h */,
+				5960276124A0A66300AA0833 /* YKProfessionalNameVC.m */,
+			);
+			path = SubVCs;
+			sourceTree = "<group>";
+		};
+		598930E124C6ECEE00863EF2 /* Teach */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teach;
+			sourceTree = "<group>";
+		};
+		598930E224C6ECF200863EF2 /* MyQuestionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				598930E324C6EDD400863EF2 /* YKMyQuestionnaireVC.h */,
+				598930E424C6EDD400863EF2 /* YKMyQuestionnaireVC.m */,
+			);
+			path = MyQuestionnaire;
+			sourceTree = "<group>";
+		};
+		598930E624C6EDE200863EF2 /* MyQuestionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				598930E724C6EE1400863EF2 /* YKMyQuestionnaireCell.h */,
+				598930E824C6EE1400863EF2 /* YKMyQuestionnaireCell.m */,
+			);
+			path = MyQuestionnaire;
+			sourceTree = "<group>";
+		};
+		678F0C60433D1CB16E7D82F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC08071A343379DDA3E894AF /* Pods-TTDoctor.debug.xcconfig */,
+				F958522930956F2C93EA27B9 /* Pods-TTDoctor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59484E0D248A5A9C00787EEE /* TTDoctor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59484E27248A5AAF00787EEE /* Build configuration list for PBXNativeTarget "TTDoctor" */;
+			buildPhases = (
+				D5C660E5C1E2F663A5976868 /* [CP] Check Pods Manifest.lock */,
+				59484E0A248A5A9C00787EEE /* Sources */,
+				59484E0B248A5A9C00787EEE /* Frameworks */,
+				59484E0C248A5A9C00787EEE /* Resources */,
+				C6EDCF1459EAD216363D1501 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTDoctor;
+			productName = TTDoctor;
+			productReference = 59484E0E248A5A9C00787EEE /* TTDoctor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59484E06248A5A9B00787EEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = YK;
+				TargetAttributes = {
+					59484E0D248A5A9C00787EEE = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 59484E09248A5A9B00787EEE /* Build configuration list for PBXProject "TTDoctor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59484E05248A5A9B00787EEE;
+			productRefGroup = 59484E0F248A5A9C00787EEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59484E0D248A5A9C00787EEE /* TTDoctor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59484E0C248A5A9C00787EEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59484E21248A5AAF00787EEE /* LaunchScreen.storyboard in Resources */,
+				59484E1E248A5AAF00787EEE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6EDCF1459EAD216363D1501 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TTDoctor/Pods-TTDoctor-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TTDoctor/Pods-TTDoctor-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TTDoctor/Pods-TTDoctor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5C660E5C1E2F663A5976868 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TTDoctor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59484E0A248A5A9C00787EEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59375B2F2500D68E0072B700 /* YKChatMessageManager.m in Sources */,
+				5946C8B2249B5C1800332B11 /* YKUserInfoCell.m in Sources */,
+				594B127C24F50EE100635525 /* CLTreeViewFirstLevelModel.m in Sources */,
+				59484E13248A5A9C00787EEE /* AppDelegate.m in Sources */,
+				594FCEB5248DE55900FDC416 /* YKApiService.m in Sources */,
+				5945A5A825022D1D002A230B /* UIView+WZMChat.m in Sources */,
+				5967EF0324AEDD2B003FC023 /* YKChatDetailVC.m in Sources */,
+				5960276524A0C32D00AA0833 /* YKServiceSettingVC.m in Sources */,
+				59452FF82499F4E100A62D05 /* YKAnnouncementCell.m in Sources */,
+				5946C8B5249B5C3700332B11 /* YKUserInfoVC.m in Sources */,
+				592A552F24E13A2800C14443 /* YKChatKeyboardView.m in Sources */,
+				595C112024A9EE0F006A18D8 /* YKProjectVC.m in Sources */,
+				5960276224A0A66300AA0833 /* YKProfessionalNameVC.m in Sources */,
+				595EBBC024EA54FB007D0206 /* WHDebugConsoleLabel.m in Sources */,
+				59236D7F2491E1390075F64B /* YKChatListVC.m in Sources */,
+				594D200724A1D00F0076EEB0 /* YKSelfInfoVC.m in Sources */,
+				5959639524972A6F00BCF83A /* NSString+BFCAddition.m in Sources */,
+				5954F73324FE555A00BD8F60 /* YKChatMessageModel.m in Sources */,
+				59236D712491DBF60075F64B /* YKTabBarVC.m in Sources */,
+				5945A59E250227DE002A230B /* YKChatBaseCell.m in Sources */,
+				594FCEB8248DE6B800FDC416 /* YKHUDHelper.m in Sources */,
+				5945A5AE25023162002A230B /* YKChatImageMessageCell.m in Sources */,
+				594E444D24A2FE700004CC01 /* YKQuickReplyVC.m in Sources */,
+				595EBBC224EA54FB007D0206 /* WHDebugCpuMonitor.m in Sources */,
+				595C112324A9EEA9006A18D8 /* YKAddProjectPatientVC.m in Sources */,
+				598930E524C6EDD400863EF2 /* YKMyQuestionnaireVC.m in Sources */,
+				59236D852491E1620075F64B /* YKMineVC.m in Sources */,
+				595099FD248F7A8C00BC3479 /* YKRegisterVC.m in Sources */,
+				594D200E24A1FFAD0076EEB0 /* YKMainSymptomCell.m in Sources */,
+				59375B332500F33F0072B700 /* YKTestChatVC.m in Sources */,
+				59236D7C2491E1250075F64B /* YKPatientVC.m in Sources */,
+				59452FF42499CC1800A62D05 /* YKAnnouncementVC.m in Sources */,
+				59537149250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.m in Sources */,
+				592A552B24E12F2900C14443 /* DKSTextView.m in Sources */,
+				595EBBBF24EA54FB007D0206 /* WHDebugMemoryMonitor.m in Sources */,
+				5946C89E249B384C00332B11 /* YKChatListCell.m in Sources */,
+				595EBBBE24EA54FB007D0206 /* WHDebugFPSMonitor.m in Sources */,
+				5951768D24E669D000985E19 /* YKMessageModel.m in Sources */,
+				594B128524F5100600635525 /* CLTreeViewNode.m in Sources */,
+				59453003249A0DBA00A62D05 /* YKPatientCell.m in Sources */,
+				594B128224F50F0F00635525 /* CLTreeViewThirdLevelModel.m in Sources */,
+				59375B2C2500CB5C0072B700 /* YKInputBase64.m in Sources */,
+				59375B292500BAE50072B700 /* YKChatDBManager.m in Sources */,
+				594FCEBB248DE80600FDC416 /* YKLoginVC.m in Sources */,
+				595EBBBC24EA54FB007D0206 /* WHDebugToolManager.m in Sources */,
+				594E445124A335840004CC01 /* YKProjectDetailVC.m in Sources */,
+				595099F3248F2DB300BC3479 /* YKGuidePagesVC.m in Sources */,
+				594FCEB2248DDE0600FDC416 /* YKNetworkManager.m in Sources */,
+				5954F73024FE553400BD8F60 /* YKChatUserModel.m in Sources */,
+				594E445524A337E30004CC01 /* YKProjectDetailCell.m in Sources */,
+				5945A5A12502284D002A230B /* YKChatMessageCell.m in Sources */,
+				594D328D249899540025B7FF /* YKHomeCell.m in Sources */,
+				595EBBC124EA54FB007D0206 /* WHDebugMonitor.m in Sources */,
+				5959639C249769B900BCF83A /* YKDoctorHelper.m in Sources */,
+				5946C8BE249B84A900332B11 /* YKProvinceVC.m in Sources */,
+				594B127924F50EC100635525 /* CLTreeViewThirdLevelCell.m in Sources */,
+				59596399249762ED00BCF83A /* YKDoctor.m in Sources */,
+				594B127F24F50EF700635525 /* CLTreeViewSecondLevelModel.m in Sources */,
+				5963EADF24FF88A7001AE2C1 /* YKChatSqliteManager.m in Sources */,
+				594B127624F50EAA00635525 /* CLTreeViewSecondLevelCell.m in Sources */,
+				5954F72824FE509B00BD8F60 /* YKChatBaseModel.m in Sources */,
+				5956A1AC24B2F1D200EEE5E7 /* YKChatDetailCell.m in Sources */,
+				5960275B24A0A57B00AA0833 /* YKDepartmentsVC.m in Sources */,
+				595EBBBD24EA54FB007D0206 /* WHDebugTempVC.m in Sources */,
+				59484E24248A5AAF00787EEE /* main.m in Sources */,
+				594D200324A1A9540076EEB0 /* YKServiceSettingCell.m in Sources */,
+				59246B5025E7927E00D766A4 /* YKRecordAnimation.m in Sources */,
+				594B126F24F50BE800635525 /* YKDoctorListVC.m in Sources */,
+				59236D792491E10B0075F64B /* YKHomeVC.m in Sources */,
+				5949D09A24AC7FA400F740EE /* YKAddProjectPatientCell.m in Sources */,
+				594FCEBF248DE9D700FDC416 /* YKUserDefaults.m in Sources */,
+				5946C8A5249B50FE00332B11 /* PopoverView.m in Sources */,
+				5915F88C249CCFAA0098CDE9 /* YKChangePasswordVC.m in Sources */,
+				5960275824A0A53700AA0833 /* YKHospitalVC.m in Sources */,
+				5954F73724FE583900BD8F60 /* YKChatHelper.m in Sources */,
+				59484E37248A5BCD00787EEE /* YKBaseVC.m in Sources */,
+				5946C8B8249B843E00332B11 /* YKChangePhoneVC.m in Sources */,
+				594D200A24A1EECC0076EEB0 /* YKMainSymptomVC.m in Sources */,
+				59596392249723FF00BCF83A /* YKAlertHelper.m in Sources */,
+				5967EF0924AEFE2C003FC023 /* YKChatSelectView.m in Sources */,
+				59452FFC249A05A700A62D05 /* YKWebVC.m in Sources */,
+				592A552A24E12F2900C14443 /* UIView+FrameTool.m in Sources */,
+				5946C8AE249B57F000332B11 /* YKQRCodeVC.m in Sources */,
+				5945A5AB250230AF002A230B /* YKChatTextMessageCell.m in Sources */,
+				5960275F24A0A61100AA0833 /* YKPatientAreasVC.m in Sources */,
+				598930E924C6EE1400863EF2 /* YKMyQuestionnaireCell.m in Sources */,
+				5946C8A1249B41A900332B11 /* YKMineCell.m in Sources */,
+				594B127324F50E8500635525 /* CLTreeViewFirstLevelCell.m in Sources */,
+				595099F6248F613E00BC3479 /* YKForgetVC.m in Sources */,
+				595099F9248F657D00BC3479 /* YKLoginCell.m in Sources */,
+				594D328A249877BE0025B7FF /* BFCButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59484E1F248A5AAF00787EEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59484E20248A5AAF00787EEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59484E25248A5AAF00787EEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		59484E26248A5AAF00787EEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59484E28248A5AAF00787EEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC08071A343379DDA3E894AF /* Pods-TTDoctor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S8ALW2ZF2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TTDoctor/Third/MyTestSDK",
+				);
+				GCC_PREFIX_HEADER = "${SRCROOT}/$(PROJECT_NAME)/Application/doctorPrefix.pch";
+				INFOPLIST_FILE = TTDoctor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdoc.TTDoctor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		59484E29248A5AAF00787EEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F958522930956F2C93EA27B9 /* Pods-TTDoctor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S8ALW2ZF2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TTDoctor/Third/MyTestSDK",
+				);
+				GCC_PREFIX_HEADER = "${SRCROOT}/$(PROJECT_NAME)/Application/doctorPrefix.pch";
+				INFOPLIST_FILE = TTDoctor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdoc.TTDoctor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59484E09248A5A9B00787EEE /* Build configuration list for PBXProject "TTDoctor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59484E25248A5AAF00787EEE /* Debug */,
+				59484E26248A5AAF00787EEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59484E27248A5AAF00787EEE /* Build configuration list for PBXNativeTarget "TTDoctor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59484E28248A5AAF00787EEE /* Debug */,
+				59484E29248A5AAF00787EEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59484E06248A5A9B00787EEE /* Project object */;
+}
