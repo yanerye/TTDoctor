@@ -560,7 +560,7 @@
 }
 
 - (void)jumpToTeach{
-    
+    //添加注释提交
 }
 
 - (void)jumpToImage{
