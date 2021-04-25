@@ -11,6 +11,7 @@
 #import "YKHomeCell.h"
 #import "YKAnnouncementVC.h"
 #import "YKTabBarVC.h"
+#import "TTDoctor-Swift.h"
 //#import "YKSelectVC.h"
 
 
@@ -542,7 +543,10 @@
         keyWindow.rootViewController = tabBarVC;
         tabBarVC.selectedIndex = 3;
     }else if (sender.tag == 2) {
-  
+        testSwiftDemo *demo = [[testSwiftDemo alloc] init];
+//        [demo logMe];
+        demo.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:demo animated:YES];
     }else if (sender.tag == 3) {
 
     }

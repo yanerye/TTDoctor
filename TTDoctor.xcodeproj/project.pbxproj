@@ -22,7 +22,7 @@
 		59375B2C2500CB5C0072B700 /* YKInputBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B2B2500CB5B0072B700 /* YKInputBase64.m */; };
 		59375B2F2500D68E0072B700 /* YKChatMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B2E2500D68E0072B700 /* YKChatMessageManager.m */; };
 		59375B332500F33F0072B700 /* YKTestChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B322500F33F0072B700 /* YKTestChatVC.m */; };
-		593D304225C93C69000682E0 /* MyTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593D304125C93C69000682E0 /* MyTestSDK.framework */; };
+		59408081261DA5CA008AA79E /* testSwiftDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408080261DA5CA008AA79E /* testSwiftDemo.swift */; };
 		59452FF42499CC1800A62D05 /* YKAnnouncementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FF32499CC1800A62D05 /* YKAnnouncementVC.m */; };
 		59452FF82499F4E100A62D05 /* YKAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FF72499F4E100A62D05 /* YKAnnouncementCell.m */; };
 		59452FFC249A05A700A62D05 /* YKWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FFB249A05A700A62D05 /* YKWebVC.m */; };
@@ -100,6 +100,7 @@
 		5963EADF24FF88A7001AE2C1 /* YKChatSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5963EADE24FF88A7001AE2C1 /* YKChatSqliteManager.m */; };
 		5967EF0324AEDD2B003FC023 /* YKChatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5967EF0224AEDD2B003FC023 /* YKChatDetailVC.m */; };
 		5967EF0924AEFE2C003FC023 /* YKChatSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5967EF0824AEFE2C003FC023 /* YKChatSelectView.m */; };
+		597BE6AE2613132100343AFC /* MyTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593D304125C93C69000682E0 /* MyTestSDK.framework */; };
 		598930E524C6EDD400863EF2 /* YKMyQuestionnaireVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 598930E424C6EDD400863EF2 /* YKMyQuestionnaireVC.m */; };
 		598930E924C6EE1400863EF2 /* YKMyQuestionnaireCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 598930E824C6EE1400863EF2 /* YKMyQuestionnaireCell.m */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,8 @@
 		59375B312500F33F0072B700 /* YKTestChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTestChatVC.h; sourceTree = "<group>"; };
 		59375B322500F33F0072B700 /* YKTestChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKTestChatVC.m; sourceTree = "<group>"; };
 		593D304125C93C69000682E0 /* MyTestSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyTestSDK.framework; sourceTree = "<group>"; };
+		59408080261DA5CA008AA79E /* testSwiftDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testSwiftDemo.swift; sourceTree = "<group>"; };
+		59408082261DA665008AA79E /* TTDoctor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTDoctor-Bridging-Header.h"; sourceTree = "<group>"; };
 		59452FF22499CC1800A62D05 /* YKAnnouncementVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAnnouncementVC.h; sourceTree = "<group>"; };
 		59452FF32499CC1800A62D05 /* YKAnnouncementVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAnnouncementVC.m; sourceTree = "<group>"; };
 		59452FF62499F4E100A62D05 /* YKAnnouncementCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAnnouncementCell.h; sourceTree = "<group>"; };
@@ -303,7 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12322844377009887BB3F55F /* libPods-TTDoctor.a in Frameworks */,
-				593D304225C93C69000682E0 /* MyTestSDK.framework in Frameworks */,
+				597BE6AE2613132100343AFC /* MyTestSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +370,8 @@
 			children = (
 				59236D772491E10B0075F64B /* YKHomeVC.h */,
 				59236D782491E10B0075F64B /* YKHomeVC.m */,
+				59408080261DA5CA008AA79E /* testSwiftDemo.swift */,
+				59408082261DA665008AA79E /* TTDoctor-Bridging-Header.h */,
 				59452FF12499CBEE00A62D05 /* Announcement */,
 			);
 			path = Home;
@@ -1019,6 +1024,7 @@
 				TargetAttributes = {
 					59484E0D248A5A9C00787EEE = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -1143,6 +1149,7 @@
 				59375B2C2500CB5C0072B700 /* YKInputBase64.m in Sources */,
 				59375B292500BAE50072B700 /* YKChatDBManager.m in Sources */,
 				594FCEBB248DE80600FDC416 /* YKLoginVC.m in Sources */,
+				59408081261DA5CA008AA79E /* testSwiftDemo.swift in Sources */,
 				595EBBBC24EA54FB007D0206 /* WHDebugToolManager.m in Sources */,
 				594E445124A335840004CC01 /* YKProjectDetailVC.m in Sources */,
 				595099F3248F2DB300BC3479 /* YKGuidePagesVC.m in Sources */,
@@ -1321,9 +1328,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC08071A343379DDA3E894AF /* Pods-TTDoctor.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7S8ALW2ZF2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1338,6 +1348,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttdoc.TTDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yk/Desktop/TTDoctor/TTDoctor/Controller/Home/TTDoctor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1346,9 +1359,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F958522930956F2C93EA27B9 /* Pods-TTDoctor.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7S8ALW2ZF2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1363,6 +1379,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttdoc.TTDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yk/Desktop/TTDoctor/TTDoctor/Controller/Home/TTDoctor-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
