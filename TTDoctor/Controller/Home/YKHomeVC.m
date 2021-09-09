@@ -49,25 +49,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    http://1253332079.vod2.myqcloud.com/2b9deca2vodgzp1253332079/670afce85285890794304251173/GCg1PVIIhJ0A.mp4
     self.navigationItem.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self checkUpdateFromBackground];
     [self createRightButtonItems];
     [self layoutAllSubviews];
     [self createLabelAction];
-    [self getAnnouncementList];
-    
+//    [self getAnnouncementList];
     NSString *str = [self getCurrentdate];
     //开通诊所成功后通知RECHECKSTATE
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setDoctorType) name:@"RECHECKSTATE" object:nil];
     //科室列表
-      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-          [self getDepartMentList];
-      });
+//      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//          [self getDepartMentList];
+//      });
     [self getResearchProjectListBeginTime:str endTime:str];
 
 }
+
+
 
 - (NSString *)getCurrentdate{
     NSDate *date=[NSDate date];

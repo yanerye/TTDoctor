@@ -10,14 +10,11 @@
 #import "YKAddProjectPatientCell.h"
 
 
-@interface YKAddProjectPatientVC ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@interface YKAddProjectPatientVC ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,strong) UIScrollView *scrollView;
-@property (nonatomic,strong) UIView *containView;
-@property (nonatomic, strong) UITableView *infoTableView;
-@property (nonatomic, strong) UIView *moreView;
+@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) UIButton *upButton;
-@property (nonatomic, strong) UITableView *moreTableView;
 
 @property (nonatomic, strong) NSArray *infoTitleArray;
 @property (nonatomic, strong) NSArray *infoPlaceholderArray;
@@ -48,14 +45,14 @@
 
 - (NSArray *)moreTitleArray{
     if (!_moreTitleArray) {
-        _moreTitleArray = @[@"第二部分1",@"第二部分2",@"第二部分3",@"第二部分4",@"第二部分5",@"第二部分6",@"第二部分7",@"第二部分8",@"第二部分9",@"第二部分10"];
+        _moreTitleArray = @[@"第二部分1",@"第二部分2",@"第二部分3",@"第二部分4",@"第二部分5",@"第二部分6",@"第二部分7",@"第二部分8",@"第二部分9",@"第二部分10",@"第二部分11",@"第二部分12",@"第二部分13",@"第二部分14",@"第二部分15",@"第二部分16"];
     }
     return _moreTitleArray;
 }
 
 - (NSArray *)morePlaceholderArray{
     if (!_morePlaceholderArray) {
-        _morePlaceholderArray = @[@"第二默认1",@"第二默认2",@"第二默认3",@"第二默认4",@"第二默认5",@"第二默认6",@"第二默认7",@"第二默认8",@"第二默认9",@"第二默认10"];
+        _morePlaceholderArray = @[@"第二默认1",@"第二默认2",@"第二默认3",@"第二默认4",@"第二默认5",@"第二默认6",@"第二默认7",@"第二默认8",@"第二默认9",@"第二默认10",@"第二默认11",@"第二默认12",@"第二默认13",@"第二默认14",@"第二默认15",@"第二默认16"];
     }
     return _morePlaceholderArray;
 }
@@ -68,142 +65,57 @@
 }
 
 - (void)layoutAllSubviews{
-    [self.view addSubview:self.scrollView];
-    [self.scrollView addSubview:self.infoTableView];
-    [self.scrollView addSubview:self.moreView];
-    [self.scrollView addSubview:self.moreTableView];
+    [self.view addSubview:self.tableView];
 
-//    [self.view addSubview:self.scrollView];
-//    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-//           make.edges.equalTo(self.view);
-//       }];
-//
-//       //为UIScrollView能使用mansory添加控件能滑动 需要添加一个containView
-//    [_scrollView addSubview:self.containView];
-//    [self.containView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(self.scrollView);
-//        make.width.equalTo(self.scrollView); // 需要设置宽度和scrollview宽度一样
-//    }];
-//
-//    [self.containView addSubview:self.infoTableView];
-//    [self.containView addSubview:self.moreView];
-//    [self.containView addSubview:self.moreTableView];
-//
-//    [self.infoTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.left.right.mas_equalTo(self.containView);
-//        make.height.mas_equalTo(540);
-//    }];
-//
-//    [self.moreView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.right.mas_equalTo(self.containView);
-//        make.top.mas_equalTo(self.infoTableView.mas_bottom);
-//        make.height.mas_equalTo(50);
-//    }];
-//
-//    [self.moreTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.right.mas_equalTo(self.containView);
-//        make.top.mas_equalTo(self.moreView.mas_bottom);
-//        make.height.mas_equalTo(450);
-//    }];
-//
-//    [self.containView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.equalTo(self.moreTableView.mas_bottom);
-//    }];
+
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.bottom.mas_equalTo(self.view);
+    }];
+
 }
 
 #pragma mark - init
 
-- (UIScrollView *)scrollView{
-    if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KWIDTH, KHEIGHT - 64)];
-        _scrollView.showsVerticalScrollIndicator = NO;
-        _scrollView.backgroundColor = RGBACOLOR(245, 245, 245);
-        _scrollView.contentSize = CGSizeMake(KWIDTH, 590);
-        
-        _scrollView.delegate = self;
+
+- (UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.tag = 100;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.rowHeight = 45;
     }
-    return _scrollView;
+    return _tableView;
 }
 
-- (UIView *)containView{
-    if (!_containView) {
-        _containView = [UIView new];
-    }
-    return _containView;
-}
-
-
-- (UITableView *)infoTableView{
-    if (!_infoTableView) {
-        _infoTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KWIDTH, 540) style:UITableViewStylePlain];
-        _infoTableView.tag = 100;
-        _infoTableView.delegate = self;
-        _infoTableView.dataSource = self;
-        _infoTableView.rowHeight = 45;
-    }
-    return _infoTableView;
-}
-
-- (UIView *)moreView{
-    if (!_moreView) {
-        _moreView = [[UIView alloc] initWithFrame:CGRectMake(0, 540, KWIDTH, 50)];
-        _moreView.backgroundColor = RGBACOLOR(242, 242, 246);
-        
-        UIButton *moreButton = [UIButton new];
-        [moreButton setTitle:@"填写更多" forState:UIControlStateNormal];
-        [moreButton setTitleColor:RGBACOLOR(70, 150, 212) forState:UIControlStateNormal];
-        moreButton.titleLabel.font = [UIFont systemFontOfSize:16];
-        [moreButton addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
-        [_moreView addSubview:moreButton];
-        
-        self.upButton = [UIButton new];
-        [self.upButton setImage:[UIImage imageNamed:@"项目_向下"] forState:UIControlStateNormal];
-        [self.upButton addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
-        [_moreView addSubview:self.upButton];
-        
-        [moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.mas_equalTo(_moreView);
-            make.centerX.mas_equalTo(_moreView).offset(-20);
-        }];
-        
-        [self.upButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.mas_equalTo(moreButton);
-            make.left.mas_equalTo(moreButton.mas_right).offset(5);
-        }];
-    }
-    return _moreView;
-}
-
-- (UITableView *)moreTableView{
-    if (!_moreTableView) {
-        _moreTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 590, KWIDTH, 450) style:UITableViewStylePlain];
-        _moreTableView.tag = 200;
-        _moreTableView.delegate = self;
-        _moreTableView.dataSource = self;
-        _moreTableView.rowHeight = 45;
-        
-        _moreTableView.hidden = YES;
-    }
-    return _moreTableView;
-}
 
 #pragma mark - UITableViewDelegate
 
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (tableView.tag == 100) {
-        return 12;
-    }
-    return 10;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0) {
+        return 12;
+    }
+    
+    if (_isShowMore) {
+        return 16;
+    }
+    return 0;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (tableView.tag == 100) {
-        NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%ld%ld", (long)[indexPath section], (long)[indexPath row]];
-        YKAddProjectPatientCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[YKAddProjectPatientCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
+    
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%ld%ld", (long)[indexPath section], (long)[indexPath row]];
+    YKAddProjectPatientCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[YKAddProjectPatientCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    if (indexPath.section == 0) {
+
         if (indexPath.row == 3) {
             cell.manButton.hidden = NO;
             cell.womanButton.hidden = NO;
@@ -223,14 +135,8 @@
         cell.contentTextField.placeholder = self.infoPlaceholderArray[indexPath.row];
 
         return cell;
-    };
-    
-    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%ld%ld", (long)[indexPath section], (long)[indexPath row]];
-    YKAddProjectPatientCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[YKAddProjectPatientCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-
+    
     cell.manButton.hidden = YES;
     cell.womanButton.hidden = YES;
     cell.addressBookButton.hidden = YES;
@@ -246,29 +152,59 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return 0;
+    }
+    return 50;
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *moreView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KWIDTH, 50)];
+    moreView.backgroundColor = RGBACOLOR(237, 237, 237);
+    
+    UIButton *moreButton = [UIButton new];
+    [moreButton setTitle:@"填写更多" forState:UIControlStateNormal];
+    [moreButton setTitleColor:RGBACOLOR(70, 150, 212) forState:UIControlStateNormal];
+    moreButton.titleLabel.font = [UIFont systemFontOfSize:16];
+    [moreButton addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
+    [moreView addSubview:moreButton];
+    
+    self.upButton = [UIButton new];
+    if (_isShowMore) {
+        [self.upButton setImage:[UIImage imageNamed:@"项目_向上"] forState:UIControlStateNormal];
+    }else{
+        [self.upButton setImage:[UIImage imageNamed:@"项目_向下"] forState:UIControlStateNormal];
+    }
+    [self.upButton addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
+    [moreView addSubview:self.upButton];
+    
+    [moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(moreView);
+        make.centerX.mas_equalTo(moreView).offset(-20);
+    }];
+    
+    [self.upButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(moreButton);
+        make.left.mas_equalTo(moreButton.mas_right).offset(5);
+    }];
+    
+    return moreView;
+}
+
 
 #pragma mark - Event
 
 - (void)moreClick{
     if (_isShowMore) {
-        [self.upButton setImage:[UIImage imageNamed:@"项目_向下"] forState:UIControlStateNormal];
         _isShowMore = NO;
-        
-        self.scrollView.contentSize = CGSizeMake(KWIDTH, 590);
-        self.scrollView.contentOffset = CGPointMake(0, 590 - (KHEIGHT - 64));
-        self.moreTableView.hidden = YES;
     }else{
-        [self.upButton setImage:[UIImage imageNamed:@"项目_向上"] forState:UIControlStateNormal];
         _isShowMore = YES;
- 
-        self.scrollView.contentSize = CGSizeMake(KWIDTH, 1040);
-        self.scrollView.contentOffset = CGPointMake(0, 405);
-        self.moreTableView.hidden = NO;
+        self.tableView.contentOffset = CGPointMake(0, 405);
     }
+    
+    [self.tableView reloadData];
+    
 }
 
 

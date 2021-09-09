@@ -40,6 +40,12 @@
     }else{
         [self autoLogin];
     }
+    
+//    NSUserDefaults * userDefault = [NSUserDefaults standardUserDefaults];
+//    [userDefault setBool:YES forKey:@"isFirst"];
+//    YKGuidePagesVC *guideVC = [[YKGuidePagesVC alloc] init];
+//    self.window.rootViewController = guideVC;
+    
     [self.window makeKeyAndVisible];
     [WHDebugToolManager toggleWith:DebugToolTypeAll];
 

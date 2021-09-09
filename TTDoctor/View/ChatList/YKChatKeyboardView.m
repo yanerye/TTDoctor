@@ -94,24 +94,24 @@ static float buttonMargin = 10.0f;
 
 #pragma mark ====== 语音按钮事件 ======
 - (void)voiceBtn:(UIButton *)btn {
-    if (_isRecord) {
-        _isRecord = NO;
-        [_voiceBtn setBackgroundImage:[UIImage imageNamed:@"wzm_chat_voice"] forState:UIControlStateNormal];
-        self.textView.hidden = NO;
-        self.recordBtn.hidden = YES;
-        [self.textView becomeFirstResponder];
-
-    }else{
-        _isRecord = YES;
-        [_voiceBtn setBackgroundImage:[UIImage imageNamed:@"wzm_chat_board"] forState:UIControlStateNormal];
-        self.textView.hidden = YES;
-        self.recordBtn.hidden = NO;
-        [self.textView resignFirstResponder];
-        
-    }
-//    if ([self.delegate respondsToSelector:@selector(showSendType)]) {
-//        [self.delegate showSendType];
+//    if (_isRecord) {
+//        _isRecord = NO;
+//        [_voiceBtn setBackgroundImage:[UIImage imageNamed:@"wzm_chat_voice"] forState:UIControlStateNormal];
+//        self.textView.hidden = NO;
+//        self.recordBtn.hidden = YES;
+//        [self.textView becomeFirstResponder];
+//
+//    }else{
+//        _isRecord = YES;
+//        [_voiceBtn setBackgroundImage:[UIImage imageNamed:@"wzm_chat_board"] forState:UIControlStateNormal];
+//        self.textView.hidden = YES;
+//        self.recordBtn.hidden = NO;
+//        [self.textView resignFirstResponder];
+//        
 //    }
+    if ([self.delegate respondsToSelector:@selector(showSendType)]) {
+        [self.delegate showSendType];
+    }
 }
 
 //#pragma mark ====== 发送按钮 ======

@@ -59,7 +59,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"测试提交";
+    self.title = @"登录";
     self.view.backgroundColor = RGBACOLOR(239, 239, 241);
     [self layoutAllSubviews];
 }

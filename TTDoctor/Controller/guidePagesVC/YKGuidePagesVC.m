@@ -22,7 +22,7 @@
 
 - (void)createGuidePages{
     NSArray *nameArray = [NSArray new];
-    if (iPhone8){
+    if (!iPhone8){
         nameArray = @[@"引导页1_1334", @"引导页2_1334", @"引导页3_1334",@"引导页4_1334"];
     }else{
         nameArray = @[@"引导页1_2208", @"引导页2_2208", @"引导页3_2208",@"引导页4_2208"];

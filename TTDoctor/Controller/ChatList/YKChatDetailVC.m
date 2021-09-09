@@ -159,8 +159,6 @@
                 [self.contentTableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionBottom animated:NO];
             }
         }
-
-        
     });
 }
 

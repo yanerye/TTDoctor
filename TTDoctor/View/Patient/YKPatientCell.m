@@ -49,8 +49,6 @@
         make.centerY.mas_equalTo(self.phoneImageView);
         make.left.mas_equalTo(self.phoneImageView.mas_right).offset(4);
     }];
-    
-
 }
 
 #pragma mark - init

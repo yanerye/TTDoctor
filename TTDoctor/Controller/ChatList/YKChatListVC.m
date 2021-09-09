@@ -98,6 +98,7 @@
     [request setValue:accessToken forHTTPHeaderField:@"X-Access-Auth-Token"];
 
     NSURLSessionTask *task = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        
         if ([responseObject[@"code"] intValue] == 200) {
             NSMutableArray *tempArray = [@[] mutableCopy];
             for (NSDictionary *dic in responseObject[@"data"]) {

@@ -254,7 +254,7 @@
 }
 
 
-#pragma merk - private
+#pragma mark - private
 
 - (void)showImagePickerWithType:(UIImagePickerControllerSourceType)type {
     

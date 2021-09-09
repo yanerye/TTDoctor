@@ -37,7 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"找回密码";
+    self.title = @"注册";
     self.view.backgroundColor = [UIColor whiteColor];
     [self layoutAllSubviews];
 }
