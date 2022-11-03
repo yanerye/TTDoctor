@@ -11,7 +11,9 @@
 #import "YKPatientCell.h"
 #import "PopoverView.h"
 #import "YKQRCodeVC.h"
-#import "YKAddProjectPatientVC.h"
+#import "YKAddPatientVC.h"
+#import "YKPatientDetailVC.h"
+#import "YKManageTagVC.h"
 
 //#import "XJPatientDetial3Controller.h"
 //#import "XJSettingTagController.h"
@@ -58,6 +60,16 @@
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLoad {
@@ -183,7 +195,7 @@
     NSString *pageStr = [NSString stringWithFormat:@"%d", _page];
     NSString *startPage = [NSString stringWithFormat:@"%d", _page *10];
 
-    [[YKApiService service] getPatientListWithPatientName:_patientName page:pageStr startpage:startPage tagIds:_tagIDs primarySymptom:_primarySymptom beginAge:_beginAge endAge:_endAge sex:_sex orderParam:_orderParam projectId:_projectId completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getPatientListWithPatientName:_patientName page:pageStr startpage:startPage tagIds:_tagIDs primarySymptom:_primarySymptom beginAge:_beginAge endAge:_endAge sex:_sex orderParam:_orderParam projectId:_projectId completion:^(id responseObject, NSError *error) {
         if (!error) {
             [self doThisDataWithResponseObj:responseObject];
         }else{
@@ -288,7 +300,7 @@
         [_searchView addSubview:sortButton];
         
         UIButton *selectButton = [UIButton new];
-        [selectButton setImage:[UIImage imageNamed:@"首页_未选择"] forState:UIControlStateNormal];
+        [selectButton setImage:[UIImage imageNamed:@"home_down"] forState:UIControlStateNormal];
         [selectButton addTarget:self action:@selector(sortClick) forControlEvents:UIControlEventTouchUpInside];
         [_searchView addSubview:selectButton];
         
@@ -331,7 +343,6 @@
             make.right.mas_equalTo(_searchView).offset(-5);
             make.size.mas_equalTo(CGSizeMake(50, 28));
         }];
-        
         [self.filtrateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(_searchView);
             make.left.mas_equalTo(selectButton.mas_right).offset(10);
@@ -391,11 +402,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//    XJPatientDetial3Controller *swVC = [storyboard instantiateViewControllerWithIdentifier:@"XJPatientDetial3Controller"];
-//    WELPatientLite *patient = (WELPatientLite *)self.dataArray[indexPath.row];
-//    swVC.patientId = [patient valueForKey:@"patientId"];
-//    [self.navigationController pushViewController:swVC animated:YES];
+    NSDictionary *dict = self.dataArray[indexPath.row];
+    YKPatientDetailVC *detailVC = [[YKPatientDetailVC alloc] init];
+    detailVC.patientId = [NSString stringWithFormat:@"%@",dict[@"patientId"]];
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -424,22 +435,18 @@
         codeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:codeVC animated:YES];
     }else if ( sender.tag == 1){
-        YKAddProjectPatientVC *addVC = [[YKAddProjectPatientVC alloc] init];
+        YKAddPatientVC *addVC = [[YKAddPatientVC alloc] init];
         addVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:addVC animated:YES];
     }else if (sender.tag == 2){
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//        XJSearchControllerV24 *swVC = [storyboard instantiateViewControllerWithIdentifier:@"XJSearchControllerV24"];
-//        [self.navigationController pushViewController:swVC animated:YES];
+
     }else if (sender.tag == 3){
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//        XJSendMessageControllerV24 *swVC = [storyboard instantiateViewControllerWithIdentifier:@"XJSendMessageControllerV24"];
-//        [self.navigationController pushViewController:swVC animated:YES];
+        
     }
 }
 
 - (void)sortClick{
-    CGPoint point = CGPointMake(29.5, 224.5);
+    CGPoint point = CGPointMake(30, navBarHeight + 160);
     NSArray *titles = @[@"按时间", @"按姓名"];
     PopoverView * pop = [[PopoverView alloc]initWithPoint:point titles:titles images:nil];
     pop.bgColor = [UIColor whiteColor];
@@ -457,9 +464,9 @@
 }
 
 - (void)tagClick{
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//    XJSettingTagController *swVC = [storyboard instantiateViewControllerWithIdentifier:@"XJSettingTagController"];
-//    [self.navigationController pushViewController:swVC animated:YES];
+    YKManageTagVC *tagVC = [[YKManageTagVC alloc] init];
+    tagVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:tagVC animated:YES];
 }
 
 - (void)onTextChange:(UITextField *)textfield{

@@ -88,7 +88,7 @@
 - (void)doneClick{
     if ([self.titleString isEqualToString:@"自我介绍"]) {
         [YKHUDHelper showHUDInView:self.view];
-        [[YKApiService service] updateDoctorSelfIntroduceWithContent:_contentString completion:^(id responseObject, NSError *error) {
+        [[YKBaseApiSeivice service] updateDoctorSelfIntroduceWithContent:_contentString completion:^(id responseObject, NSError *error) {
             if (!error) {
                 [YKHUDHelper hideHUDInView:self.view];
                 _doctor.selfInfo = _contentString;
@@ -101,7 +101,7 @@
         }];
     }else if ([self.titleString isEqualToString:@"诊所公告"]){
         [YKHUDHelper showHUDInView:self.view];
-        [[YKApiService service] updateClinicNoticeWithContent:_contentString completion:^(id responseObject, NSError *error) {
+        [[YKBaseApiSeivice service] updateClinicNoticeWithContent:_contentString completion:^(id responseObject, NSError *error) {
             if (!error) {
                 [YKHUDHelper hideHUDInView:self.view];
                 _doctor.sign = _contentString;
@@ -119,7 +119,7 @@
             return;
         }
         [YKHUDHelper showHUDInView:self.view];
-        [[YKApiService service] addQuickReplyWithContent:_contentString completion:^(id responseObject, NSError *error) {
+        [[YKBaseApiSeivice service] addQuickReplyWithContent:_contentString completion:^(id responseObject, NSError *error) {
             if (!error) {
                 [YKHUDHelper hideHUDInView:self.view];
                 [self.navigationController popViewControllerAnimated:YES];
@@ -135,7 +135,7 @@
         }
         [YKHUDHelper showHUDInView:self.view];
         
-        [[YKApiService service] updateQuickReplyWithReplyID:self.replyDict[@"id"] content:_contentString completion:^(id responseObject, NSError *error) {
+        [[YKBaseApiSeivice service] updateQuickReplyWithReplyID:self.replyDict[@"id"] content:_contentString completion:^(id responseObject, NSError *error) {
             if (!error) {
                 [YKHUDHelper hideHUDInView:self.view];
                 [self.navigationController popViewControllerAnimated:YES];

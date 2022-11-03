@@ -12,6 +12,7 @@
 #import "YKRegisterVC.h"
 #import "YKDoctor.h"
 #import "YKTabBarVC.h"
+#import "JPUSHService.h"
 
 #define textFont 14
 #define buttonFont 15
@@ -38,7 +39,7 @@
 
 - (NSArray *)imageArray{
     if (!_imageArray) {
-        _imageArray = @[@"登录_手机",@"登录_密码"];
+        _imageArray = @[@"login_phone",@"login_password"];
     }
     return _imageArray;
 }
@@ -207,60 +208,60 @@
     
     [YKHUDHelper showHUDInView:self.view];
     
-    //保存token
-    NSString *accessPath = [NSString stringWithFormat:@"%@/app/auth/v2.0/login",TOKEN_SERVER];
-    NSDictionary *params = @{@"client":@"2",@"mobile":_phoneString,@"password":_passwordString};
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:accessPath parameters:params error:nil];
-    request.timeoutInterval = 10.f;
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+   [[YKTokenApiService service] loginWithTelephone:_phoneString password:_passwordString requestMethod:@"POST" completion:^(id responseObject, NSError *error) {
+      [YKHUDHelper hideHUDInView:self.view];
 
-    NSURLSessionDataTask *task = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        NSDictionary *tempDict = responseObject[@"data"];
-        if (!error) {
-            if ([tempDict isKindOfClass:[NSNull class]] || [tempDict isEqual:[NSNull null]]) {
-                
-            }else{
-                //保存token
-                NSString *accessToken = tempDict[@"accessToken"];
-                [[NSUserDefaults standardUserDefaults] setValue:accessToken forKey:@"accessToken"];
-//                //保存别名
-//                NSString *alias = tempDict[@"alias"];
-//                [[NSUserDefaults standardUserDefaults] setValue:alias forKey:@"alias"];
+      if (!error) {
 
-//                [JPUSHService setAlias:alias completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-//
-//                } seq:0];
-            }
-        } else {
-            
-        }
-                    
-    }];
-    [task resume];
+         //保存token
+         NSString *accessToken = responseObject[@"accessToken"];
+         [[NSUserDefaults standardUserDefaults] setValue:accessToken forKey:@"accessToken"];
+         [self showRootVC];
+          //保存别名
+          NSString *alias = responseObject[@"alias"];
+          [[NSUserDefaults standardUserDefaults] setValue:alias forKey:@"alias"];
+
+          [JPUSHService setAlias:alias completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+
+          } seq:0];
+         
+      }else{
+         [YKHUDHelper hideHUDInView:self.view];
+         [YKAlertHelper showErrorMessage:error.localizedFailureReason inView:self.view];
+      }
+   }];
+   
     
-    [[YKApiService service] loginWithTelephone:_phoneString passwprd:_passwordString completion:^(id responseObject, NSError *error) {
-        if (!error) {
-            [YKHUDHelper hideHUDInView:self.view];
-            NSDictionary *dict = responseObject[@"doctor"];
-            [YKDoctorHelper saveShareDoctorForNet:dict];
-            
-            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-            [userDefaults setValue:_phoneString forKey:@"phoneNumber"];
-            [userDefaults setValue:_passwordString forKey:@"passWord"];
-            
-            dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, 0.1*NSEC_PER_SEC);
-            dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-                
-                YKTabBarVC *tabBarVC = [[YKTabBarVC alloc] init];
-                UIWindow * keyWindow = [UIApplication sharedApplication].keyWindow;
-                keyWindow.rootViewController = tabBarVC;
-            });
-        }else{
-            [YKHUDHelper hideHUDInView:self.view];
-            [YKAlertHelper showErrorMessage:error.localizedFailureReason inView:self.view];
-        }
-    }];
+
 }
+
+- (void)showRootVC{
+   [[YKBaseApiSeivice service] loginWithTelephone:_phoneString passwprd:_passwordString completion:^(id responseObject, NSError *error) {
+       if (!error) {
+           [YKHUDHelper hideHUDInView:self.view];
+           NSDictionary *dict = responseObject[@"doctor"];
+           [YKDoctorHelper saveShareDoctorForNet:dict];
+
+           NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+           [userDefaults setValue:_phoneString forKey:@"phoneNumber"];
+           [userDefaults setValue:_passwordString forKey:@"passWord"];
+
+          [YKAlertHelper showErrorMessage:@"登录成功" inView:self.view];
+
+          
+           dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, 0.1*NSEC_PER_SEC);
+           dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+
+               YKTabBarVC *tabBarVC = [[YKTabBarVC alloc] init];
+               UIWindow * keyWindow = [UIApplication sharedApplication].keyWindow;
+               keyWindow.rootViewController = tabBarVC;
+           });
+       }else{
+           [YKHUDHelper hideHUDInView:self.view];
+           [YKAlertHelper showErrorMessage:error.localizedFailureReason inView:self.view];
+       }
+   }];
+}
+
 
 @end

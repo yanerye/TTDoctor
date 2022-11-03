@@ -117,12 +117,10 @@
     if (indexPath.section == 0) {
 
         if (indexPath.row == 3) {
-            cell.manButton.hidden = NO;
-            cell.womanButton.hidden = NO;
+
             cell.contentTextField.hidden = YES;
         }else{
-            cell.manButton.hidden = YES;
-            cell.womanButton.hidden = YES;
+
             cell.contentTextField.hidden = NO;
         }
                 
@@ -137,8 +135,6 @@
         return cell;
     }
     
-    cell.manButton.hidden = YES;
-    cell.womanButton.hidden = YES;
     cell.addressBookButton.hidden = YES;
     
     cell.titleLabel.text = self.moreTitleArray[indexPath.row];

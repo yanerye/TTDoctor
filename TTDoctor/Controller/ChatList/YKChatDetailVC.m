@@ -164,7 +164,7 @@
 
 //快捷回复列表
 - (void)getQuickReplyList{
-    [[YKApiService service] getQuickReplyListCompletion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getQuickReplyListCompletion:^(id responseObject, NSError *error) {
         if (!error) {
             NSArray *tempArray = responseObject[@"rows"];
             for (NSDictionary *dict in tempArray) {

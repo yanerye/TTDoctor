@@ -11,8 +11,7 @@
 #import "YKChatDetailVC.h"
 #import "YKChatUserModel.h"
 #import "YKTestChatVC.h"
-//#import "LWGChatController.h"
-//#import "FindPatientChatController.h"
+
 
 
 
@@ -39,6 +38,18 @@
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    [self startRequest];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLoad {
@@ -68,6 +79,7 @@
                                                                           NSFontAttributeName : [UIFont systemFontOfSize:19]}];
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
+
 }
 
 
@@ -284,6 +296,7 @@
     chatVC.userModel = userModel;
     
     chatVC.chatId = [NSString stringWithFormat:@"%@",dict[@"id"]];
+    chatVC.titleString = [NSString stringWithFormat:@"%@",dict[@"patientName"]];
     [self.navigationController pushViewController:chatVC animated:YES];
 }
 

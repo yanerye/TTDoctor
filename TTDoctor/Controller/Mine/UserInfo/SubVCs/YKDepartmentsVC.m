@@ -62,7 +62,7 @@
 - (void)getData{
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] getDepartMentListWithDeptName:_departNameStr completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getDepartMentListWithDeptName:_departNameStr completion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             [self.dataArray removeAllObjects];

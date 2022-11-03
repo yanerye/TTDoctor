@@ -96,7 +96,7 @@
     
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] getMyQuestionnaireWithQuestionnaireName:_questionnaireName startPage:pageStr completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getMyQuestionnaireWithQuestionnaireName:_questionnaireName startPage:pageStr completion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             [self doThisDataWithResponseObj:responseObject];

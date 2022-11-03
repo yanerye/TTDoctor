@@ -145,7 +145,7 @@
     
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] updatePasswordWithOldPassword:_oldPassword newPassword:_newPassword completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] updatePasswordWithOldPassword:_oldPassword newPassword:_newPassword completion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             [YKAlertHelper showErrorMessage:@"修改成功" inView:self.view];

@@ -18,14 +18,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createGuidePages];
+//    [self swapWithA:8 b:10];
+//   [self maxCommonWithA:18 b:27];
+//    [self maxCommon2WithA:20 b:8];
+//    [self primeWithA:2047];
+}
+
+- (void)swapWithA:(int)a b:(int)b{
+    int temp = a;
+    a = b;
+    b = temp;
+    NSLog(@"%d=======%d",a, b);
+}
+
+- (void)maxCommon1WithA:(int)a b:(int)b{
+    int max = 0;
+    for (int i = 1; i < a; i ++) {
+        if (a % i == 0 && b % i == 0) {
+            max = i;
+        }
+    }
+    NSLog(@"输出是=======%d", max);
+}
+
+- (void)maxCommon2WithA:(int)a b:(int)b{
+    int r = 0;
+    while (a % b > 0) {
+        r = a % b;
+        a = b;
+        b = r;
+    }
+    NSLog(@"最终的结果是=====%d", r);
+}
+
+- (void)primeWithA:(int)a{
+    for (int i = 2; i < sqrt(a); i ++ ) {
+        NSLog(@"%d",i);
+        if (a % i == 0) {
+            NSLog(@"不是质数");
+            return;
+        }
+    }
+    NSLog(@"是质数");
 }
 
 - (void)createGuidePages{
     NSArray *nameArray = [NSArray new];
-    if (!iPhone8){
-        nameArray = @[@"引导页1_1334", @"引导页2_1334", @"引导页3_1334",@"引导页4_1334"];
+    if (!isNotch){
+        nameArray = @[@"guide1_1334", @"guide2_1334", @"guide3_1334",@"guide4_1334"];
     }else{
-        nameArray = @[@"引导页1_2208", @"引导页2_2208", @"引导页3_2208",@"引导页4_2208"];
+        nameArray = @[@"guide1_2208", @"guide2_2208", @"guide3_2208",@"guide4_2208"];
     }
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.contentSize = CGSizeMake(KWIDTH*nameArray.count, KHEIGHT);

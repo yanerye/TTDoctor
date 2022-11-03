@@ -15,13 +15,8 @@
 #import "YKWebVC.h"
 #import "YKDoctorListVC.h"
 #import <TZImagePickerController.h>
-#import "YKChatMessageModel.h"
-#import "YKChatMessageManager.h"
-#import "YKChatUserModel.h"
-#import "YKChatDBManager.h"
-#import "YKChatHelper.h"
-#import "SDImageCache.h"
-#import <MyTestSDK/YKAlertViewController.h>
+#import "YKAlertViewController.h"
+#import "JPUSHService.h"
 
 @interface YKMineVC ()<UITableViewDelegate,UITableViewDataSource,TZImagePickerControllerDelegate>
 
@@ -36,8 +31,6 @@
 @property (nonatomic, strong) NSArray *imageArray;
 @property (nonatomic, strong) NSArray *titleArray;
 
-@property (nonatomic, strong) YKChatUserModel *userModel;
-@property (nonatomic, strong) NSMutableArray *messageModels;
 
 
 @end
@@ -49,7 +42,7 @@
 
 - (NSArray *)imageArray{
     if (!_imageArray) {
-        _imageArray = @[@"我的_我的二维码",@"我的_服务设置",@"我的_服务条款",@"我的_关于我们"];
+        _imageArray = @[@"mine_qrcode",@"mine_serviceSetting",@"mine_serviceAgreement",@"mine_about"];
     }
     return _imageArray;
 }
@@ -61,127 +54,13 @@
     return _titleArray;
 }
 
-- (NSMutableArray *)messageModels{
-    if (!_messageModels) {
-        _messageModels = [NSMutableArray arrayWithCapacity:0];
-    }
-    return _messageModels;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = RGBACOLOR(244, 244, 244);
     [self layoutAllSubviews];
-//    [self addTestButton];
-//    YKChatUserModel *userModel = [[YKChatUserModel alloc] init];
-//    userModel.uid = @"102";
-//    userModel.avatar = @"https://cmcd.ttdoc.cn/weixin/images/woman.png";
-//    userModel.name = @"王小四";
-//    self.userModel = userModel;
-//    [self showAlertButton];
 }
 
-- (void)showAlertButton{
-    UIButton *sendButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 50, 100, 50)];
-    sendButton.backgroundColor = [UIColor cyanColor];
-    [sendButton setTitle:@"显示" forState:UIControlStateNormal];
-    [sendButton addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:sendButton];
-}
-
--(void)showAlert{
-    ZHYAlertButtonItem *cancel = [[ZHYAlertButtonItem alloc] init];
-    cancel.title = @"取消";
-    cancel.color = 0xAD7255;
-    ZHYAlertButtonItem *sure = [[ZHYAlertButtonItem alloc] init];
-    sure.title = @"确定";
-    sure.color = 0xAD7255;
-    sure.buttonBlock = ^{
-
-    };
-    YKAlertViewController *alert = [[YKAlertViewController alloc] initWithAlertTitle:@"退出提示" contentText:@"您确定要退出当前账户？" actionButtons:@[cancel, sure]];
-    [alert showAlert];
-}
-
-- (void)addTestButton{
-    UIButton *sendButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 50, 100, 50)];
-    sendButton.backgroundColor = [UIColor cyanColor];
-    [sendButton setTitle:@"发送" forState:UIControlStateNormal];
-    [sendButton addTarget:self action:@selector(send) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:sendButton];
-    
-    UIButton *receiveButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 150, 100, 50)];
-    receiveButton.backgroundColor = [UIColor cyanColor];
-    [receiveButton setTitle:@"接收" forState:UIControlStateNormal];
-    [receiveButton addTarget:self action:@selector(receive) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:receiveButton];
-    
-    UIButton *saveButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 250, 100, 50)];
-    saveButton.backgroundColor = [UIColor cyanColor];
-    [saveButton setTitle:@"显示保存" forState:UIControlStateNormal];
-    [saveButton addTarget:self action:@selector(show) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:saveButton];
-    
-    UIButton *deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 100, 50)];
-    deleteButton.backgroundColor = [UIColor cyanColor];
-    [deleteButton setTitle:@"删除" forState:UIControlStateNormal];
-    [deleteButton addTarget:self action:@selector(delete) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:deleteButton];
-}
-
-- (void)send{
-    YKChatMessageModel *model = [YKChatMessageManager createTextMessage:self.userModel
-                                                                message:@"我发送了一条文本消息"
-                                                               isSender:YES];
-    [self sendMessageModel:model];
-}
-
-
-//发送消息
-- (void)sendMessageModel:(YKChatMessageModel *)model {
-    [self addMessageModel:model];
-}
-
-//消息存储
-- (void)addMessageModel:(YKChatMessageModel *)model {
-    [[YKChatDBManager DBManager] insertMessage:model chatWithUser:self.userModel];
-    
-}
-
-
-- (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize
-{
-    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * scaleSize, image.size.height * scaleSize));
-    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height * scaleSize)];
-    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return scaledImage;
-}
-
-
-- (void)receive{
-
-    YKChatMessageModel *model = [YKChatMessageManager createTextMessage:self.userModel
-                                                                message:@"我收到了一条文本消息，啊哈哈哈哈哈哈哈安徽哈哈哈殴斗阿苏有大神的阿萨德阿萨德啊"
-                                                               isSender:NO];
-    [self receiveMessageModel:model];
-}
-
-//收到消息
-- (void)receiveMessageModel:(YKChatMessageModel *)model {
-    [self addMessageModel:model];
-}
-
-- (void)delete{
-    [[YKChatDBManager DBManager] deleteUserModel:self.userModel.uid];
-    [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
-    [[SDImageCache sharedImageCache] clearMemory];//可不写
-}
-
-- (void)show{
-    self.messageModels = [[YKChatDBManager DBManager] messagesWithUser:self.userModel];
-    
-}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -225,10 +104,10 @@
 - (void)configUI{
      NSString *picUrl = doc.picUrl;
      if (picUrl.length < 1) {
-         self.iconImageView.image = [UIImage imageNamed:@"我的_医生默认"];
+         self.iconImageView.image = [UIImage imageNamed:@"mine_defaultAvatar"];
      } else {
          NSString *doctorImageStr = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,picUrl];
-         [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:doctorImageStr] placeholderImage:[UIImage imageNamed:@"我的_医生默认"]];
+         [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:doctorImageStr] placeholderImage:[UIImage imageNamed:@"mine_defaultAvatar"]];
      }
     NSString *tempString1 = [NSString stringWithFormat:@"%@", doc.familyname];
     NSString *tempString= [NSString stringWithFormat:@"%@ %@ | %@", doc.familyname,doc.professionalRanksName, doc.deptName];
@@ -337,31 +216,44 @@
 
 //退出登录,显示登录页面
 -(void)logOut {
-    //清理数据
+    
+    
+    ZHYAlertButtonItem *cancel = [[ZHYAlertButtonItem alloc] init];
+    cancel.title = @"取消";
+    cancel.buttonBlock = ^{
+        
+    };
+    ZHYAlertButtonItem *sure = [[ZHYAlertButtonItem alloc] init];
+    sure.title = @"确定";
+    sure.buttonBlock = ^{
+        [self showLoginVC];
+    };
+    YKAlertViewController *alert = [[YKAlertViewController alloc] initWithAlertTitle:@"" contentText:@"是否退出登录" actionButtons:@[cancel, sure]];
+    [alert showAlert];
+    
+}
+
+
+- (void)showLoginVC{
     [self clearData];
     NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"accessToken"];
 
-//    //极光推送移除别名
-//    [JPUSHService deleteAlias:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-//
-//    } seq:0] ;
+    //极光推送移除别名
+    [JPUSHService deleteAlias:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+
+    } seq:0] ;
    
     if (accessToken.length >0) {
-         //退出登录
-        NSString *accessPath = [NSString stringWithFormat:@"%@/app/auth/v2.0/logout",TOKEN_SERVER];
-        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-        NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:accessPath parameters:nil error:nil];
-        request.timeoutInterval = 10.f;
-
-        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [request setValue:accessToken forHTTPHeaderField:@"X-Access-Auth-Token"];
-        NSURLSessionTask *task = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-            //移除token
-            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"accessToken"];
-            //移除别名
-//            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"alias"];
+        
+        [[YKTokenApiService service] loginOutWithRequestMethod:@"POST" completion:^(id responseObject, NSError *error) {
+            if (!error) {
+                //移除token
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"accessToken"];
+                //移除别名
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"alias"];
+            }
         }];
-        [task resume];
+        
     }
     
     YKLoginVC *loginVC = [[YKLoginVC alloc] init];

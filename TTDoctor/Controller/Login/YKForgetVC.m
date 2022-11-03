@@ -24,7 +24,7 @@
 
 - (NSArray *)imageArray{
     if (!_imageArray) {
-        _imageArray = @[@"登录_手机",@"登录_手机",@"登录_手机",@"登录_密码"];
+        _imageArray = @[@"login_phone",@"login_phone",@"login_phone",@"login_password"];
     }
     return _imageArray;
 }

@@ -54,7 +54,7 @@
 {
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] getPatientAreaListCompletion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getPatientAreaListCompletion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             NSArray *tempArray = responseObject;

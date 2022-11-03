@@ -10,6 +10,9 @@
 
 @interface YKBaseVC : UIViewController
 
+- (void)addLeftBackNavigationItemWithImageName:(NSString *)imageName;
+- (void)addLeftCloseNavigationItemWithImageName:(NSString *)imageName;
+
 - (void)createRefreshWithTableView:(UITableView *)myTable;
 -(void)startRefresh;
 

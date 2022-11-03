@@ -14,8 +14,10 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UITextField *contentTextField;
 @property (nonatomic, strong) UIButton *addressBookButton;
-@property (nonatomic, strong) BFCButton *manButton;
-@property (nonatomic, strong) BFCButton *womanButton;
+
+@property (nonatomic, strong) UIImageView *rightImageView;
+@property (nonatomic, strong) UILabel *unitLabel;
+
 
 @end
 

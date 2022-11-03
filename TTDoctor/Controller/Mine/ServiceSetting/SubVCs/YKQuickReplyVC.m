@@ -67,7 +67,7 @@
 {
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] getQuickReplyListCompletion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getQuickReplyListCompletion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             [self.dataArray removeAllObjects];
@@ -89,7 +89,7 @@
 - (UIButton *)addButton{
     if (!_addButton) {
         _addButton = [UIButton new];
-        [_addButton setImage:[UIImage imageNamed:@"快捷回复_添加"] forState:UIControlStateNormal];
+        [_addButton setImage:[UIImage imageNamed:@"mine_quickReply_add"] forState:UIControlStateNormal];
         [_addButton addTarget:self action:@selector(addClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _addButton;
@@ -155,7 +155,7 @@
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
         UITableViewRowAction *layTopRowAction1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
             NSDictionary *dict = self.dataArray[indexPath.row];
-            [[YKApiService service] deleteQuickReplyWithReplyID:dict[@"id"] completion:^(id responseObject, NSError *error) {
+            [[YKBaseApiSeivice service] deleteQuickReplyWithReplyID:dict[@"id"] completion:^(id responseObject, NSError *error) {
                 if (!error) {
                     [self getData];
                 }else{

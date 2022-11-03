@@ -30,6 +30,16 @@
     return _dataArray;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _page = 0;
@@ -77,7 +87,7 @@
 -(void)getData
 {
     NSString *pageStr = [NSString stringWithFormat:@"%d", _page * 10];
-    [[YKApiService service] getCaseRecordListWithStartPage:pageStr completion:^(id responseObject, NSError *error){
+    [[YKBaseApiSeivice service] getCaseRecordListWithStartPage:pageStr completion:^(id responseObject, NSError *error){
         if (!error) {
             [self doThisDataWithResponseObj:responseObject];
         }else{

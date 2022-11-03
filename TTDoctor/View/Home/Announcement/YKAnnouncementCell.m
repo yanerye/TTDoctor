@@ -45,7 +45,7 @@
 - (UIImageView *)leftImageView{
     if (!_leftImageView) {
         _leftImageView = [UIImageView new];
-        _leftImageView.image = [UIImage imageNamed:@"公告_图标"];
+        _leftImageView.image = [UIImage imageNamed:@"home_horn"];
     }
     return _leftImageView;
 }

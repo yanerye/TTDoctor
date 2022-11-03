@@ -34,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"公告";
+    [self addLeftBackNavigationItemWithImageName:@"icon_back"];
+    self.view.backgroundColor = [UIColor whiteColor];
     _page = 0;
     [self layoutAllSubviews];
     [self createRefreshWithTableView:_tableView];
@@ -62,7 +64,7 @@
 //获取公告列表
 - (void)getAnnouncementList{
     _pageString = [NSString stringWithFormat:@"%d",_page *10];
-    [[YKApiService service] getAnnouncementListWithStartPage:_pageString completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getAnnouncementListWithStartPage:_pageString completion:^(id responseObject, NSError *error) {
         if (!error) {
             NSArray *tempArray = responseObject[@"rows"];
             [self doDataWithArray:tempArray];

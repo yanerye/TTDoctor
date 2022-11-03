@@ -115,7 +115,7 @@
         cell.detailLabel.hidden = YES;
         NSString *picUrl = _doctor.picUrl;
         NSString *doctorImageStr = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,picUrl];
-        [cell.userImageView sd_setImageWithURL:[NSURL URLWithString:doctorImageStr] placeholderImage:[UIImage imageNamed:@"我的_医生默认"]];
+        [cell.userImageView sd_setImageWithURL:[NSURL URLWithString:doctorImageStr] placeholderImage:[UIImage imageNamed:@"mine_defaultAvatar"]];
     }else{
         cell.userImageView.hidden = YES;
         cell.detailLabel.hidden = NO;
@@ -286,7 +286,7 @@
         NSString * dataStr = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
         
         [YKHUDHelper showHUDInView:self.view];
-        [[YKApiService service] updateDoctorImageWithImageData:dataStr completion:^(id responseObject, NSError *error) {
+        [[YKBaseApiSeivice service] updateDoctorImageWithImageData:dataStr completion:^(id responseObject, NSError *error) {
             if (!error) {
                 [YKHUDHelper hideHUDInView:self.view];
                 NSString * tempStr = [NSString stringWithFormat:@"%@",responseObject[@"user"][@"localPic"]];
@@ -356,7 +356,7 @@
 #pragma mark - 修改信息
 
 - (void)upDateDoctoeInfoWithKeyStr:(NSString *)keyStr value:(NSString *)valueStr{
-    [[YKApiService service] updateDoctorBaseInfoWithKeyStr:keyStr valueStr:valueStr completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] updateDoctorBaseInfoWithKeyStr:keyStr valueStr:valueStr completion:^(id responseObject, NSError *error) {
         if (!error) {
             
         }else{

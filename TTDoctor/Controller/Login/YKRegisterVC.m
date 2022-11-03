@@ -38,6 +38,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"注册";
+    [self addLeftBackNavigationItemWithImageName:@"icon_back"];
+    [self addLeftCloseNavigationItemWithImageName:@"disease_close"];
     self.view.backgroundColor = [UIColor whiteColor];
     [self layoutAllSubviews];
 }

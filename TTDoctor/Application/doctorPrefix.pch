@@ -9,20 +9,9 @@
 #ifndef doctorPrefix_pch
 #define doctorPrefix_pch
 
-#define KWIDTH [[UIScreen mainScreen] bounds].size.width
-#define KHEIGHT [[UIScreen mainScreen] bounds].size.height
-
-#define isIphoneX KWIDTH >=375.0f && KHEIGHT >=812.0f
-#define navBarHeight (CGFloat)(isIphoneX?(88.0):(64.0))
-
-
-#define RGBACOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define COMMONCOLOR [UIColor colorWithRed:0/255.0 green:221/255.0 blue:191/255.0 alpha:1.0]
-
-#define iPhone8 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
-
 #import "Masonry.h"
-#import "YKApiService.h"
+#import "YKBaseApiSeivice.h"
+#import "YKTokenApiService.h"
 #import "NSString+BFCAddition.h"
 #import "YKAlertHelper.h"
 #import "YKHUDHelper.h"
@@ -31,11 +20,8 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import <AFNetworking/AFNetworking.h>
-
-//生产环境
-#define BASE_SERVER @"https://cd.ttdoc.cn/sp"
-#define TOKEN_SERVER @"https://cd.ttdoc.cn"
-#define IMAGE_SERVER @"http://cd-oss.ttdoc.cn"
-
+#import "YKConstantsDefine.h"
+#import "YKiPhoneGlobalConfig.h"
+#import "YKBaseNaviVC.h"
 
 #endif /* doctorPrefix_pch */

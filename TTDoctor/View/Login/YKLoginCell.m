@@ -21,11 +21,11 @@
 }
 
 - (void)layoutAllSubviews{
-    [self addSubview:self.leftImageView];
-    [self addSubview:self.titleLabel];
-    [self addSubview:self.contentTextField];
-    [self addSubview:self.graphicCodeImageView];
-    [self addSubview:self.codeButton];
+    [self.contentView addSubview:self.leftImageView];
+    [self.contentView addSubview:self.titleLabel];
+    [self.contentView addSubview:self.contentTextField];
+    [self.contentView addSubview:self.graphicCodeImageView];
+    [self.contentView addSubview:self.codeButton];
 
     [self.leftImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self);

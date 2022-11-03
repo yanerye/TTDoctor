@@ -9,7 +9,7 @@
 #import "YKServiceSettingVC.h"
 #import "YKServiceSettingCell.h"
 #import "YKSelfInfoVC.h"
-#import "YKMainSymptomVC.h"
+#import "YKSetMainSymptomVC.h"
 #import "YKQuickReplyVC.h"
 
 @interface YKServiceSettingVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -28,7 +28,7 @@
 
 - (NSArray *)imageArray{
     if (!_imageArray) {
-        _imageArray = @[@"服务设置_自我介绍",@"服务设置_擅长病种",@"服务设置_诊所公告",@"服务设置_出诊时间",@"服务设置_快捷回复"];
+        _imageArray = @[@"mine_service_introduce",@"mine_service_disease",@"mine_service_notice",@"mine_service_visitTime",@"mine_service_quickReply"];
     }
     return _imageArray;
 }
@@ -131,7 +131,7 @@
         vc.titleString = @"自我介绍";
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
-        YKMainSymptomVC *vc = [[YKMainSymptomVC alloc] init];
+        YKSetMainSymptomVC *vc = [[YKSetMainSymptomVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 2){
         YKSelfInfoVC *vc = [[YKSelfInfoVC alloc] init];

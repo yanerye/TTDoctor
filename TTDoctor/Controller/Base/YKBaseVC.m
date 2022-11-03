@@ -18,30 +18,86 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (self.navigationController) {
-        
-        //导航栏后退图片
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"icon_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:nil action:nil];
-        self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
-        self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage new];
-     
-        self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-        self.navigationController.navigationBar.translucent = NO;
-        
-        //去掉下方横线
-        [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-        [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-    }
-    
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+    self.navigationController.navigationBar.translucent = NO;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,[UIFont systemFontOfSize:19], NSFontAttributeName, nil];
-    self.navigationController.navigationBar.barTintColor = COMMONCOLOR;
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+    
+    if(@available(iOS 15.0,*)){
+        UINavigationBarAppearance *apperance=[[UINavigationBarAppearance alloc]init];
+        //设置背景色
+        apperance.backgroundColor = COMMONCOLOR;
+        //设置标题字体
+        [apperance setTitleTextAttributes:@{
+          NSFontAttributeName:[UIFont systemFontOfSize:17],
+          NSForegroundColorAttributeName:[UIColor whiteColor]
+        }];
+        //分割线去除
+        apperance.shadowColor = [UIColor clearColor];
+        //重新赋值
+        self.navigationController.navigationBar.standardAppearance = apperance;
+        self.navigationController.navigationBar.scrollEdgeAppearance = apperance;
+    }else{
+        //设置标题字体
+        self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,[UIFont systemFontOfSize:19], NSFontAttributeName, nil];
+        //设置背景色
+        self.navigationController.navigationBar.barTintColor = COMMONCOLOR;
+        //去掉分割线
+        [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    }
 }
+
+- (void)addLeftBackNavigationItemWithImageName:(NSString *)imageName{
+    UIView *left = self.navigationItem.leftBarButtonItem.customView;
+    if ([left isKindOfClass:[UIButton class]]) {
+        UIButton *temp = (UIButton *)left;
+        [temp setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    } else {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(navigationBack) forControlEvents:UIControlEventTouchUpInside];
+        button.frame = CGRectMake(0, 0, 24, 44);
+        button.contentEdgeInsets = UIEdgeInsetsMake(0, -15, 0, 0);
+        UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+        self.navigationItem.leftBarButtonItem = leftBarItem;
+    }
+}
+
+- (void)addLeftCloseNavigationItemWithImageName:(NSString *)imageName {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(navigationClose) forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(0, 0, 30, 44);
+    UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.leftBarButtonItems = @[self.navigationItem.leftBarButtonItem, leftBarItem];
+}
+
+- (void)navigationBack{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)navigationClose {
+    if (self.presentingViewController) {
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+//- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+//    // 如果viewController不是导航控制器的第1个子控制器
+//    if (self.childViewControllers.count > 0) {
+//        viewController.hidesBottomBarWhenPushed = YES;
+//    }
+//}
+//
+//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+//    return self.childViewControllers.count > 1;
+//}
 
 - (void)createRefreshWithTableView:(UITableView *)table{
     MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector((startRefresh))];

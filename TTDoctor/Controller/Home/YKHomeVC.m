@@ -11,8 +11,8 @@
 #import "YKHomeCell.h"
 #import "YKAnnouncementVC.h"
 #import "YKTabBarVC.h"
-#import "TTDoctor-Swift.h"
-//#import "YKSelectVC.h"
+#import "YKWebVC.h"
+#import "YKConsultVC.h"
 
 
 @interface YKHomeVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -47,23 +47,26 @@
     return _dataArray;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    http://1253332079.vod2.myqcloud.com/2b9deca2vodgzp1253332079/670afce85285890794304251173/GCg1PVIIhJ0A.mp4
     self.navigationItem.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self checkUpdateFromBackground];
     [self createRightButtonItems];
     [self layoutAllSubviews];
     [self createLabelAction];
-//    [self getAnnouncementList];
+    [self getAnnouncementList];
     NSString *str = [self getCurrentdate];
-    //开通诊所成功后通知RECHECKSTATE
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setDoctorType) name:@"RECHECKSTATE" object:nil];
-    //科室列表
-//      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//          [self getDepartMentList];
-//      });
     [self getResearchProjectListBeginTime:str endTime:str];
 
 }
@@ -81,8 +84,27 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:19]}];
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    
+    if(@available(iOS 15.0,*)){
+        UINavigationBarAppearance *apperance=[[UINavigationBarAppearance alloc]init];
+        //设置背景色
+        apperance.backgroundColor = [UIColor whiteColor];
+        //设置标题字体
+        [apperance setTitleTextAttributes:@{
+          NSFontAttributeName:[UIFont systemFontOfSize:19],
+          NSForegroundColorAttributeName:[UIColor blackColor]
+        }];
+        //分割线去除
+        apperance.shadowColor = [UIColor clearColor];
+        //重新赋值
+        self.navigationController.navigationBar.standardAppearance = apperance;
+        self.navigationController.navigationBar.scrollEdgeAppearance = apperance;
+    }else{
+        [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:19]}];
+        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    }
+    
+
     [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
     [self setDoctorType];
 }
@@ -91,7 +113,7 @@
 //设置客服按钮
 - (void)createRightButtonItems {
     UIImageView *image2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 22, 20)];
-    image2.image = [UIImage imageNamed:@"首页_客服"];
+    image2.image = [UIImage imageNamed:@"home_service"];
 
     image2.userInteractionEnabled = YES;
     [image2 addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(phoneClick)]];
@@ -155,7 +177,7 @@
 //获取公告列表
 - (void)getAnnouncementList{
     
-    [[YKApiService service] getAnnouncementListCompletion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getAnnouncementListCompletion:^(id responseObject, NSError *error) {
         if (!error) {
             NSString *announcementStr = responseObject[0][@"title"];
             self.noticeLabel.text = announcementStr;
@@ -175,7 +197,7 @@
     
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] getFollowUPListWithBeginTime:beginTime endTime:endTime projectId:@"" patientName:@"" Completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getFollowUPListWithBeginTime:beginTime endTime:endTime projectId:@"" patientName:@"" Completion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             NSArray *tempArray= responseObject[@"projectPlanList"];
@@ -219,7 +241,10 @@
         _topView.backgroundColor = [UIColor whiteColor];
         
         UIImageView *topImageView = [UIImageView new];
-        topImageView.image = [UIImage imageNamed:@"首页_banner"];
+        topImageView.image = [UIImage imageNamed:@"home_banner"];
+        topImageView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *guideTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(guideClick)];
+        [topImageView addGestureRecognizer:guideTap];
         [_topView addSubview:topImageView];
         
         UIView *noticeView = [UIView new];
@@ -241,10 +266,10 @@
         }];
         
         UIImageView *noticeImageView = [UIImageView new];
-        noticeImageView.image = [UIImage imageNamed:@"首页_公告"];
+        noticeImageView.image = [UIImage imageNamed:@"home_notice"];
         
         UIButton *rightButton = [UIButton new];
-        [rightButton setImage:[UIImage imageNamed:@"首页_向右"]  forState:UIControlStateNormal];
+        [rightButton setImage:[UIImage imageNamed:@"home_right"]  forState:UIControlStateNormal];
         [rightButton addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
         
         UIButton *moreButton = [UIButton new];
@@ -291,16 +316,16 @@
             [collectBtn addTarget:self action:@selector(onButtonsAction:) forControlEvents:UIControlEventTouchUpInside];
             collectBtn.alignType = BFCButtonAlignTypeTextBottom;
             if (i == 0) {
-                [collectBtn setImage:[UIImage imageNamed:@"首页_患者"] forState:UIControlStateNormal];
+                [collectBtn setImage:[UIImage imageNamed:@"home_patient"] forState:UIControlStateNormal];
                 [collectBtn setTitle:@"患者" forState:UIControlStateNormal];
             }else if (i == 1){
-                [collectBtn setImage:[UIImage imageNamed:@"首页_病例登记"] forState:UIControlStateNormal];
+                [collectBtn setImage:[UIImage imageNamed:@"home_project"] forState:UIControlStateNormal];
                 [collectBtn setTitle:@"病例登记" forState:UIControlStateNormal];
             }else if (i == 2){
-                [collectBtn setImage:[UIImage imageNamed:@"首页_会诊"] forState:UIControlStateNormal];
+                [collectBtn setImage:[UIImage imageNamed:@"home_consultation"] forState:UIControlStateNormal];
                 [collectBtn setTitle:@"会诊" forState:UIControlStateNormal];
             }else if (i == 3){
-                [collectBtn setImage:[UIImage imageNamed:@"首页_转诊"] forState:UIControlStateNormal];
+                [collectBtn setImage:[UIImage imageNamed:@"home_refer"] forState:UIControlStateNormal];
                 [collectBtn setTitle:@"转诊" forState:UIControlStateNormal];
             }
             collectBtn.titleLabel.font = [UIFont systemFontOfSize:13];
@@ -334,7 +359,7 @@
         
         
         UIButton *rightButton = [UIButton new];
-        [rightButton setImage:[UIImage imageNamed:@"首页_向右"]  forState:UIControlStateNormal];
+        [rightButton setImage:[UIImage imageNamed:@"home_right"]  forState:UIControlStateNormal];
         [rightButton addTarget:self action:@selector(selectClick) forControlEvents:UIControlEventTouchUpInside];
         [_bottomView addSubview:rightButton];
 
@@ -406,7 +431,7 @@
 - (UIImageView *)placeHoderImageView{
     if (!_placeHoderImageView) {
         _placeHoderImageView = [UIImageView new];
-        _placeHoderImageView.image = [UIImage imageNamed:@"首页_默认"];
+        _placeHoderImageView.image = [UIImage imageNamed:@"home_default"];
     }
     return _placeHoderImageView;;
 }
@@ -521,6 +546,14 @@
 
 #pragma mark - Event
 
+- (void)guideClick{
+    YKWebVC *webVC = [[YKWebVC alloc]init];
+    webVC.titleString = @"新手必看";
+    webVC.urlString = @"/weixin/app-doc.html";
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
+}
+
 - (void)phoneClick{
      NSString *phoneNumber = @"tel://4006270012";
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
@@ -544,10 +577,9 @@
         keyWindow.rootViewController = tabBarVC;
         tabBarVC.selectedIndex = 3;
     }else if (sender.tag == 2) {
-        testSwiftDemo *demo = [[testSwiftDemo alloc] init];
-//        [demo logMe];
-        demo.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:demo animated:YES];
+        YKConsultVC *consultVC = [[YKConsultVC alloc] init];
+        consultVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:consultVC animated:YES];
     }else if (sender.tag == 3) {
 
     }

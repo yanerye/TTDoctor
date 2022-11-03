@@ -13,6 +13,7 @@
 #import "YKProjectVC.h"
 #import "YKMineVC.h"
 #import "YKDoctorListVC.h"
+#import "YKNewsVC.h"
 
 @interface YKTabBarVC ()
 
@@ -39,19 +40,23 @@
 - (void)setUpAllChildVC
 {
     YKHomeVC * homeVC = [[YKHomeVC alloc] init];
-    [self setUpOneChildVcWithVc:homeVC Image:@"底部_首页未选" selectedImage:@"底部_首页选中" title:@"首页"];
+    [self setUpOneChildVcWithVc:homeVC Image:@"tabBar_home_unSelected" selectedImage:@"tabBar_home_selected" title:@"首页"];
 
     YKPatientVC * patientVC = [[YKPatientVC alloc] init];
-    [self setUpOneChildVcWithVc:patientVC Image:@"底部_患者未选" selectedImage:@"底部_患者选中" title:@"患者"];
+    [self setUpOneChildVcWithVc:patientVC Image:@"tabBar_patient_unSelected" selectedImage:@"tabBar_patient_selected" title:@"患者"];
 
     YKChatListVC * chatListVC = [[YKChatListVC alloc] init];
-    [self setUpOneChildVcWithVc:chatListVC Image:@"底部_随访未选中" selectedImage:@"底部_随访选中" title:@"随访"];
+    [self setUpOneChildVcWithVc:chatListVC Image:@"tabBar_chat_unSelected" selectedImage:@"tabBar_chat_selected" title:@"随访"];
 
-    YKProjectVC * projectVC = [[YKProjectVC alloc] init];
-    [self setUpOneChildVcWithVc:projectVC Image:@"底部_病历登记未选" selectedImage:@"底部_病历登记选中" title:@"病历登记"];
+//    YKProjectVC * projectVC = [[YKProjectVC alloc] init];
+//    [self setUpOneChildVcWithVc:projectVC Image:@"tabBar_project_unSelected" selectedImage:@"tabBar_project_selected" title:@"病历登记"];
     
     YKMineVC * mineVC = [[YKMineVC alloc] init];
-    [self setUpOneChildVcWithVc:mineVC Image:@"底部_个人中心未选" selectedImage:@"底部_个人中心选中" title:@"个人中心"];
+    [self setUpOneChildVcWithVc:mineVC Image:@"tabBar_mine_unSelected" selectedImage:@"tabBar_mine_selected" title:@"个人中心"];
+    
+    
+    YKNewsVC * newsVC = [[YKNewsVC alloc] init];
+    [self setUpOneChildVcWithVc:newsVC Image:@"tabBar_mine_unSelected" selectedImage:@"tabBar_mine_selected" title:@"科研资讯"];
     
 //    YKDoctorListVC * mineVC = [YKDoctorListVC init];
 //    [self setUpOneChildVcWithVc:mineVC Image:@"底部_个人中心未选" selectedImage:@"底部_个人中心选中" title:@"个人中心"];
@@ -91,5 +96,7 @@
     UIGraphicsEndImageContext();
     return theImage;
 }
+
+
 
 @end

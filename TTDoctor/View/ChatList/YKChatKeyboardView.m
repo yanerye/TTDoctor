@@ -216,11 +216,11 @@ static float buttonMargin = 10.0f;
     return _backView;
 }
 
-//选择按钮
+//选择按钮 聊天_添加图标  wzm_chat_voice
 - (UIButton *)voiceBtn {
     if (!_voiceBtn) {
         _voiceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_voiceBtn setBackgroundImage:[UIImage imageNamed:@"wzm_chat_voice"] forState:UIControlStateNormal];
+        [_voiceBtn setBackgroundImage:[UIImage imageNamed:@"聊天_添加图标"] forState:UIControlStateNormal];
         [_voiceBtn addTarget:self action:@selector(voiceBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.backView addSubview:_voiceBtn];
     }

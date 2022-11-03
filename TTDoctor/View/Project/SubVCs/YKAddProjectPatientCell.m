@@ -15,6 +15,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self layoutAllSubviews];
     }
     return self;
@@ -24,9 +25,10 @@
     [self addSubview:self.titleLabel];
     [self addSubview:self.contentTextField];
     [self addSubview:self.addressBookButton];
+    [self addSubview:self.rightImageView];
+    [self addSubview:self.unitLabel];
 //    [self addSubview:self.sexView];
-    [self addSubview:self.manButton];
-    [self addSubview:self.womanButton];
+
 
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self);
@@ -37,6 +39,7 @@
     [self.contentTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self);
         make.left.mas_equalTo(self.titleLabel.mas_right);
+        make.size.mas_equalTo(CGSizeMake(128, 25));
     }];
     
     [self.addressBookButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -46,29 +49,16 @@
         make.width.mas_equalTo(60);
     }];
     
-    [self.manButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.rightImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self);
-        make.left.mas_equalTo(self.titleLabel.mas_right);
-        make.width.mas_equalTo(50);
+        make.right.mas_equalTo(self).offset(-10);
     }];
     
-    [self.womanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.unitLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self);
-        make.left.mas_equalTo(self.manButton.mas_right).offset(20);
-        make.width.mas_equalTo(50);
+        make.right.mas_equalTo(self).offset(-10);
     }];
     
-    //        [manButton mas_makeConstraints:^(MASConstraintMaker *make) {
-    //            make.centerY.mas_equalTo(_sexView);
-    //            make.left.mas_equalTo(_sexView);
-    //            make.width.mas_equalTo(50);
-    //        }];
-    //
-    //        [womenButton mas_makeConstraints:^(MASConstraintMaker *make) {
-    //            make.centerY.mas_equalTo(_sexView);
-    //            make.left.mas_equalTo(manButton.mas_right).offset(20);
-    //            make.width.mas_equalTo(50);
-    //        }];
 //    [self.sexView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.centerY.mas_equalTo(self);
 //        make.left.mas_equalTo(self.titleLabel.mas_right);
@@ -101,37 +91,29 @@
         [_addressBookButton setTitleColor:RGBACOLOR(94, 94, 94) forState:UIControlStateNormal];
         _addressBookButton.layer.cornerRadius = 4;
         _addressBookButton.titleLabel.font = [UIFont systemFontOfSize:TEXTFONT];
+        _addressBookButton.hidden = YES;
     }
     return _addressBookButton;
 }
 
-- (BFCButton *)manButton{
-    if (!_manButton) {
-        _manButton = [BFCButton buttonWithType:UIButtonTypeCustom];
-        [_manButton addTarget:self action:@selector(manClick) forControlEvents:UIControlEventTouchUpInside];
-        _manButton.alignType = BFCButtonAlignTypeTextRight;
-        [_manButton setImage:[UIImage imageNamed:@"服务设置_未选"] forState:UIControlStateNormal];
-        [_manButton setTitle:@"男" forState:UIControlStateNormal];
-        _manButton.titleLabel.font = [UIFont systemFontOfSize:TEXTFONT];
-        [_manButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        _manButton.imageviewRatio = 0.8;
+- (UIImageView *)rightImageView{
+    if (!_rightImageView) {
+        _rightImageView = [UIImageView new];
+        _rightImageView.image = [UIImage imageNamed:@"icon_right"];
+        _rightImageView.hidden = YES;
     }
-    return _manButton;
+    return _rightImageView;
 }
-    
-- (BFCButton *)womanButton{
-    if (!_womanButton) {
-        _womanButton = [BFCButton buttonWithType:UIButtonTypeCustom];
-        [_womanButton addTarget:self action:@selector(womanClick) forControlEvents:UIControlEventTouchUpInside];
-        _womanButton.alignType = BFCButtonAlignTypeTextRight;
-        [_womanButton setImage:[UIImage imageNamed:@"服务设置_未选"] forState:UIControlStateNormal];
-        [_womanButton setTitle:@"女" forState:UIControlStateNormal];
-        _womanButton.titleLabel.font = [UIFont systemFontOfSize:TEXTFONT];
-        [_womanButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        _womanButton.imageviewRatio = 0.8;
+
+- (UILabel *)unitLabel{
+    if (!_unitLabel) {
+        _unitLabel = [UILabel new];
+        _unitLabel.font = [UIFont systemFontOfSize:TEXTFONT];
+        _unitLabel.hidden = YES;
     }
-    return _womanButton;
+    return _unitLabel;
 }
+
     
 //- (UIView *)sexView{
 //    if (!_sexView) {
@@ -174,17 +156,4 @@
 //    return _sexView;
 //}
     
-#pragma mark - Event
-
-
-- (void)manClick{
-    [self.manButton setImage:[UIImage imageNamed:@"服务设置_选中"] forState:UIControlStateNormal];
-    [self.womanButton setImage:[UIImage imageNamed:@"服务设置_未选"] forState:UIControlStateNormal];
-
-}
-
-- (void)womanClick{
-    [self.womanButton setImage:[UIImage imageNamed:@"服务设置_选中"] forState:UIControlStateNormal];
-    [self.manButton setImage:[UIImage imageNamed:@"服务设置_未选"] forState:UIControlStateNormal];
-}
 @end

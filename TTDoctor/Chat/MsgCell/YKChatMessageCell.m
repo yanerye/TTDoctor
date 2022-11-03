@@ -106,7 +106,7 @@
     else {
         _avatarImageView.frame = CGRectMake(10, 10, 40, 40);
 
-        [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:model.avatar] completed:nil];
+        [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"随访_默认头像"]];
 
         _nickLabel.frame = CGRectMake(_avatarImageView.chat_maxX+10, 5, 100, 20);
         _nickLabel.text = model.name;
@@ -141,6 +141,8 @@
 }
 
 - (void)retryBtnClick:(UIButton *)btn {
-
+    
 }
+
+
 @end

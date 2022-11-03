@@ -57,7 +57,7 @@
 {
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] getProvinceListCompletion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getProvinceListCompletion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             NSArray *tempArray = responseObject;

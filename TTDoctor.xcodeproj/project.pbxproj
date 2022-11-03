@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0466956329125B7B009E931C /* YKBaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466956229125B7B009E931C /* YKBaseNaviVC.m */; };
+		04EFD6E4283628FC0074EB4D /* YKConsultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD6E3283628FC0074EB4D /* YKConsultVC.m */; };
+		04FA53BA28379B3400A44ABC /* YKReceiveConsultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA53B928379B3400A44ABC /* YKReceiveConsultCell.m */; };
+		04FA53BD28379B4700A44ABC /* YKApplyConsultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA53BC28379B4700A44ABC /* YKApplyConsultCell.m */; };
 		12322844377009887BB3F55F /* libPods-TTDoctor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 260DC1B01CF6D372725D9F7D /* libPods-TTDoctor.a */; };
+		5907551D2714173900E2A4E5 /* CXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590755162714173900E2A4E5 /* CXDatePickerView.m */; };
+		5907551E2714173900E2A4E5 /* NSDate+CXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5907551B2714173900E2A4E5 /* NSDate+CXCategory.m */; };
+		5907551F2714173900E2A4E5 /* CXDatePickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5907551C2714173900E2A4E5 /* CXDatePickerViewManager.m */; };
 		5915F88C249CCFAA0098CDE9 /* YKChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5915F88B249CCFAA0098CDE9 /* YKChangePasswordVC.m */; };
 		59236D712491DBF60075F64B /* YKTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59236D702491DBF60075F64B /* YKTabBarVC.m */; };
 		59236D792491E10B0075F64B /* YKHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59236D782491E10B0075F64B /* YKHomeVC.m */; };
@@ -22,7 +29,6 @@
 		59375B2C2500CB5C0072B700 /* YKInputBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B2B2500CB5B0072B700 /* YKInputBase64.m */; };
 		59375B2F2500D68E0072B700 /* YKChatMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B2E2500D68E0072B700 /* YKChatMessageManager.m */; };
 		59375B332500F33F0072B700 /* YKTestChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59375B322500F33F0072B700 /* YKTestChatVC.m */; };
-		59408081261DA5CA008AA79E /* testSwiftDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408080261DA5CA008AA79E /* testSwiftDemo.swift */; };
 		59452FF42499CC1800A62D05 /* YKAnnouncementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FF32499CC1800A62D05 /* YKAnnouncementVC.m */; };
 		59452FF82499F4E100A62D05 /* YKAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FF72499F4E100A62D05 /* YKAnnouncementCell.m */; };
 		59452FFC249A05A700A62D05 /* YKWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59452FFB249A05A700A62D05 /* YKWebVC.m */; };
@@ -56,7 +62,6 @@
 		594B128524F5100600635525 /* CLTreeViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 594B128424F5100600635525 /* CLTreeViewNode.m */; };
 		594D200324A1A9540076EEB0 /* YKServiceSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200224A1A9540076EEB0 /* YKServiceSettingCell.m */; };
 		594D200724A1D00F0076EEB0 /* YKSelfInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200624A1D00F0076EEB0 /* YKSelfInfoVC.m */; };
-		594D200A24A1EECC0076EEB0 /* YKMainSymptomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200924A1EECC0076EEB0 /* YKMainSymptomVC.m */; };
 		594D200E24A1FFAD0076EEB0 /* YKMainSymptomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D200D24A1FFAD0076EEB0 /* YKMainSymptomCell.m */; };
 		594D328A249877BE0025B7FF /* BFCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D3288249877BE0025B7FF /* BFCButton.m */; };
 		594D328D249899540025B7FF /* YKHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594D328C249899540025B7FF /* YKHomeCell.m */; };
@@ -64,7 +69,6 @@
 		594E445124A335840004CC01 /* YKProjectDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E445024A335840004CC01 /* YKProjectDetailVC.m */; };
 		594E445524A337E30004CC01 /* YKProjectDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E445424A337E30004CC01 /* YKProjectDetailCell.m */; };
 		594FCEB2248DDE0600FDC416 /* YKNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEB1248DDE0600FDC416 /* YKNetworkManager.m */; };
-		594FCEB5248DE55900FDC416 /* YKApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEB4248DE55900FDC416 /* YKApiService.m */; };
 		594FCEB8248DE6B800FDC416 /* YKHUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEB7248DE6B800FDC416 /* YKHUDHelper.m */; };
 		594FCEBB248DE80600FDC416 /* YKLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEBA248DE80600FDC416 /* YKLoginVC.m */; };
 		594FCEBF248DE9D700FDC416 /* YKUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FCEBE248DE9D600FDC416 /* YKUserDefaults.m */; };
@@ -100,9 +104,30 @@
 		5963EADF24FF88A7001AE2C1 /* YKChatSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5963EADE24FF88A7001AE2C1 /* YKChatSqliteManager.m */; };
 		5967EF0324AEDD2B003FC023 /* YKChatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5967EF0224AEDD2B003FC023 /* YKChatDetailVC.m */; };
 		5967EF0924AEFE2C003FC023 /* YKChatSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5967EF0824AEFE2C003FC023 /* YKChatSelectView.m */; };
-		597BE6AE2613132100343AFC /* MyTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593D304125C93C69000682E0 /* MyTestSDK.framework */; };
+		59861E9C26FB19F300E1B36A /* YKPatientDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59861E9B26FB19F300E1B36A /* YKPatientDetailVC.m */; };
 		598930E524C6EDD400863EF2 /* YKMyQuestionnaireVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 598930E424C6EDD400863EF2 /* YKMyQuestionnaireVC.m */; };
 		598930E924C6EE1400863EF2 /* YKMyQuestionnaireCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 598930E824C6EE1400863EF2 /* YKMyQuestionnaireCell.m */; };
+		5998F58C280523E80069F859 /* YKBaseApiSeivice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F58B280523E80069F859 /* YKBaseApiSeivice.m */; };
+		5998F59128052BAE0069F859 /* YKTokenApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F59028052BAE0069F859 /* YKTokenApiService.m */; };
+		5998F596280569030069F859 /* YKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F594280569030069F859 /* YKAlertViewController.m */; };
+		5998F5A6280570CC0069F859 /* JPUSHService+inapp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F59E280570CC0069F859 /* JPUSHService+inapp.m */; };
+		5998F5A7280570CC0069F859 /* jcore-ios-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F59F280570CC0069F859 /* jcore-ios-3.2.0.a */; };
+		5998F5A8280570CD0069F859 /* jpush-extension-ios-1.1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5A1280570CC0069F859 /* jpush-extension-ios-1.1.2.a */; };
+		5998F5A9280570CD0069F859 /* jpush-ios-4.6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5A5280570CC0069F859 /* jpush-ios-4.6.0.a */; };
+		5998F5AC2805710F0069F859 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5AB2805710F0069F859 /* CFNetwork.framework */; };
+		5998F5AE280571230069F859 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5AD280571230069F859 /* CoreFoundation.framework */; };
+		5998F5B02805712B0069F859 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5AF2805712A0069F859 /* CoreTelephony.framework */; };
+		5998F5B2280571300069F859 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5B1280571300069F859 /* SystemConfiguration.framework */; };
+		5998F5B4280571350069F859 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5B3280571350069F859 /* CoreGraphics.framework */; };
+		5998F5B62805713F0069F859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5B52805713E0069F859 /* Foundation.framework */; };
+		5998F5B8280571460069F859 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5B7280571460069F859 /* UIKit.framework */; };
+		5998F5BA2805714D0069F859 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5B92805714D0069F859 /* Security.framework */; };
+		5998F5BC280571650069F859 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5BB280571650069F859 /* UserNotifications.framework */; };
+		5998F5BE280571720069F859 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5BD280571720069F859 /* libresolv.tbd */; };
+		5998F5C1280571980069F859 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5C0280571980069F859 /* WebKit.framework */; };
+		5998F5C3280571A90069F859 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5998F5C2280571A90069F859 /* StoreKit.framework */; };
+		5998F5CB280577100069F859 /* ZAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F5C9280577100069F859 /* ZAlertViewManager.m */; };
+		5998F5CC280577100069F859 /* ZAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F5CA280577100069F859 /* ZAlertView.m */; };
 		599B8A28264CCB2D00C2A91C /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 599B89B5264CCB2C00C2A91C /* libavutil.a */; };
 		599B8A29264CCB2D00C2A91C /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 599B89B6264CCB2C00C2A91C /* libavfilter.a */; };
 		599B8A2A264CCB2D00C2A91C /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 599B89B7264CCB2C00C2A91C /* libavcodec.a */; };
@@ -115,10 +140,36 @@
 		599B8A35264CCB6C00C2A91C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599B8A34264CCB6C00C2A91C /* CoreMedia.framework */; };
 		599B8A37264CCB7C00C2A91C /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599B8A36264CCB7C00C2A91C /* VideoToolbox.framework */; };
 		599B8A39264CCB8200C2A91C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599B8A38264CCB8200C2A91C /* AVFoundation.framework */; };
+		59ADE1D5280E95AB003C9D0D /* YKNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ADE1D4280E95AB003C9D0D /* YKNewsVC.m */; };
+		59ADE1E1280EA879003C9D0D /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ADE1DF280EA879003C9D0D /* ViewPagerController.m */; };
+		59ADE1E6280EAB4B003C9D0D /* YKNewsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ADE1E5280EAB4B003C9D0D /* YKNewsListVC.m */; };
+		59B90C9127116B76007989FD /* YKTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B90C9027116B76007989FD /* YKTagCell.m */; };
+		59B90C9627118DCB007989FD /* YKModifyTagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B90C9527118DCB007989FD /* YKModifyTagVC.m */; };
+		59B90C9E2711A189007989FD /* YKAddPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B90C9D2711A189007989FD /* YKAddPatientVC.m */; };
+		59C56F9527213E8E0012CC06 /* YKSetMainSymptomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C56F9427213E8E0012CC06 /* YKSetMainSymptomVC.m */; };
+		59C56F9A27213F150012CC06 /* YKSelectMainSymptomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C56F9927213F150012CC06 /* YKSelectMainSymptomVC.m */; };
+		59E74485271FFD9F00DF7EE5 /* YKSelectTagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74484271FFD9F00DF7EE5 /* YKSelectTagVC.m */; };
+		59E74489271FFDC400DF7EE5 /* YKManageTagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74488271FFDC400DF7EE5 /* YKManageTagVC.m */; };
+		59FD46072704197C00EB2986 /* YKiPhoneGlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD46062704197C00EB2986 /* YKiPhoneGlobalConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0466956129125B7B009E931C /* YKBaseNaviVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKBaseNaviVC.h; sourceTree = "<group>"; };
+		0466956229125B7B009E931C /* YKBaseNaviVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKBaseNaviVC.m; sourceTree = "<group>"; };
+		04EFD6E2283628FC0074EB4D /* YKConsultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKConsultVC.h; sourceTree = "<group>"; };
+		04EFD6E3283628FC0074EB4D /* YKConsultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKConsultVC.m; sourceTree = "<group>"; };
+		04FA53B828379B3400A44ABC /* YKReceiveConsultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKReceiveConsultCell.h; sourceTree = "<group>"; };
+		04FA53B928379B3400A44ABC /* YKReceiveConsultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKReceiveConsultCell.m; sourceTree = "<group>"; };
+		04FA53BB28379B4700A44ABC /* YKApplyConsultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKApplyConsultCell.h; sourceTree = "<group>"; };
+		04FA53BC28379B4700A44ABC /* YKApplyConsultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKApplyConsultCell.m; sourceTree = "<group>"; };
 		260DC1B01CF6D372725D9F7D /* libPods-TTDoctor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TTDoctor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		590755162714173900E2A4E5 /* CXDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDatePickerView.m; sourceTree = "<group>"; };
+		590755172714173900E2A4E5 /* NSDate+CXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CXCategory.h"; sourceTree = "<group>"; };
+		590755182714173900E2A4E5 /* CXDatePickerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDatePickerViewManager.h; sourceTree = "<group>"; };
+		590755192714173900E2A4E5 /* CXDatePickerStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDatePickerStyle.h; sourceTree = "<group>"; };
+		5907551A2714173900E2A4E5 /* CXDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDatePickerView.h; sourceTree = "<group>"; };
+		5907551B2714173900E2A4E5 /* NSDate+CXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CXCategory.m"; sourceTree = "<group>"; };
+		5907551C2714173900E2A4E5 /* CXDatePickerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDatePickerViewManager.m; sourceTree = "<group>"; };
 		5915F88A249CCFAA0098CDE9 /* YKChangePasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChangePasswordVC.h; sourceTree = "<group>"; };
 		5915F88B249CCFAA0098CDE9 /* YKChangePasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChangePasswordVC.m; sourceTree = "<group>"; };
 		59236D6F2491DBF60075F64B /* YKTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTabBarVC.h; sourceTree = "<group>"; };
@@ -147,9 +198,6 @@
 		59375B2E2500D68E0072B700 /* YKChatMessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatMessageManager.m; sourceTree = "<group>"; };
 		59375B312500F33F0072B700 /* YKTestChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTestChatVC.h; sourceTree = "<group>"; };
 		59375B322500F33F0072B700 /* YKTestChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKTestChatVC.m; sourceTree = "<group>"; };
-		593D304125C93C69000682E0 /* MyTestSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyTestSDK.framework; sourceTree = "<group>"; };
-		59408080261DA5CA008AA79E /* testSwiftDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testSwiftDemo.swift; sourceTree = "<group>"; };
-		59408082261DA665008AA79E /* TTDoctor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTDoctor-Bridging-Header.h"; sourceTree = "<group>"; };
 		59452FF22499CC1800A62D05 /* YKAnnouncementVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAnnouncementVC.h; sourceTree = "<group>"; };
 		59452FF32499CC1800A62D05 /* YKAnnouncementVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAnnouncementVC.m; sourceTree = "<group>"; };
 		59452FF62499F4E100A62D05 /* YKAnnouncementCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAnnouncementCell.h; sourceTree = "<group>"; };
@@ -216,8 +264,6 @@
 		594D200224A1A9540076EEB0 /* YKServiceSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKServiceSettingCell.m; sourceTree = "<group>"; };
 		594D200524A1D00F0076EEB0 /* YKSelfInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSelfInfoVC.h; sourceTree = "<group>"; };
 		594D200624A1D00F0076EEB0 /* YKSelfInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSelfInfoVC.m; sourceTree = "<group>"; };
-		594D200824A1EECC0076EEB0 /* YKMainSymptomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMainSymptomVC.h; sourceTree = "<group>"; };
-		594D200924A1EECC0076EEB0 /* YKMainSymptomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMainSymptomVC.m; sourceTree = "<group>"; };
 		594D200C24A1FFAD0076EEB0 /* YKMainSymptomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMainSymptomCell.h; sourceTree = "<group>"; };
 		594D200D24A1FFAD0076EEB0 /* YKMainSymptomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMainSymptomCell.m; sourceTree = "<group>"; };
 		594D3288249877BE0025B7FF /* BFCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFCButton.m; sourceTree = "<group>"; };
@@ -232,8 +278,6 @@
 		594E445424A337E30004CC01 /* YKProjectDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKProjectDetailCell.m; sourceTree = "<group>"; };
 		594FCEB0248DDE0600FDC416 /* YKNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKNetworkManager.h; sourceTree = "<group>"; };
 		594FCEB1248DDE0600FDC416 /* YKNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKNetworkManager.m; sourceTree = "<group>"; wrapsLines = 0; };
-		594FCEB3248DE55900FDC416 /* YKApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKApiService.h; sourceTree = "<group>"; };
-		594FCEB4248DE55900FDC416 /* YKApiService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKApiService.m; sourceTree = "<group>"; };
 		594FCEB6248DE6B800FDC416 /* YKHUDHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHUDHelper.h; sourceTree = "<group>"; };
 		594FCEB7248DE6B800FDC416 /* YKHUDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHUDHelper.m; sourceTree = "<group>"; };
 		594FCEB9248DE80600FDC416 /* YKLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLoginVC.h; sourceTree = "<group>"; };
@@ -304,10 +348,43 @@
 		5967EF0224AEDD2B003FC023 /* YKChatDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatDetailVC.m; sourceTree = "<group>"; };
 		5967EF0724AEFE2C003FC023 /* YKChatSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKChatSelectView.h; sourceTree = "<group>"; };
 		5967EF0824AEFE2C003FC023 /* YKChatSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChatSelectView.m; sourceTree = "<group>"; };
+		59861E9A26FB19F300E1B36A /* YKPatientDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKPatientDetailVC.h; sourceTree = "<group>"; };
+		59861E9B26FB19F300E1B36A /* YKPatientDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKPatientDetailVC.m; sourceTree = "<group>"; };
 		598930E324C6EDD400863EF2 /* YKMyQuestionnaireVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMyQuestionnaireVC.h; sourceTree = "<group>"; };
 		598930E424C6EDD400863EF2 /* YKMyQuestionnaireVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMyQuestionnaireVC.m; sourceTree = "<group>"; };
 		598930E724C6EE1400863EF2 /* YKMyQuestionnaireCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKMyQuestionnaireCell.h; sourceTree = "<group>"; };
 		598930E824C6EE1400863EF2 /* YKMyQuestionnaireCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKMyQuestionnaireCell.m; sourceTree = "<group>"; };
+		5998F58A280523E80069F859 /* YKBaseApiSeivice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKBaseApiSeivice.h; sourceTree = "<group>"; };
+		5998F58B280523E80069F859 /* YKBaseApiSeivice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKBaseApiSeivice.m; sourceTree = "<group>"; };
+		5998F58F28052BAE0069F859 /* YKTokenApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTokenApiService.h; sourceTree = "<group>"; };
+		5998F59028052BAE0069F859 /* YKTokenApiService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKTokenApiService.m; sourceTree = "<group>"; };
+		5998F594280569030069F859 /* YKAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAlertViewController.m; sourceTree = "<group>"; };
+		5998F595280569030069F859 /* YKAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAlertViewController.h; sourceTree = "<group>"; };
+		5998F59E280570CC0069F859 /* JPUSHService+inapp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JPUSHService+inapp.m"; sourceTree = "<group>"; };
+		5998F59F280570CC0069F859 /* jcore-ios-3.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-3.2.0.a"; sourceTree = "<group>"; };
+		5998F5A0280570CC0069F859 /* JAdService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAdService.h; sourceTree = "<group>"; };
+		5998F5A1280570CC0069F859 /* jpush-extension-ios-1.1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.1.2.a"; sourceTree = "<group>"; };
+		5998F5A2280570CC0069F859 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
+		5998F5A3280570CC0069F859 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		5998F5A4280570CC0069F859 /* JPUSHService+inapp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPUSHService+inapp.h"; sourceTree = "<group>"; };
+		5998F5A5280570CC0069F859 /* jpush-ios-4.6.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-4.6.0.a"; sourceTree = "<group>"; };
+		5998F5AB2805710F0069F859 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5998F5AD280571230069F859 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		5998F5AF2805712A0069F859 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		5998F5B1280571300069F859 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5998F5B3280571350069F859 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5998F5B52805713E0069F859 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5998F5B7280571460069F859 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5998F5B92805714D0069F859 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5998F5BB280571650069F859 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		5998F5BD280571720069F859 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		5998F5C0280571980069F859 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5998F5C2280571A90069F859 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5998F5C4280571E40069F859 /* TTDoctorDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TTDoctorDebug.entitlements; sourceTree = "<group>"; };
+		5998F5C7280577100069F859 /* ZAlertViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlertViewManager.h; sourceTree = "<group>"; };
+		5998F5C8280577100069F859 /* ZAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlertView.h; sourceTree = "<group>"; };
+		5998F5C9280577100069F859 /* ZAlertViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlertViewManager.m; sourceTree = "<group>"; };
+		5998F5CA280577100069F859 /* ZAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlertView.m; sourceTree = "<group>"; };
 		599B89B5264CCB2C00C2A91C /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		599B89B6264CCB2C00C2A91C /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
 		599B89B7264CCB2C00C2A91C /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
@@ -422,6 +499,29 @@
 		599B8A34264CCB6C00C2A91C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		599B8A36264CCB7C00C2A91C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		599B8A38264CCB8200C2A91C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		59ADE1D3280E95AB003C9D0D /* YKNewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKNewsVC.h; sourceTree = "<group>"; };
+		59ADE1D4280E95AB003C9D0D /* YKNewsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKNewsVC.m; sourceTree = "<group>"; };
+		59ADE1DF280EA879003C9D0D /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerController.m; sourceTree = "<group>"; };
+		59ADE1E0280EA879003C9D0D /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerController.h; sourceTree = "<group>"; };
+		59ADE1E4280EAB4B003C9D0D /* YKNewsListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKNewsListVC.h; sourceTree = "<group>"; };
+		59ADE1E5280EAB4B003C9D0D /* YKNewsListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKNewsListVC.m; sourceTree = "<group>"; };
+		59B90C8F27116B76007989FD /* YKTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTagCell.h; sourceTree = "<group>"; };
+		59B90C9027116B76007989FD /* YKTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKTagCell.m; sourceTree = "<group>"; };
+		59B90C9427118DCB007989FD /* YKModifyTagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKModifyTagVC.h; sourceTree = "<group>"; };
+		59B90C9527118DCB007989FD /* YKModifyTagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKModifyTagVC.m; sourceTree = "<group>"; };
+		59B90C9C2711A189007989FD /* YKAddPatientVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAddPatientVC.h; sourceTree = "<group>"; };
+		59B90C9D2711A189007989FD /* YKAddPatientVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAddPatientVC.m; sourceTree = "<group>"; };
+		59C56F9327213E8E0012CC06 /* YKSetMainSymptomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSetMainSymptomVC.h; sourceTree = "<group>"; };
+		59C56F9427213E8E0012CC06 /* YKSetMainSymptomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSetMainSymptomVC.m; sourceTree = "<group>"; };
+		59C56F9827213F150012CC06 /* YKSelectMainSymptomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSelectMainSymptomVC.h; sourceTree = "<group>"; };
+		59C56F9927213F150012CC06 /* YKSelectMainSymptomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSelectMainSymptomVC.m; sourceTree = "<group>"; };
+		59E74483271FFD9F00DF7EE5 /* YKSelectTagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSelectTagVC.h; sourceTree = "<group>"; };
+		59E74484271FFD9F00DF7EE5 /* YKSelectTagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSelectTagVC.m; sourceTree = "<group>"; };
+		59E74487271FFDC400DF7EE5 /* YKManageTagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKManageTagVC.h; sourceTree = "<group>"; };
+		59E74488271FFDC400DF7EE5 /* YKManageTagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKManageTagVC.m; sourceTree = "<group>"; };
+		59FD46052704197C00EB2986 /* YKiPhoneGlobalConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKiPhoneGlobalConfig.h; sourceTree = "<group>"; };
+		59FD46062704197C00EB2986 /* YKiPhoneGlobalConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKiPhoneGlobalConfig.m; sourceTree = "<group>"; };
+		59FD460A27041A4800EB2986 /* YKConstantsDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKConstantsDefine.h; sourceTree = "<group>"; };
 		DC08071A343379DDA3E894AF /* Pods-TTDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTDoctor.debug.xcconfig"; path = "Target Support Files/Pods-TTDoctor/Pods-TTDoctor.debug.xcconfig"; sourceTree = "<group>"; };
 		F958522930956F2C93EA27B9 /* Pods-TTDoctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTDoctor.release.xcconfig"; path = "Target Support Files/Pods-TTDoctor/Pods-TTDoctor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -431,29 +531,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5998F5C3280571A90069F859 /* StoreKit.framework in Frameworks */,
+				5998F5C1280571980069F859 /* WebKit.framework in Frameworks */,
+				5998F5BE280571720069F859 /* libresolv.tbd in Frameworks */,
+				5998F5BC280571650069F859 /* UserNotifications.framework in Frameworks */,
+				599B8A2F264CCB4B00C2A91C /* libz.tbd in Frameworks */,
+				5998F5BA2805714D0069F859 /* Security.framework in Frameworks */,
+				5998F5B8280571460069F859 /* UIKit.framework in Frameworks */,
+				5998F5B62805713F0069F859 /* Foundation.framework in Frameworks */,
+				5998F5B4280571350069F859 /* CoreGraphics.framework in Frameworks */,
+				5998F5B2280571300069F859 /* SystemConfiguration.framework in Frameworks */,
+				5998F5B02805712B0069F859 /* CoreTelephony.framework in Frameworks */,
+				5998F5AE280571230069F859 /* CoreFoundation.framework in Frameworks */,
+				5998F5AC2805710F0069F859 /* CFNetwork.framework in Frameworks */,
 				599B8A39264CCB8200C2A91C /* AVFoundation.framework in Frameworks */,
+				5998F5A7280570CC0069F859 /* jcore-ios-3.2.0.a in Frameworks */,
 				599B8A37264CCB7C00C2A91C /* VideoToolbox.framework in Frameworks */,
 				599B8A35264CCB6C00C2A91C /* CoreMedia.framework in Frameworks */,
 				599B8A33264CCB6100C2A91C /* libiconv.tbd in Frameworks */,
+				5998F5A9280570CD0069F859 /* jpush-ios-4.6.0.a in Frameworks */,
 				599B8A31264CCB5600C2A91C /* libbz2.tbd in Frameworks */,
-				599B8A2F264CCB4B00C2A91C /* libz.tbd in Frameworks */,
 				599B8A29264CCB2D00C2A91C /* libavfilter.a in Frameworks */,
 				599B8A28264CCB2D00C2A91C /* libavutil.a in Frameworks */,
 				599B8A2A264CCB2D00C2A91C /* libavcodec.a in Frameworks */,
 				599B8A2B264CCB2D00C2A91C /* libavformat.a in Frameworks */,
 				599B8A2D264CCB2D00C2A91C /* libswscale.a in Frameworks */,
+				5998F5A8280570CD0069F859 /* jpush-extension-ios-1.1.2.a in Frameworks */,
 				12322844377009887BB3F55F /* libPods-TTDoctor.a in Frameworks */,
 				599B8A2C264CCB2D00C2A91C /* libswresample.a in Frameworks */,
-				597BE6AE2613132100343AFC /* MyTestSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04EFD6E1283628110074EB4D /* Consult */ = {
+			isa = PBXGroup;
+			children = (
+				04EFD6E2283628FC0074EB4D /* YKConsultVC.h */,
+				04EFD6E3283628FC0074EB4D /* YKConsultVC.m */,
+			);
+			path = Consult;
+			sourceTree = "<group>";
+		};
+		04FA53B728379AFB00A44ABC /* Consult */ = {
+			isa = PBXGroup;
+			children = (
+				04FA53B828379B3400A44ABC /* YKReceiveConsultCell.h */,
+				04FA53B928379B3400A44ABC /* YKReceiveConsultCell.m */,
+				04FA53BB28379B4700A44ABC /* YKApplyConsultCell.h */,
+				04FA53BC28379B4700A44ABC /* YKApplyConsultCell.m */,
+			);
+			path = Consult;
+			sourceTree = "<group>";
+		};
 		492A15E2C7907249F76C6A65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5998F5C2280571A90069F859 /* StoreKit.framework */,
+				5998F5C0280571980069F859 /* WebKit.framework */,
+				5998F5BD280571720069F859 /* libresolv.tbd */,
+				5998F5BB280571650069F859 /* UserNotifications.framework */,
+				5998F5B92805714D0069F859 /* Security.framework */,
+				5998F5B7280571460069F859 /* UIKit.framework */,
+				5998F5B52805713E0069F859 /* Foundation.framework */,
+				5998F5B3280571350069F859 /* CoreGraphics.framework */,
+				5998F5B1280571300069F859 /* SystemConfiguration.framework */,
+				5998F5AF2805712A0069F859 /* CoreTelephony.framework */,
+				5998F5AD280571230069F859 /* CoreFoundation.framework */,
+				5998F5AB2805710F0069F859 /* CFNetwork.framework */,
 				599B8A38264CCB8200C2A91C /* AVFoundation.framework */,
 				599B8A36264CCB7C00C2A91C /* VideoToolbox.framework */,
 				599B8A34264CCB6C00C2A91C /* CoreMedia.framework */,
@@ -463,6 +609,20 @@
 				260DC1B01CF6D372725D9F7D /* libPods-TTDoctor.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		590755152714173900E2A4E5 /* CXDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				590755192714173900E2A4E5 /* CXDatePickerStyle.h */,
+				5907551A2714173900E2A4E5 /* CXDatePickerView.h */,
+				590755162714173900E2A4E5 /* CXDatePickerView.m */,
+				590755182714173900E2A4E5 /* CXDatePickerViewManager.h */,
+				5907551C2714173900E2A4E5 /* CXDatePickerViewManager.m */,
+				590755172714173900E2A4E5 /* NSDate+CXCategory.h */,
+				5907551B2714173900E2A4E5 /* NSDate+CXCategory.m */,
+			);
+			path = CXDatePickerView;
 			sourceTree = "<group>";
 		};
 		59236D722491E01A0075F64B /* Mine */ = {
@@ -505,6 +665,9 @@
 			children = (
 				59236D7A2491E1250075F64B /* YKPatientVC.h */,
 				59236D7B2491E1250075F64B /* YKPatientVC.m */,
+				59B90C9B2711A136007989FD /* AddPatient */,
+				59B90C9927119EB9007989FD /* PatientDetail */,
+				59B90C9327118D60007989FD /* Tag */,
 			);
 			path = Patient;
 			sourceTree = "<group>";
@@ -514,9 +677,8 @@
 			children = (
 				59236D772491E10B0075F64B /* YKHomeVC.h */,
 				59236D782491E10B0075F64B /* YKHomeVC.m */,
-				59408080261DA5CA008AA79E /* testSwiftDemo.swift */,
-				59408082261DA665008AA79E /* TTDoctor-Bridging-Header.h */,
 				59452FF12499CBEE00A62D05 /* Announcement */,
+				04EFD6E1283628110074EB4D /* Consult */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -539,14 +701,6 @@
 				59375B322500F33F0072B700 /* YKTestChatVC.m */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		593D304025C93C48000682E0 /* MyTestSDK */ = {
-			isa = PBXGroup;
-			children = (
-				593D304125C93C69000682E0 /* MyTestSDK.framework */,
-			);
-			path = MyTestSDK;
 			sourceTree = "<group>";
 		};
 		59452FF12499CBEE00A62D05 /* Announcement */ = {
@@ -581,6 +735,8 @@
 			children = (
 				59453001249A0DBA00A62D05 /* YKPatientCell.h */,
 				59453002249A0DBA00A62D05 /* YKPatientCell.m */,
+				59B90C8F27116B76007989FD /* YKTagCell.h */,
+				59B90C9027116B76007989FD /* YKTagCell.m */,
 			);
 			path = Patient;
 			sourceTree = "<group>";
@@ -724,6 +880,7 @@
 		59484E10248A5A9C00787EEE /* TTDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				5998F5C4280571E40069F859 /* TTDoctorDebug.entitlements */,
 				5954F72324FE4F5D00BD8F60 /* Chat */,
 				59484E33248A5B0D00787EEE /* Application */,
 				59484E32248A5B0B00787EEE /* Controller */,
@@ -734,6 +891,8 @@
 				59484E2D248A5B0300787EEE /* ApiService */,
 				59484E2C248A5B0100787EEE /* Category */,
 				59484E2B248A5AFE00787EEE /* Third */,
+				59FD4604270418FC00EB2986 /* Tools */,
+				59FD4603270418F700EB2986 /* ConstantsDefine */,
 				59484E1D248A5AAF00787EEE /* Assets.xcassets */,
 				59484E1F248A5AAF00787EEE /* LaunchScreen.storyboard */,
 				59484E22248A5AAF00787EEE /* Info.plist */,
@@ -745,8 +904,12 @@
 		59484E2B248A5AFE00787EEE /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				59ADE1DE280EA879003C9D0D /* ICViewPager */,
+				5998F5C6280577100069F859 /* ZAlertView */,
+				5998F59D280570CC0069F859 /* Lib */,
+				5998F593280569030069F859 /* YKAlertViewController */,
+				590755152714173900E2A4E5 /* CXDatePickerView */,
 				599B89B3264CCAF800C2A91C /* FFmpeg */,
-				593D304025C93C48000682E0 /* MyTestSDK */,
 				595EBBAD24EA54FA007D0206 /* WHDebugTool */,
 				592A552324E12F2900C14443 /* DKSKeyBoard */,
 				5946C8A2249B50EA00332B11 /* PopoverView */,
@@ -766,8 +929,10 @@
 		59484E2D248A5B0300787EEE /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
-				594FCEB3248DE55900FDC416 /* YKApiService.h */,
-				594FCEB4248DE55900FDC416 /* YKApiService.m */,
+				5998F58A280523E80069F859 /* YKBaseApiSeivice.h */,
+				5998F58B280523E80069F859 /* YKBaseApiSeivice.m */,
+				5998F58F28052BAE0069F859 /* YKTokenApiService.h */,
+				5998F59028052BAE0069F859 /* YKTokenApiService.m */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -833,6 +998,7 @@
 				59236D742491E01F0075F64B /* ChatList */,
 				59236D732491E01C0075F64B /* Project */,
 				59236D722491E01A0075F64B /* Mine */,
+				59ADE1D1280E94CB003C9D0D /* News */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -854,6 +1020,8 @@
 				59484E36248A5BCD00787EEE /* YKBaseVC.m */,
 				59236D6F2491DBF60075F64B /* YKTabBarVC.h */,
 				59236D702491DBF60075F64B /* YKTabBarVC.m */,
+				0466956129125B7B009E931C /* YKBaseNaviVC.h */,
+				0466956229125B7B009E931C /* YKBaseNaviVC.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -909,10 +1077,10 @@
 			children = (
 				594D200524A1D00F0076EEB0 /* YKSelfInfoVC.h */,
 				594D200624A1D00F0076EEB0 /* YKSelfInfoVC.m */,
-				594D200824A1EECC0076EEB0 /* YKMainSymptomVC.h */,
-				594D200924A1EECC0076EEB0 /* YKMainSymptomVC.m */,
 				594E444B24A2FE700004CC01 /* YKQuickReplyVC.h */,
 				594E444C24A2FE700004CC01 /* YKQuickReplyVC.m */,
+				59C56F9327213E8E0012CC06 /* YKSetMainSymptomVC.h */,
+				59C56F9427213E8E0012CC06 /* YKSetMainSymptomVC.m */,
 			);
 			path = SubVCs;
 			sourceTree = "<group>";
@@ -941,6 +1109,7 @@
 				594D328B249899540025B7FF /* YKHomeCell.h */,
 				594D328C249899540025B7FF /* YKHomeCell.m */,
 				59452FF52499F4B700A62D05 /* Announcement */,
+				04FA53B728379AFB00A44ABC /* Consult */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1127,6 +1296,41 @@
 			path = MyQuestionnaire;
 			sourceTree = "<group>";
 		};
+		5998F593280569030069F859 /* YKAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5998F595280569030069F859 /* YKAlertViewController.h */,
+				5998F594280569030069F859 /* YKAlertViewController.m */,
+			);
+			path = YKAlertViewController;
+			sourceTree = "<group>";
+		};
+		5998F59D280570CC0069F859 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				5998F5A0280570CC0069F859 /* JAdService.h */,
+				5998F59F280570CC0069F859 /* jcore-ios-3.2.0.a */,
+				5998F5A1280570CC0069F859 /* jpush-extension-ios-1.1.2.a */,
+				5998F5A5280570CC0069F859 /* jpush-ios-4.6.0.a */,
+				5998F5A2280570CC0069F859 /* JPushNotificationExtensionService.h */,
+				5998F5A3280570CC0069F859 /* JPUSHService.h */,
+				5998F5A4280570CC0069F859 /* JPUSHService+inapp.h */,
+				5998F59E280570CC0069F859 /* JPUSHService+inapp.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		5998F5C6280577100069F859 /* ZAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				5998F5C8280577100069F859 /* ZAlertView.h */,
+				5998F5CA280577100069F859 /* ZAlertView.m */,
+				5998F5C7280577100069F859 /* ZAlertViewManager.h */,
+				5998F5C9280577100069F859 /* ZAlertViewManager.m */,
+			);
+			path = ZAlertView;
+			sourceTree = "<group>";
+		};
 		599B89B3264CCAF800C2A91C /* FFmpeg */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,79 +1381,79 @@
 		599B89C2264CCB2D00C2A91C /* libavutil */ = {
 			isa = PBXGroup;
 			children = (
-				599B89C3264CCB2D00C2A91C /* hwcontext.h */,
-				599B89C4264CCB2D00C2A91C /* time.h */,
-				599B89C5264CCB2D00C2A91C /* hwcontext_cuda.h */,
-				599B89C6264CCB2D00C2A91C /* intfloat.h */,
-				599B89C7264CCB2D00C2A91C /* error.h */,
-				599B89C8264CCB2D00C2A91C /* fifo.h */,
-				599B89C9264CCB2D00C2A91C /* blowfish.h */,
-				599B89CA264CCB2D00C2A91C /* replaygain.h */,
-				599B89CB264CCB2D00C2A91C /* version.h */,
-				599B89CC264CCB2D00C2A91C /* murmur3.h */,
-				599B89CD264CCB2D00C2A91C /* stereo3d.h */,
-				599B89CE264CCB2D00C2A91C /* samplefmt.h */,
-				599B89CF264CCB2D00C2A91C /* pixdesc.h */,
-				599B89D0264CCB2D00C2A91C /* base64.h */,
-				599B89D1264CCB2D00C2A91C /* rational.h */,
-				599B89D2264CCB2D00C2A91C /* sha.h */,
-				599B89D3264CCB2D00C2A91C /* motion_vector.h */,
-				599B89D4264CCB2D00C2A91C /* avconfig.h */,
-				599B89D5264CCB2D00C2A91C /* lfg.h */,
-				599B89D6264CCB2D00C2A91C /* avutil.h */,
-				599B89D7264CCB2D00C2A91C /* xtea.h */,
-				599B89D8264CCB2D00C2A91C /* crc.h */,
-				599B89D9264CCB2D00C2A91C /* hwcontext_vdpau.h */,
-				599B89DA264CCB2D00C2A91C /* frame.h */,
-				599B89DB264CCB2D00C2A91C /* file.h */,
-				599B89DC264CCB2D00C2A91C /* md5.h */,
-				599B89DD264CCB2D00C2A91C /* cast5.h */,
-				599B89DE264CCB2D00C2A91C /* hwcontext_vaapi.h */,
-				599B89DF264CCB2D00C2A91C /* ffversion.h */,
-				599B89E0264CCB2D00C2A91C /* audio_fifo.h */,
-				599B89E1264CCB2D00C2A91C /* tree.h */,
-				599B89E2264CCB2D00C2A91C /* threadmessage.h */,
-				599B89E3264CCB2D00C2A91C /* attributes.h */,
 				599B89E4264CCB2D00C2A91C /* adler32.h */,
-				599B89E5264CCB2D00C2A91C /* timecode.h */,
-				599B89E6264CCB2D00C2A91C /* sha512.h */,
-				599B89E7264CCB2D00C2A91C /* hwcontext_dxva2.h */,
-				599B89E8264CCB2D00C2A91C /* display.h */,
+				599B8A04264CCB2D00C2A91C /* aes_ctr.h */,
+				599B89F4264CCB2D00C2A91C /* aes.h */,
+				599B89E3264CCB2D00C2A91C /* attributes.h */,
+				599B89E0264CCB2D00C2A91C /* audio_fifo.h */,
+				599B8A07264CCB2D00C2A91C /* avassert.h */,
+				599B89D4264CCB2D00C2A91C /* avconfig.h */,
+				599B8A0B264CCB2D00C2A91C /* avstring.h */,
+				599B89D6264CCB2D00C2A91C /* avutil.h */,
+				599B89D0264CCB2D00C2A91C /* base64.h */,
+				599B89C9264CCB2D00C2A91C /* blowfish.h */,
+				599B8A01264CCB2D00C2A91C /* bprint.h */,
+				599B89F6264CCB2D00C2A91C /* bswap.h */,
 				599B89E9264CCB2D00C2A91C /* buffer.h */,
 				599B89EA264CCB2D00C2A91C /* camellia.h */,
-				599B89EB264CCB2D00C2A91C /* pixelutils.h */,
-				599B89EC264CCB2D00C2A91C /* common.h */,
-				599B89ED264CCB2D00C2A91C /* hmac.h */,
-				599B89EE264CCB2D00C2A91C /* eval.h */,
-				599B89EF264CCB2D00C2A91C /* dict.h */,
-				599B89F0264CCB2D00C2A91C /* random_seed.h */,
-				599B89F1264CCB2D00C2A91C /* opt.h */,
-				599B89F2264CCB2D00C2A91C /* mastering_display_metadata.h */,
-				599B89F3264CCB2D00C2A91C /* log.h */,
-				599B89F4264CCB2D00C2A91C /* aes.h */,
-				599B89F5264CCB2D00C2A91C /* macros.h */,
-				599B89F6264CCB2D00C2A91C /* bswap.h */,
-				599B89F7264CCB2D00C2A91C /* rc4.h */,
-				599B89F8264CCB2D00C2A91C /* tea.h */,
-				599B89F9264CCB2D00C2A91C /* cpu.h */,
-				599B89FA264CCB2D00C2A91C /* des.h */,
+				599B89DD264CCB2D00C2A91C /* cast5.h */,
 				599B89FB264CCB2D00C2A91C /* channel_layout.h */,
-				599B89FC264CCB2D00C2A91C /* twofish.h */,
-				599B89FD264CCB2D00C2A91C /* imgutils.h */,
-				599B89FE264CCB2D00C2A91C /* mem.h */,
-				599B89FF264CCB2D00C2A91C /* parseutils.h */,
-				599B8A00264CCB2D00C2A91C /* ripemd.h */,
-				599B8A01264CCB2D00C2A91C /* bprint.h */,
-				599B8A02264CCB2D00C2A91C /* hwcontext_qsv.h */,
-				599B8A03264CCB2D00C2A91C /* pixfmt.h */,
-				599B8A04264CCB2D00C2A91C /* aes_ctr.h */,
-				599B8A05264CCB2D00C2A91C /* timestamp.h */,
+				599B89EC264CCB2D00C2A91C /* common.h */,
+				599B89F9264CCB2D00C2A91C /* cpu.h */,
+				599B89D8264CCB2D00C2A91C /* crc.h */,
+				599B89FA264CCB2D00C2A91C /* des.h */,
+				599B89EF264CCB2D00C2A91C /* dict.h */,
+				599B89E8264CCB2D00C2A91C /* display.h */,
 				599B8A06264CCB2D00C2A91C /* downmix_info.h */,
-				599B8A07264CCB2D00C2A91C /* avassert.h */,
+				599B89C7264CCB2D00C2A91C /* error.h */,
+				599B89EE264CCB2D00C2A91C /* eval.h */,
+				599B89DF264CCB2D00C2A91C /* ffversion.h */,
+				599B89C8264CCB2D00C2A91C /* fifo.h */,
+				599B89DB264CCB2D00C2A91C /* file.h */,
+				599B89DA264CCB2D00C2A91C /* frame.h */,
 				599B8A08264CCB2D00C2A91C /* hash.h */,
-				599B8A09264CCB2D00C2A91C /* mathematics.h */,
+				599B89ED264CCB2D00C2A91C /* hmac.h */,
+				599B89C5264CCB2D00C2A91C /* hwcontext_cuda.h */,
+				599B89E7264CCB2D00C2A91C /* hwcontext_dxva2.h */,
+				599B8A02264CCB2D00C2A91C /* hwcontext_qsv.h */,
+				599B89DE264CCB2D00C2A91C /* hwcontext_vaapi.h */,
+				599B89D9264CCB2D00C2A91C /* hwcontext_vdpau.h */,
+				599B89C3264CCB2D00C2A91C /* hwcontext.h */,
+				599B89FD264CCB2D00C2A91C /* imgutils.h */,
+				599B89C6264CCB2D00C2A91C /* intfloat.h */,
 				599B8A0A264CCB2D00C2A91C /* intreadwrite.h */,
-				599B8A0B264CCB2D00C2A91C /* avstring.h */,
+				599B89D5264CCB2D00C2A91C /* lfg.h */,
+				599B89F3264CCB2D00C2A91C /* log.h */,
+				599B89F5264CCB2D00C2A91C /* macros.h */,
+				599B89F2264CCB2D00C2A91C /* mastering_display_metadata.h */,
+				599B8A09264CCB2D00C2A91C /* mathematics.h */,
+				599B89DC264CCB2D00C2A91C /* md5.h */,
+				599B89FE264CCB2D00C2A91C /* mem.h */,
+				599B89D3264CCB2D00C2A91C /* motion_vector.h */,
+				599B89CC264CCB2D00C2A91C /* murmur3.h */,
+				599B89F1264CCB2D00C2A91C /* opt.h */,
+				599B89FF264CCB2D00C2A91C /* parseutils.h */,
+				599B89CF264CCB2D00C2A91C /* pixdesc.h */,
+				599B89EB264CCB2D00C2A91C /* pixelutils.h */,
+				599B8A03264CCB2D00C2A91C /* pixfmt.h */,
+				599B89F0264CCB2D00C2A91C /* random_seed.h */,
+				599B89D1264CCB2D00C2A91C /* rational.h */,
+				599B89F7264CCB2D00C2A91C /* rc4.h */,
+				599B89CA264CCB2D00C2A91C /* replaygain.h */,
+				599B8A00264CCB2D00C2A91C /* ripemd.h */,
+				599B89CE264CCB2D00C2A91C /* samplefmt.h */,
+				599B89D2264CCB2D00C2A91C /* sha.h */,
+				599B89E6264CCB2D00C2A91C /* sha512.h */,
+				599B89CD264CCB2D00C2A91C /* stereo3d.h */,
+				599B89F8264CCB2D00C2A91C /* tea.h */,
+				599B89E2264CCB2D00C2A91C /* threadmessage.h */,
+				599B89C4264CCB2D00C2A91C /* time.h */,
+				599B89E5264CCB2D00C2A91C /* timecode.h */,
+				599B8A05264CCB2D00C2A91C /* timestamp.h */,
+				599B89E1264CCB2D00C2A91C /* tree.h */,
+				599B89FC264CCB2D00C2A91C /* twofish.h */,
+				599B89CB264CCB2D00C2A91C /* version.h */,
+				599B89D7264CCB2D00C2A91C /* xtea.h */,
 			);
 			path = libavutil;
 			sourceTree = "<group>";
@@ -1277,22 +1481,22 @@
 			isa = PBXGroup;
 			children = (
 				599B8A14264CCB2D00C2A91C /* avcodec.h */,
-				599B8A15264CCB2D00C2A91C /* version.h */,
-				599B8A16264CCB2D00C2A91C /* vdpau.h */,
+				599B8A21264CCB2D00C2A91C /* avdct.h */,
+				599B8A1D264CCB2D00C2A91C /* avfft.h */,
+				599B8A1C264CCB2D00C2A91C /* d3d11va.h */,
+				599B8A20264CCB2D00C2A91C /* dirac.h */,
+				599B8A24264CCB2D00C2A91C /* dv_profile.h */,
+				599B8A23264CCB2D00C2A91C /* dxva2.h */,
+				599B8A1F264CCB2D00C2A91C /* jni.h */,
+				599B8A1B264CCB2D00C2A91C /* mediacodec.h */,
 				599B8A17264CCB2D00C2A91C /* qsv.h */,
 				599B8A18264CCB2D00C2A91C /* vaapi.h */,
-				599B8A19264CCB2D00C2A91C /* videotoolbox.h */,
-				599B8A1A264CCB2D00C2A91C /* xvmc.h */,
-				599B8A1B264CCB2D00C2A91C /* mediacodec.h */,
-				599B8A1C264CCB2D00C2A91C /* d3d11va.h */,
-				599B8A1D264CCB2D00C2A91C /* avfft.h */,
 				599B8A1E264CCB2D00C2A91C /* vda.h */,
-				599B8A1F264CCB2D00C2A91C /* jni.h */,
-				599B8A20264CCB2D00C2A91C /* dirac.h */,
-				599B8A21264CCB2D00C2A91C /* avdct.h */,
+				599B8A16264CCB2D00C2A91C /* vdpau.h */,
+				599B8A15264CCB2D00C2A91C /* version.h */,
+				599B8A19264CCB2D00C2A91C /* videotoolbox.h */,
 				599B8A22264CCB2D00C2A91C /* vorbis_parser.h */,
-				599B8A23264CCB2D00C2A91C /* dxva2.h */,
-				599B8A24264CCB2D00C2A91C /* dv_profile.h */,
+				599B8A1A264CCB2D00C2A91C /* xvmc.h */,
 			);
 			path = libavcodec;
 			sourceTree = "<group>";
@@ -1304,6 +1508,84 @@
 				599B8A27264CCB2D00C2A91C /* swresample.h */,
 			);
 			path = libswresample;
+			sourceTree = "<group>";
+		};
+		59ADE1D1280E94CB003C9D0D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				59ADE1D3280E95AB003C9D0D /* YKNewsVC.h */,
+				59ADE1D4280E95AB003C9D0D /* YKNewsVC.m */,
+				59ADE1E4280EAB4B003C9D0D /* YKNewsListVC.h */,
+				59ADE1E5280EAB4B003C9D0D /* YKNewsListVC.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		59ADE1DE280EA879003C9D0D /* ICViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				59ADE1E0280EA879003C9D0D /* ViewPagerController.h */,
+				59ADE1DF280EA879003C9D0D /* ViewPagerController.m */,
+			);
+			path = ICViewPager;
+			sourceTree = "<group>";
+		};
+		59B90C9327118D60007989FD /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				59E74487271FFDC400DF7EE5 /* YKManageTagVC.h */,
+				59E74488271FFDC400DF7EE5 /* YKManageTagVC.m */,
+				59B90C9427118DCB007989FD /* YKModifyTagVC.h */,
+				59B90C9527118DCB007989FD /* YKModifyTagVC.m */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		59B90C9927119EB9007989FD /* PatientDetail */ = {
+			isa = PBXGroup;
+			children = (
+				59861E9A26FB19F300E1B36A /* YKPatientDetailVC.h */,
+				59861E9B26FB19F300E1B36A /* YKPatientDetailVC.m */,
+			);
+			path = PatientDetail;
+			sourceTree = "<group>";
+		};
+		59B90C9B2711A136007989FD /* AddPatient */ = {
+			isa = PBXGroup;
+			children = (
+				59B90C9C2711A189007989FD /* YKAddPatientVC.h */,
+				59B90C9D2711A189007989FD /* YKAddPatientVC.m */,
+				59C56F9127213DE20012CC06 /* SubVCs */,
+			);
+			path = AddPatient;
+			sourceTree = "<group>";
+		};
+		59C56F9127213DE20012CC06 /* SubVCs */ = {
+			isa = PBXGroup;
+			children = (
+				59E74483271FFD9F00DF7EE5 /* YKSelectTagVC.h */,
+				59E74484271FFD9F00DF7EE5 /* YKSelectTagVC.m */,
+				59C56F9827213F150012CC06 /* YKSelectMainSymptomVC.h */,
+				59C56F9927213F150012CC06 /* YKSelectMainSymptomVC.m */,
+			);
+			path = SubVCs;
+			sourceTree = "<group>";
+		};
+		59FD4603270418F700EB2986 /* ConstantsDefine */ = {
+			isa = PBXGroup;
+			children = (
+				59FD460A27041A4800EB2986 /* YKConstantsDefine.h */,
+			);
+			path = ConstantsDefine;
+			sourceTree = "<group>";
+		};
+		59FD4604270418FC00EB2986 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				59FD46052704197C00EB2986 /* YKiPhoneGlobalConfig.h */,
+				59FD46062704197C00EB2986 /* YKiPhoneGlobalConfig.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		678F0C60433D1CB16E7D82F4 /* Pods */ = {
@@ -1432,9 +1714,10 @@
 				59375B2F2500D68E0072B700 /* YKChatMessageManager.m in Sources */,
 				5946C8B2249B5C1800332B11 /* YKUserInfoCell.m in Sources */,
 				594B127C24F50EE100635525 /* CLTreeViewFirstLevelModel.m in Sources */,
+				59ADE1E6280EAB4B003C9D0D /* YKNewsListVC.m in Sources */,
 				59484E13248A5A9C00787EEE /* AppDelegate.m in Sources */,
-				594FCEB5248DE55900FDC416 /* YKApiService.m in Sources */,
 				5945A5A825022D1D002A230B /* UIView+WZMChat.m in Sources */,
+				59B90C9127116B76007989FD /* YKTagCell.m in Sources */,
 				5967EF0324AEDD2B003FC023 /* YKChatDetailVC.m in Sources */,
 				5960276524A0C32D00AA0833 /* YKServiceSettingVC.m in Sources */,
 				59452FF82499F4E100A62D05 /* YKAnnouncementCell.m in Sources */,
@@ -1442,13 +1725,16 @@
 				592A552F24E13A2800C14443 /* YKChatKeyboardView.m in Sources */,
 				595C112024A9EE0F006A18D8 /* YKProjectVC.m in Sources */,
 				5960276224A0A66300AA0833 /* YKProfessionalNameVC.m in Sources */,
+				5998F596280569030069F859 /* YKAlertViewController.m in Sources */,
 				595EBBC024EA54FB007D0206 /* WHDebugConsoleLabel.m in Sources */,
 				59236D7F2491E1390075F64B /* YKChatListVC.m in Sources */,
 				594D200724A1D00F0076EEB0 /* YKSelfInfoVC.m in Sources */,
 				5959639524972A6F00BCF83A /* NSString+BFCAddition.m in Sources */,
 				5954F73324FE555A00BD8F60 /* YKChatMessageModel.m in Sources */,
 				59236D712491DBF60075F64B /* YKTabBarVC.m in Sources */,
+				04EFD6E4283628FC0074EB4D /* YKConsultVC.m in Sources */,
 				5945A59E250227DE002A230B /* YKChatBaseCell.m in Sources */,
+				5907551F2714173900E2A4E5 /* CXDatePickerViewManager.m in Sources */,
 				594FCEB8248DE6B800FDC416 /* YKHUDHelper.m in Sources */,
 				5945A5AE25023162002A230B /* YKChatImageMessageCell.m in Sources */,
 				594E444D24A2FE700004CC01 /* YKQuickReplyVC.m in Sources */,
@@ -1464,18 +1750,25 @@
 				59537149250F4C2200C8A85D /* YKChatQuestionnaireMessageCell.m in Sources */,
 				592A552B24E12F2900C14443 /* DKSTextView.m in Sources */,
 				595EBBBF24EA54FB007D0206 /* WHDebugMemoryMonitor.m in Sources */,
+				59C56F9A27213F150012CC06 /* YKSelectMainSymptomVC.m in Sources */,
+				59ADE1E1280EA879003C9D0D /* ViewPagerController.m in Sources */,
+				5998F58C280523E80069F859 /* YKBaseApiSeivice.m in Sources */,
 				5946C89E249B384C00332B11 /* YKChatListCell.m in Sources */,
 				595EBBBE24EA54FB007D0206 /* WHDebugFPSMonitor.m in Sources */,
+				5907551D2714173900E2A4E5 /* CXDatePickerView.m in Sources */,
 				5951768D24E669D000985E19 /* YKMessageModel.m in Sources */,
 				594B128524F5100600635525 /* CLTreeViewNode.m in Sources */,
 				59453003249A0DBA00A62D05 /* YKPatientCell.m in Sources */,
+				04FA53BA28379B3400A44ABC /* YKReceiveConsultCell.m in Sources */,
 				594B128224F50F0F00635525 /* CLTreeViewThirdLevelModel.m in Sources */,
 				59375B2C2500CB5C0072B700 /* YKInputBase64.m in Sources */,
 				59375B292500BAE50072B700 /* YKChatDBManager.m in Sources */,
 				594FCEBB248DE80600FDC416 /* YKLoginVC.m in Sources */,
-				59408081261DA5CA008AA79E /* testSwiftDemo.swift in Sources */,
 				595EBBBC24EA54FB007D0206 /* WHDebugToolManager.m in Sources */,
+				5998F5A6280570CC0069F859 /* JPUSHService+inapp.m in Sources */,
 				594E445124A335840004CC01 /* YKProjectDetailVC.m in Sources */,
+				59E74489271FFDC400DF7EE5 /* YKManageTagVC.m in Sources */,
+				5998F59128052BAE0069F859 /* YKTokenApiService.m in Sources */,
 				595099F3248F2DB300BC3479 /* YKGuidePagesVC.m in Sources */,
 				594FCEB2248DDE0600FDC416 /* YKNetworkManager.m in Sources */,
 				5954F73024FE553400BD8F60 /* YKChatUserModel.m in Sources */,
@@ -1487,7 +1780,9 @@
 				5946C8BE249B84A900332B11 /* YKProvinceVC.m in Sources */,
 				594B127924F50EC100635525 /* CLTreeViewThirdLevelCell.m in Sources */,
 				59596399249762ED00BCF83A /* YKDoctor.m in Sources */,
+				59E74485271FFD9F00DF7EE5 /* YKSelectTagVC.m in Sources */,
 				594B127F24F50EF700635525 /* CLTreeViewSecondLevelModel.m in Sources */,
+				59FD46072704197C00EB2986 /* YKiPhoneGlobalConfig.m in Sources */,
 				5963EADF24FF88A7001AE2C1 /* YKChatSqliteManager.m in Sources */,
 				594B127624F50EAA00635525 /* CLTreeViewSecondLevelCell.m in Sources */,
 				5954F72824FE509B00BD8F60 /* YKChatBaseModel.m in Sources */,
@@ -1495,21 +1790,29 @@
 				5960275B24A0A57B00AA0833 /* YKDepartmentsVC.m in Sources */,
 				595EBBBD24EA54FB007D0206 /* WHDebugTempVC.m in Sources */,
 				59484E24248A5AAF00787EEE /* main.m in Sources */,
+				59ADE1D5280E95AB003C9D0D /* YKNewsVC.m in Sources */,
 				594D200324A1A9540076EEB0 /* YKServiceSettingCell.m in Sources */,
+				5998F5CC280577100069F859 /* ZAlertView.m in Sources */,
 				59246B5025E7927E00D766A4 /* YKRecordAnimation.m in Sources */,
 				594B126F24F50BE800635525 /* YKDoctorListVC.m in Sources */,
+				59B90C9627118DCB007989FD /* YKModifyTagVC.m in Sources */,
+				5907551E2714173900E2A4E5 /* NSDate+CXCategory.m in Sources */,
 				59236D792491E10B0075F64B /* YKHomeVC.m in Sources */,
 				5949D09A24AC7FA400F740EE /* YKAddProjectPatientCell.m in Sources */,
+				59B90C9E2711A189007989FD /* YKAddPatientVC.m in Sources */,
 				594FCEBF248DE9D700FDC416 /* YKUserDefaults.m in Sources */,
 				5946C8A5249B50FE00332B11 /* PopoverView.m in Sources */,
 				5915F88C249CCFAA0098CDE9 /* YKChangePasswordVC.m in Sources */,
 				5960275824A0A53700AA0833 /* YKHospitalVC.m in Sources */,
 				5954F73724FE583900BD8F60 /* YKChatHelper.m in Sources */,
+				5998F5CB280577100069F859 /* ZAlertViewManager.m in Sources */,
 				59484E37248A5BCD00787EEE /* YKBaseVC.m in Sources */,
 				5946C8B8249B843E00332B11 /* YKChangePhoneVC.m in Sources */,
-				594D200A24A1EECC0076EEB0 /* YKMainSymptomVC.m in Sources */,
+				0466956329125B7B009E931C /* YKBaseNaviVC.m in Sources */,
 				59596392249723FF00BCF83A /* YKAlertHelper.m in Sources */,
 				5967EF0924AEFE2C003FC023 /* YKChatSelectView.m in Sources */,
+				04FA53BD28379B4700A44ABC /* YKApplyConsultCell.m in Sources */,
+				59861E9C26FB19F300E1B36A /* YKPatientDetailVC.m in Sources */,
 				59452FFC249A05A700A62D05 /* YKWebVC.m in Sources */,
 				592A552A24E12F2900C14443 /* UIView+FrameTool.m in Sources */,
 				5946C8AE249B57F000332B11 /* YKQRCodeVC.m in Sources */,
@@ -1521,6 +1824,7 @@
 				595099F6248F613E00BC3479 /* YKForgetVC.m in Sources */,
 				595099F9248F657D00BC3479 /* YKLoginCell.m in Sources */,
 				594D328A249877BE0025B7FF /* BFCButton.m in Sources */,
+				59C56F9527213E8E0012CC06 /* YKSetMainSymptomVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1652,13 +1956,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC08071A343379DDA3E894AF /* Pods-TTDoctor.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = TTDoctor/TTDoctorDebug.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: lizhu gong (X8B5MRNZ72)";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7S8ALW2ZF2;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTDoctor/Third/MyTestSDK",
@@ -1690,12 +1997,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTDoctor/Third/FFmpeg/lib",
+					"$(PROJECT_DIR)/TTDoctor/Third/Lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ttdoc.TTDoctor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.econ.ChronicFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yk/Desktop/TTDoctor/TTDoctor/Controller/Home/TTDoctor-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				PROVISIONING_PROFILE_SPECIFIER = chronicFriend_development;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1704,13 +2010,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F958522930956F2C93EA27B9 /* Pods-TTDoctor.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Beijing Econ Network Technology Co., Ltd (7S8ALW2ZF2)";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7S8ALW2ZF2;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTDoctor/Third/MyTestSDK",
@@ -1742,11 +2050,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTDoctor/Third/FFmpeg/lib",
+					"$(PROJECT_DIR)/TTDoctor/Third/Lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ttdoc.TTDoctor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.econ.ChronicFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yk/Desktop/TTDoctor/TTDoctor/Controller/Home/TTDoctor-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				PROVISIONING_PROFILE_SPECIFIER = chronicFriend_AppleStore;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

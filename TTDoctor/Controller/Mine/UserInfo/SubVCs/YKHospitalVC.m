@@ -62,7 +62,7 @@
 - (void)getData{
     [YKHUDHelper showHUDInView:self.view];
     
-    [[YKApiService service] getHospitalListWithProvince:self.provienceStr hospitalName:_hospitalStr completion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getHospitalListWithProvince:self.provienceStr hospitalName:_hospitalStr completion:^(id responseObject, NSError *error) {
         if (!error) {
             [YKHUDHelper hideHUDInView:self.view];
             [self.dataArray removeAllObjects];

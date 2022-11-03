@@ -62,7 +62,7 @@
 
 - (void)fillData{
     NSString *doctorImageStr = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,_doctor.picUrl];
-    [self.userImageView sd_setImageWithURL:[NSURL URLWithString:doctorImageStr] placeholderImage:[UIImage imageNamed:@"我的_医生默认"]];
+    [self.userImageView sd_setImageWithURL:[NSURL URLWithString:doctorImageStr] placeholderImage:[UIImage imageNamed:@"mine_defaultAvatar"]];
     [self.QRCodeImageView sd_setImageWithURL:[NSURL URLWithString:_doctor.qrUrl]];
     self.nameLabel.text = [NSString stringWithFormat:@"%@ %@",_doctor.familyname,_doctor.professionalRanksName];
     self.hospitalLabel.text = [NSString stringWithFormat:@"%@ %@",_doctor.hospitalName,_doctor.deptName];

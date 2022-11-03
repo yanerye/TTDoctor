@@ -31,6 +31,8 @@
     
     if ([self.titleString isEqualToString:@"公告详情"]) {
         urlStr = [NSString stringWithFormat:@"%@%@&%@",CANNOUCEMENTDETIAL, self.urlString, [YKDoctorHelper doctorID]];
+    }else if ([self.titleString isEqualToString:@"新手必看"]) {
+        urlStr = [NSString stringWithFormat:@"%@%@",TOKEN_SERVER,self.urlString];
     }else if ([self.titleString isEqualToString:@"服务条款"]) {
         urlStr = [NSString stringWithFormat:@"%@/doctoragreement.html",BASE_SERVER];
     }else if ([self.titleString isEqualToString:@"关于我们"]) {

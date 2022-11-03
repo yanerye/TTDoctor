@@ -92,7 +92,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = RGBACOLOR(237, 239, 243);
-    self.title = @"聊天详情";
+    self.title = self.titleString;
     _keyboardH = 0;
     _isSHow = NO;
     [self layoutAllSubviews];
@@ -100,6 +100,10 @@
     [self getQuickReplyList];
     //发送问卷通知
     [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector (getQuestionnaire:) name:@"sendQuestionnaire" object:nil];
+    
+    
+    //获取最新的消息
+    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector (getNewMessage:) name:@"newMessage" object:nil];
 }
 
 
@@ -124,6 +128,54 @@
     [self.view addSubview:self.selectView];
     [self.view addSubview:self.quickReplyBackgroundView];
     [self.view addSubview:self.quickReplyView];
+    [self setRightItem];
+}
+#pragma mark  - 清空消息
+
+- (void)setRightItem{
+    UIView *rightButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 50)];
+
+    UIButton *mainAndSearchBtn = [[UIButton alloc] initWithFrame:CGRectMake(18, 0, 62, 50)];
+    [rightButtonView addSubview:mainAndSearchBtn];
+    [mainAndSearchBtn setTitle:@"清空消息" forState:UIControlStateNormal];
+    mainAndSearchBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [mainAndSearchBtn addTarget:self action:@selector(deleteMessage) forControlEvents:UIControlEventTouchUpInside];
+     
+    //把右侧的两个按钮添加到rightBarButtonItem
+    UIBarButtonItem *rightCunstomButtonView = [[UIBarButtonItem alloc] initWithCustomView:rightButtonView];
+    self.navigationItem.rightBarButtonItem = rightCunstomButtonView;
+}
+
+- (void)deleteMessage{
+    [[YKChatDBManager DBManager] deleteMessageWithUid:self.chatId];
+
+    NSLog(@"清空");
+}
+
+#pragma mark  - 在页面收到消息
+
+- (void)getNewMessage:(NSNotification *)noti{
+    NSDictionary *tempDict = noti.object;
+    NSLog(@"%@",tempDict);
+    //接收文本消息
+    if ([tempDict[@"type"] isEqualToString:@"CHAT_MESSAGE_NOTICE"]) {
+        NSString *content = [NSString stringWithFormat:@"%@",tempDict[@"content"]];
+        //网络请求的发送消息
+        YKChatMessageModel *model = [YKChatMessageManager createTextMessage:self.userModel
+                                                                    message:content
+                                                                   isSender:NO];
+        model.sendType = YKMessageSendTypeSuccess;
+        [self sendMessageModel:model];
+    }
+//    if ([tempDict[@"data"] intValue] == [self.chatId intValue]) {
+//            [self refreshNewMessage];
+//    }else{
+//        messageNumber++;
+//        redView.hidden = NO;
+//        numberLabel.hidden = NO;
+//        numberLabel.text = [NSString stringWithFormat:@"%d",messageNumber];
+//    }
+    
 }
 
 #pragma mark - Network
@@ -147,7 +199,7 @@
 
 //快捷回复列表
 - (void)getQuickReplyList{
-    [[YKApiService service] getQuickReplyListCompletion:^(id responseObject, NSError *error) {
+    [[YKBaseApiSeivice service] getQuickReplyListCompletion:^(id responseObject, NSError *error) {
         if (!error) {
             NSArray *tempArray = responseObject[@"rows"];
             for (NSDictionary *dict in tempArray) {
@@ -382,51 +434,34 @@
 #pragma mark - 发送文本消息
 
 -(void)sendMessageWithContent:(NSString *)content{
-    //发送并存储消息
+    //网络请求的发送消息
     YKChatMessageModel *model = [YKChatMessageManager createTextMessage:self.userModel
                                                                 message:content
                                                                isSender:YES];
     [self sendMessageModel:model];
+
     
-    model.sendType = YKMessageSendTypeSuccess;
-    [[YKChatDBManager DBManager] updateMessageModel:model chatWithUser:self.userModel];
-    [self.contentTableView reloadData];
+    [[YKTokenApiService service] sendMessageWithChatId:self.chatId content:content requestMethod:@"PUT" completion:^(id responseObject, NSError *error) {
+        if (!error) {
+            
+            //发送消息成功
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                model.sendType = YKMessageSendTypeSuccess;
+                [[YKChatDBManager DBManager] updateMessageModel:model chatWithUser:self.userModel];
+                [self.contentTableView reloadData];
+            });
+        }else{
+            //发送消息失败
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                model.sendType = YKMessageSendTypeFailed;
+                [[YKChatDBManager DBManager] updateMessageModel:model chatWithUser:self.userModel];
+                [self.contentTableView reloadData];
+            });
+        }
+            
+    }];
+
     
-//    NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"accessToken"];
-//    NSString *accessPath = [NSString stringWithFormat:@"%@/app/chat-record/v2.0/send",TOKEN_SERVER];
-//    // 请求参数字典
-//    NSDictionary *params = @{@"chatId":self.chatId,
-//                             @"client":@"1",
-//                             @"quessionId":@"",
-//                             @"type":@"2",
-//                             @"content":content
-//    };
-//
-//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-//    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"PUT" URLString:accessPath parameters:params error:nil];
-//    request.timeoutInterval = 10.f;
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//    [request setValue:accessToken forHTTPHeaderField:@"X-Access-Auth-Token"];
-//    NSURLSessionDataTask *task = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-//
-//        if ([responseObject[@"code"] intValue] == 200) {
-//            //发送消息成功
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                model.sendType = YKMessageSendTypeSuccess;
-//                [[YKChatDBManager DBManager] updateMessageModel:model chatWithUser:self.userModel];
-//                [self.contentTableView reloadData];
-//            });
-//        }else{
-//            //发送消息失败
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                model.sendType = YKMessageSendTypeFailed;
-//                [[YKChatDBManager DBManager] updateMessageModel:model chatWithUser:self.userModel];
-//                [self.contentTableView reloadData];
-//            });
-//        }
-//    }];
-//
-//    [task resume];
 }
 
 #pragma mark - 语音发送
@@ -437,24 +472,30 @@
         //开始录音
         NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0];
         start = [date timeIntervalSince1970]*1000;
+        NSLog(@"开始录音");
     }
     else if (type == WZMRecordTypeFinish) {
         NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0];
         NSInteger duration = [date timeIntervalSince1970]*1000 - start;
-        NSLog(@"%ld",duration/1000);
-        //结束录音
-        //将录音上传到服务器, 获取录音链接
+        NSLog(@"录音时长是%ld",duration/1000);
+        NSLog(@"结束录音");
+
+//        //结束录音
+//        //将录音上传到服务器, 获取录音链接
 //        NSString *voiceUrl = @"";
 //        //创建录音model
-//        WZMChatMessageModel *model = [WZMChatMessageManager createVoiceMessage:self.userModel
+//        YKChatMessageModel *model = [YKChatMessageManager createVoiceMessage:self.userModel
 //                                                                      duration:duration/1000
 //                                                                      voiceUrl:voiceUrl
 //                                                                      isSender:YES];
 //        [self sendMessageModel:model];
     }
     else {
-        
+        NSLog(@"取消录音");
+
     }
+
+
 }
 
 #pragma mark - 点击事件
@@ -462,6 +503,7 @@
 - (void)selectClick{
     [self setSelectAnimate];
     self.slelectBackgroundView.hidden = NO;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"keyboardHide" object:nil];
 }
 
 -(void)setSelectAnimate
@@ -623,48 +665,31 @@
 #pragma mark - 发送图片
 -(void)sendImage:(UIImage *)image imageSuffix:(NSString *)imageSuffix inde:(int)inde{
     NSLog(@"进入的顺序是%d",inde);
-    
+
     //缩略图
     UIImage *thumImage = [self scaleImage:image toScale:0.5];
-    
+
     //缩略图的base64字符串
     NSData *thumData = UIImageJPEGRepresentation(thumImage,1.0f);
     NSString *thumImageStr =[thumData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
-    
+
     //原图的base64字符串
     NSData *originalData = UIImageJPEGRepresentation(image,1.0f);
     NSString *originalImageStr =[originalData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
-    
+
     //发送状态正在发送中 图片使用base64字符串加载
     YKChatMessageModel *msgModel = [YKChatMessageManager createImageMessage:self.userModel thumbnail:thumImageStr original:originalImageStr thumImage:thumImage oriImage:image isSender:YES];
     [self sendMessageModel:msgModel];
 
-    NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"accessToken"];
-    NSString *accessPath = [NSString stringWithFormat:@"%@/app/chat-record/v2.0/send",TOKEN_SERVER];
-    // 请求参数字典
-    NSDictionary *params = @{@"chatId":self.chatId,
-                             @"client":@"1",
-                             @"quessionId":@"",
-                             @"type":@"1",
-                             @"content":originalImageStr,
-                             @"suffix":imageSuffix
-    };
 
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"PUT" URLString:accessPath parameters:params error:nil];
-    request.timeoutInterval = 10.f;
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:accessToken forHTTPHeaderField:@"X-Access-Auth-Token"];
-    
-    NSURLSessionTask *task = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-
-        if ([responseObject[@"code"] intValue] == 200) {
+    [[YKTokenApiService service] sendImageWithChatId:self.chatId content:originalImageStr suffix:imageSuffix requestMethod:@"PUT" completion:^(id responseObject, NSError *error) {
+        if (!error) {
             dispatch_async(_queue, ^{
                 [_lock lockWhenCondition:inde];
-                NSLog(@"执行完成的顺序是%d",inde);
+                NSLog(@"发送成功执行完成的顺序是%d",inde);
 
-                NSString *original = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,responseObject[@"data"][@"orignImg"]];
-                NSString *thumbnail = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,responseObject[@"data"][@"smallImg"]];
+                NSString *original = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,responseObject[@"orignImg"]];
+                NSString *thumbnail = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,responseObject[@"smallImg"]];
 
                 //发送状态成功 存储大小图片的网址  更新数据库
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -682,7 +707,7 @@
         }else{
             dispatch_async(_queue, ^{
                 [_lock lockWhenCondition:inde];
-                NSLog(@"执行完成的顺序是%d",inde);
+                NSLog(@"发送失败执行完成的顺序是%d",inde);
                 //发送状态失败 存储图片的base64字符串
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     msgModel.sendType = YKMessageSendTypeFailed;
@@ -694,8 +719,82 @@
             });
         }
     }];
+    
+//    NSLog(@"进入的顺序是%d",inde);
+//
+//    //缩略图
+//    UIImage *thumImage = [self scaleImage:image toScale:0.5];
+//
+//    //缩略图的base64字符串
+//    NSData *thumData = UIImageJPEGRepresentation(thumImage,1.0f);
+//    NSString *thumImageStr =[thumData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+//
+//    //原图的base64字符串
+//    NSData *originalData = UIImageJPEGRepresentation(image,1.0f);
+//    NSString *originalImageStr =[originalData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+//
+//    //发送状态正在发送中 图片使用base64字符串加载
+//    YKChatMessageModel *msgModel = [YKChatMessageManager createImageMessage:self.userModel thumbnail:thumImageStr original:originalImageStr thumImage:thumImage oriImage:image isSender:YES];
+//    [self sendMessageModel:msgModel];
+//
+//    NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"accessToken"];
+//    NSString *accessPath = [NSString stringWithFormat:@"%@/app/chat-record/v2.0/send",TOKEN_SERVER];
+//    // 请求参数字典
+//    NSDictionary *params = @{@"chatId":self.chatId,
+//                             @"client":@"1",
+//                             @"quessionId":@"",
+//                             @"type":@"1",
+//                             @"content":originalImageStr,
+//                             @"suffix":imageSuffix
+//    };
+//
+//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"PUT" URLString:accessPath parameters:params error:nil];
+//    request.timeoutInterval = 10.f;
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//    [request setValue:accessToken forHTTPHeaderField:@"X-Access-Auth-Token"];
+//
+//    NSURLSessionTask *task = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+//
+//        if ([responseObject[@"code"] intValue] == 200) {
+//            dispatch_async(_queue, ^{
+//                [_lock lockWhenCondition:inde];
+//                NSLog(@"执行成功的顺序是%d",inde);
+//
+//                NSString *original = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,responseObject[@"data"][@"orignImg"]];
+//                NSString *thumbnail = [NSString stringWithFormat:@"%@%@",IMAGE_SERVER,responseObject[@"data"][@"smallImg"]];
+//
+//                //发送状态成功 存储大小图片的网址  更新数据库
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                    msgModel.sendType = YKMessageSendTypeSuccess;
+//                    msgModel.thumbnail = thumbnail;
+//                    msgModel.original  = original;
+//                    [[SDImageCache sharedImageCache] storeImage:image forKey:original completion:nil];
+//                    [[SDImageCache sharedImageCache] storeImage:thumImage forKey:thumbnail completion:nil];
+//                    [[YKChatDBManager DBManager] updateMessageModel:msgModel chatWithUser:self.userModel];
+//                    [self.pictureArray addObject:original];
+//                    [self.contentTableView reloadData];
+//                });
+//                [_lock unlockWithCondition:inde + 1];
+//            });
+//        }else{
+//            dispatch_async(_queue, ^{
+//                [_lock lockWhenCondition:inde];
+//                NSLog(@"执行失败的顺序是%d",inde);
+//                //发送状态失败 存储图片的base64字符串
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                    msgModel.sendType = YKMessageSendTypeFailed;
+//                    [[YKChatDBManager DBManager] updateMessageModel:msgModel chatWithUser:self.userModel];
+//                    [self.pictureArray addObject:originalImageStr];
+//                    [self.contentTableView reloadData];
+//                });
+//                [_lock unlockWithCondition:inde + 1];
+//            });
+//        }
+//    }];
+//
+//    [task resume];
 
-    [task resume];
 }
 
 #pragma mark - 点击查看大图
